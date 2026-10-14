@@ -1,4 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
+# The version of a release: shown in the watch's log, and in the web installer.
+set(PROJECT_VER "0.1.0")
+
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(german_cards)
+project(knoedel_watch)

@@ -14,6 +14,14 @@
 
 上面是推荐链接：通过它购买，本项目作者会获得佣金，你付的价格不变。这个套件在 M5Stack 官方和其他店铺也能买到。
 
+## 安装
+
+不需要任何开发工具：在电脑上用 Chrome 或 Edge 打开 **[网页安装器](https://GITHUB_USER.github.io/knoedel-watch/)**，用能传数据的 USB-C 线连上手表，点"安装"。第一次安装时选择清空手表；以后更新时选择保留数据，练习进度不会丢。
+
+习惯用命令行？每个 [Release](https://github.com/GITHUB_USER/knoedel-watch/releases) 里也有一个包含全部内容的镜像：先 `pip install esptool`，然后运行 `python3 -m esptool --chip esp32s3 write-flash 0x0 knoedel-watch-<版本>-full.bin`（相当于全新安装，会清空练习进度和设置）。
+
+想自己编译，见 [编译和烧录](#编译和烧录)。
+
 ## 第一次开机
 
 手表默认是英文界面。切换成中文：*Settings* → *Language*，轻触一下。然后设置时间：*设置* → *时间*，轻触开始，依次调整时、分、日、月、年（按键改数值，轻触跳到下一项，最后一下保存）。不设时间也能学习，只有时钟页面需要它。
@@ -101,6 +109,14 @@ python3 tools/flash_content.py         # 写入手表
 没有内容包的手表会显示 "No content"，等待第 2 步。
 
 `import_decks.py` 会检查每个卡组，用固件自己的绘制代码排一遍所有语言的所有文字，圆屏上放不下的内容包会被拒绝。没有 cmake 或 SDL2 时可以加 `--skip-fit` 跳过这项检查。加 `--locale zh-Hans` 可以让新手表默认显示中文。
+
+### 发布新版本
+
+```bash
+idf.py build && python3 tools/import_decks.py && python3 tools/make_release.py
+```
+
+`release/site/` 是网页安装器（ESP Web Tools：网页、清单和闪存的四个部分），用 GitHub Pages 发布；`release/knoedel-watch-<版本>-full.bin` 放进 GitHub Release。版本号是 `CMakeLists.txt` 里的 `PROJECT_VER`。发布前想在本地试一下：`python3 -m http.server -d release/site 8000`，然后打开 http://localhost:8000。
 
 ### 配音
 

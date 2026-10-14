@@ -9,6 +9,8 @@ sim/out/
 __pycache__/
 # Content packs, built by tools/import_decks.py
 packs/
+# Releases, built by tools/make_release.py
+release/
 # Editor settings hold paths of one machine
 .vscode/
 content/*/preview.html

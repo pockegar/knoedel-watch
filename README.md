@@ -14,6 +14,14 @@ One [M5Stack StopWatch Dev Kit](https://openelab.io/products/m5stack-stopwatch-d
 
 That is an affiliate link: if you buy through it, the author of this project earns a commission, at no extra cost to you. The kit is also sold by M5Stack directly and by other shops.
 
+## Install
+
+No development tools needed: open the **[web installer](https://GITHUB_USER.github.io/knoedel-watch/)** in Chrome or Edge on a computer, connect the watch with a USB-C data cable and press *Install*. On the first install, let it erase the watch; when updating later, keep the data and your progress stays.
+
+Prefer the command line? Each [release](https://github.com/GITHUB_USER/knoedel-watch/releases) also has one image with everything: `pip install esptool`, then `python3 -m esptool --chip esp32s3 write-flash 0x0 knoedel-watch-<version>-full.bin` (a fresh install: it erases progress and settings).
+
+To build it yourself, see [Build and flash](#build-and-flash).
+
 ## First start
 
 The watch starts in English. To switch to Chinese: *Settings* → *Language*, tap. Then set the clock: *Settings* → *Time*, tap, and set hour, minute, day, month and year in turn (keys change the value, a tap moves on, the last tap saves). Learning works without the clock; only the clock face needs it.
@@ -101,6 +109,14 @@ python3 tools/flash_content.py         # writes it to the watch
 A watch without a content pack says "No content" and waits for step 2.
 
 `import_decks.py` checks every deck, lays out every text of every language with the firmware's own drawing code, and refuses a pack with text that does not fit the round screen. To skip that check (no cmake or SDL2), pass `--skip-fit`. `--locale zh-Hans` makes Chinese the language a new watch starts in.
+
+### Making a release
+
+```bash
+idf.py build && python3 tools/import_decks.py && python3 tools/make_release.py
+```
+
+`release/site/` is the web installer (ESP Web Tools: page, manifest, the four parts of the flash); publish it with GitHub Pages. `release/knoedel-watch-<version>-full.bin` goes to the GitHub release. The version is `PROJECT_VER` in `CMakeLists.txt`. To try the installer before publishing: `python3 -m http.server -d release/site 8000`, then open http://localhost:8000.
 
 ### Audio
 

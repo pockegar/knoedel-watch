@@ -19,6 +19,7 @@
 // and written to the watch by tools/flash_content.py.
 
 #include <M5Unified.h>
+#include <esp_app_desc.h>
 #include <esp_log.h>
 #include <nvs.h>
 #include <esp_random.h>
@@ -1010,6 +1011,7 @@ extern "C" void app_main(void)
     ESP_LOGI(TAG, "practice: day %d, %d cards seen, clock %s (%04d-%02d-%02d %02d:%02d:%02d)", progress::today(),
              progress::known(), !M5.Rtc.isEnabled() ? "not found" : has_clock ? "running" : "not usable", now.date.year,
              now.date.month, now.date.date, now.time.hours, now.time.minutes, now.time.seconds);
+    ESP_LOGI(TAG, "knoedel-watch %s", esp_app_get_description()->version);
     ESP_LOGI(TAG, "display %dx%d, pack \"%s\": %d decks, language %s%s", (int)M5.Display.width(), (int)M5.Display.height(),
              content_name(), deck_count(), deck_locale(), two_languages ? " (two in the pack)" : "");
     {
