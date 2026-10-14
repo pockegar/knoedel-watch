@@ -1,0 +1,150 @@
+lemma,pos,article,level_est,topic,role,deck,status,notes
+sich bücken,verb,,B1,body-health,card,koerperbewegungen,web,Ep.1 web only
+sich strecken,verb,,B1,body-health,card,koerperbewegungen,web,Ep.1 web only
+aufstehen,verb,,A1,daily-routine,card,koerperbewegungen,web,Ep.1 web only; also in morgenroutine
+sich hinsetzen,verb,,A2,body-health,card,koerperbewegungen,web,Ep.1 web only
+sich hinlegen,verb,,A2,body-health,card,koerperbewegungen,web,Ep.1 web only
+sich umdrehen,verb,,B1,body-health,card,koerperbewegungen,web,Ep.1 web only
+stolpern,verb,,B1,body-health,card,koerperbewegungen,web,Ep.1 web only
+ausrutschen,verb,,B1,body-health,card,koerperbewegungen,web,Ep.1 web only
+hinfallen,verb,,B1,body-health,card,koerperbewegungen,web,Ep.1 web only
+an,preposition,,A1,grammar,card,wechselpraepositionen,web,Ep.2 grammar series: Wohin+Akk / Wo+Dat
+auf,preposition,,A1,grammar,card,wechselpraepositionen,web,Ep.2 grammar series
+hinter,preposition,,A2,grammar,card,wechselpraepositionen,web,Ep.2 grammar series
+in,preposition,,A1,grammar,card,wechselpraepositionen,web,Ep.2 grammar series
+neben,preposition,,A2,grammar,card,wechselpraepositionen,web,Ep.2 grammar series
+über,preposition,,A2,grammar,card,wechselpraepositionen,web,Ep.2 grammar series
+unter,preposition,,A2,grammar,card,wechselpraepositionen,web,Ep.2 grammar series
+vor,preposition,,A1,grammar,card,wechselpraepositionen,web,Ep.2 grammar series
+zwischen,preposition,,A2,grammar,card,wechselpraepositionen,web,Ep.2 grammar series
+Sonne,noun,die,A1,nature-weather,card,wetter,web,Ep.3 web only
+Wolke,noun,die,A2,nature-weather,card,wetter,web,Ep.3 web only
+Regen,noun,der,A2,nature-weather,card,wetter,web,Ep.3 web only
+Gewitter,noun,das,B1,nature-weather,card,wetter,web,Ep.3 web only
+Wind,noun,der,A2,nature-weather,card,wetter,web,Ep.3 web only
+Nebel,noun,der,B1,nature-weather,card,wetter,web,Ep.3 web only
+Schnee,noun,der,A2,nature-weather,card,wetter,web,Ep.3 web only
+Hagel,noun,der,B1,nature-weather,card,wetter,web,Ep.3 web only
+Frost,noun,der,B1,nature-weather,card,wetter,web,Ep.3 web only; flagged: Kälte may suit better
+es regnet,phrase,,A1,nature-weather,expression,wetter,web,Ep.3 sentence pattern es + Verb
+es schneit,phrase,,A2,nature-weather,expression,wetter,web,Ep.3
+es blitzt und donnert,phrase,,B1,nature-weather,expression,wetter,web,Ep.3
+es hagelt,phrase,,B1,nature-weather,expression,wetter,web,Ep.3
+es friert,phrase,,B1,nature-weather,expression,wetter,web,Ep.3
+sonnig,adjective,,A2,nature-weather,expression,wetter,web,Ep.3 es ist + Adjektiv
+bewölkt,adjective,,A2,nature-weather,expression,wetter,web,Ep.3
+regnerisch,adjective,,B1,nature-weather,expression,wetter,web,Ep.3
+windig,adjective,,A2,nature-weather,expression,wetter,web,Ep.3
+neblig,adjective,,B1,nature-weather,expression,wetter,web,Ep.3
+eiskalt,adjective,,B1,nature-weather,expression,wetter,web,Ep.3
+scheinen,verb,,A2,nature-weather,expression,wetter,web,Ep.3 die Sonne scheint
+wehen,verb,,B1,nature-weather,expression,wetter,web,Ep.3 der Wind weht
+glücklich,adjective,,A2,feelings,card,gefuehle,device,Ep.4 device deck
+traurig,adjective,,A2,feelings,card,gefuehle,device,Ep.4
+nervös,adjective,,A2,feelings,card,gefuehle,device,Ep.4
+aufgeregt,adjective,,B1,feelings,card,gefuehle,device,Ep.4
+gestresst,adjective,,B1,feelings,card,gefuehle,device,Ep.4
+enttäuscht,adjective,,B1,feelings,card,gefuehle,device,Ep.4
+entspannt,adjective,,B1,feelings,card,gefuehle,device,Ep.4
+sauer,adjective,,B1,feelings,card,gefuehle,device,Ep.4 colloquial
+erleichtert,adjective,,B1,feelings,card,gefuehle,device,Ep.4
+überrascht,adjective,,B1,feelings,card,gefuehle,device,Ep.4
+stolz,adjective,,B1,feelings,card,gefuehle,device,Ep.4
+genervt,adjective,,B1,feelings,card,gefuehle,device,Ep.4 colloquial
+Wie fühlst du dich?,phrase,,A2,feelings,expression,gefuehle,web,Ep.4 video intro
+aufwachen,verb,,A2,daily-routine,card,morgenroutine,web,Ep.5 web only
+aufstehen,verb,,A1,daily-routine,card,morgenroutine,web,Ep.5 web only; DUPLICATE of koerperbewegungen
+sich duschen,verb,,A1,daily-routine,card,morgenroutine,web,Ep.5 web only
+sich die Zähne putzen,verb,,A1,daily-routine,card,morgenroutine,web,Ep.5 web only
+sich anziehen,verb,,A2,daily-routine,card,morgenroutine,web,Ep.5 web only
+sich kämmen,verb,,B1,daily-routine,card,morgenroutine,web,Ep.5 web only
+Kaffee kochen,verb,,A1,daily-routine,card,morgenroutine,web,Ep.5 web only
+frühstücken,verb,,A1,daily-routine,card,morgenroutine,web,Ep.5 web only
+losgehen,verb,,B1,daily-routine,card,morgenroutine,web,Ep.5 web only
+halb sieben,phrase,,A1,time,expression,morgenroutine,web,Ep.5 informal clock time: halb
+Viertel vor / nach,phrase,,A1,time,expression,morgenroutine,web,Ep.5 informal clock time
+fünf vor / nach,phrase,,A1,time,expression,morgenroutine,web,Ep.5 informal clock time
+müde,adjective,,A2,,card,a2-gesundheit-zustaende,draft,
+wach,adjective,,A2,,card,a2-gesundheit-zustaende,draft,
+hungrig,adjective,,A2,,card,a2-gesundheit-zustaende,draft,
+durstig,adjective,,A2,,card,a2-gesundheit-zustaende,draft,
+satt,adjective,,A2,,card,a2-gesundheit-zustaende,draft,
+krank,adjective,,A2,,card,a2-gesundheit-zustaende,draft,
+gesund,adjective,,A2,,card,a2-gesundheit-zustaende,draft,
+erkältet,adjective,,A2,,card,a2-gesundheit-zustaende,draft,
+fit,adjective,,A2,,card,a2-gesundheit-zustaende,draft,
+Mir ist kalt,phrase,,A2,,card,a2-gesundheit-zustaende,draft,
+Mir ist warm,phrase,,A2,,card,a2-gesundheit-zustaende,draft,
+Mir ist schlecht,phrase,,A2,,card,a2-gesundheit-zustaende,draft,
+fleißig,adjective,,A2,,card,a2-charakter,draft,
+faul,adjective,,A2,,card,a2-charakter,draft,
+ordentlich,adjective,,A2,,card,a2-charakter,draft,
+chaotisch,adjective,,A2,,card,a2-charakter,draft,
+pünktlich,adjective,,A2,,card,a2-charakter,draft,
+unpünktlich,adjective,,A2,,card,a2-charakter,draft,
+lustig,adjective,,A2,,card,a2-charakter,draft,
+ernst,adjective,,A2,,card,a2-charakter,draft,
+ruhig,adjective,,A2,,card,a2-charakter,draft,
+laut,adjective,,A2,,card,a2-charakter,draft,
+sympathisch,adjective,,A2,,card,a2-charakter,draft,
+schüchtern,adjective,,A2,,card,a2-charakter,draft,
+das Bett machen,verb,,A2,,card,a2-haushalt-verben,draft,
+aufräumen,verb,,A2,,card,a2-haushalt-verben,draft,
+putzen,verb,,A2,,card,a2-haushalt-verben,draft,
+staubsaugen,verb,,A2,,card,a2-haushalt-verben,draft,
+den Boden wischen,verb,,A2,,card,a2-haushalt-verben,draft,
+Wäsche waschen,verb,,A2,,card,a2-haushalt-verben,draft,
+Wäsche aufhängen,verb,,A2,,card,a2-haushalt-verben,draft,
+bügeln,verb,,A2,,card,a2-haushalt-verben,draft,
+Geschirr spülen,verb,,A2,,card,a2-haushalt-verben,draft,
+abtrocknen,verb,,A2,,card,a2-haushalt-verben,draft,
+den Müll rausbringen,verb,,A2,,card,a2-haushalt-verben,draft,
+die Blumen gießen,verb,,A2,,card,a2-haushalt-verben,draft,
+Fahrrad fahren,verb,,A2,,card,a2-unterwegs-verben,draft,
+sich beeilen,verb,,A2,,card,a2-unterwegs-verben,draft,
+verpassen,verb,,A2,,card,a2-unterwegs-verben,draft,
+warten,verb,,A2,,card,a2-unterwegs-verben,draft,
+einsteigen,verb,,A2,,card,a2-unterwegs-verben,draft,
+abfahren,verb,,A2,,card,a2-unterwegs-verben,draft,
+umsteigen,verb,,A2,,card,a2-unterwegs-verben,draft,
+aussteigen,verb,,A2,,card,a2-unterwegs-verben,draft,
+sich verlaufen,verb,,A2,,card,a2-unterwegs-verben,draft,
+ankommen,verb,,A2,,card,a2-unterwegs-verben,draft,
+abholen,verb,,A2,,card,a2-unterwegs-verben,draft,
+mitnehmen,verb,,A2,,card,a2-unterwegs-verben,draft,
+Wie bitte?,phrase,,A2,,card,a2-reaktionen,draft,
+Ach so!,phrase,,A2,,card,a2-reaktionen,draft,
+Genau!,phrase,,A2,,card,a2-reaktionen,draft,
+Echt?,phrase,,A2,,card,a2-reaktionen,draft,
+Keine Ahnung,phrase,,A2,,card,a2-reaktionen,draft,
+Schade!,phrase,,A2,,card,a2-reaktionen,draft,
+Macht nichts,phrase,,A2,,card,a2-reaktionen,draft,
+Gute Besserung!,phrase,,A2,,card,a2-reaktionen,draft,
+Kein Problem,phrase,,A2,,card,a2-reaktionen,draft,
+Gern geschehen,phrase,,A2,,card,a2-reaktionen,draft,
+Viel Glück!,phrase,,A2,,card,a2-reaktionen,draft,
+Herzlichen Glückwunsch!,phrase,,A2,,card,a2-reaktionen,draft,
+aussuchen,verb,,A2,,card,a2-einkaufen-verben,draft,
+anprobieren,verb,,A2,,card,a2-einkaufen-verben,draft,
+passen,verb,,A2,,card,a2-einkaufen-verben,draft,
+stehen,verb,,A2,,card,a2-einkaufen-verben,draft,
+gefallen,verb,,A2,,card,a2-einkaufen-verben,draft,
+bezahlen,verb,,A2,,card,a2-einkaufen-verben,draft,
+einpacken,verb,,A2,,card,a2-einkaufen-verben,draft,
+bestellen,verb,,A2,,card,a2-einkaufen-verben,draft,
+umtauschen,verb,,A2,,card,a2-einkaufen-verben,draft,
+zurückgeben,verb,,A2,,card,a2-einkaufen-verben,draft,
+ausgeben,verb,,A2,,card,a2-einkaufen-verben,draft,
+sparen,verb,,A2,,card,a2-einkaufen-verben,draft,
+anrufen,verb,,A2,,card,a2-termine-verben,draft,
+zurückrufen,verb,,A2,,card,a2-termine-verben,draft,
+einen Termin vereinbaren,verb,,A2,,card,a2-termine-verben,draft,
+bestätigen,verb,,A2,,card,a2-termine-verben,draft,
+verschieben,verb,,A2,,card,a2-termine-verben,draft,
+absagen,verb,,A2,,card,a2-termine-verben,draft,
+sich verspäten,verb,,A2,,card,a2-termine-verben,draft,
+vorbeikommen,verb,,A2,,card,a2-termine-verben,draft,
+sich anmelden,verb,,A2,,card,a2-termine-verben,draft,
+ausfüllen,verb,,A2,,card,a2-termine-verben,draft,
+unterschreiben,verb,,A2,,card,a2-termine-verben,draft,
+abgeben,verb,,A2,,card,a2-termine-verben,draft,

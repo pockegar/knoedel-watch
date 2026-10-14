@@ -1,0 +1,327 @@
+{
+  "format": 1,
+  "files": {
+    "aussuchen_0.mp3": {
+      "text": "aussuchen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "aussuchen_1.mp3": {
+      "text": "suchte aus. hat ausgesucht.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "aussuchen_2.mp3": {
+      "text": "Du darfst dir ein T-Shirt aussuchen – ich bezahle!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "anprobieren_0.mp3": {
+      "text": "anprobieren.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "anprobieren_1.mp3": {
+      "text": "probierte an. hat anprobiert.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "anprobieren_2.mp3": {
+      "text": "– Kann ich die Jacke anprobieren? – Klar, die Kabine ist da hinten.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural|de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "passen_0.mp3": {
+      "text": "passen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "passen_1.mp3": {
+      "text": "passte. hat gepasst.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "passen_2.mp3": {
+      "text": "Die Schuhe sind schön, aber sie passen mir leider nicht.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "passen_3.mp3": {
+      "text": "jemandem passen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "stehen_0.mp3": {
+      "text": "stehen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "stehen_1.mp3": {
+      "text": "stand. hat gestanden.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "stehen_2.mp3": {
+      "text": "Die neuen Sachen stehen dir richtig gut!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "stehen_3.mp3": {
+      "text": "jemandem stehen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "gefallen_0.mp3": {
+      "text": "gefallen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "gefallen_1.mp3": {
+      "text": "gefiel. hat gefallen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "gefallen_2.mp3": {
+      "text": "Mir gefallen die blauen Sneaker am besten.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "gefallen_3.mp3": {
+      "text": "jemandem gefallen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "bezahlen_0.mp3": {
+      "text": "bezahlen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "bezahlen_1.mp3": {
+      "text": "bezahlte. hat bezahlt.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "bezahlen_2.mp3": {
+      "text": "– Kann ich mit Karte bezahlen? – Tut mir leid, nur bar.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural|de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "einpacken_0.mp3": {
+      "text": "einpacken.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "einpacken_1.mp3": {
+      "text": "packte ein. hat eingepackt.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "einpacken_2.mp3": {
+      "text": "Soll ich es Ihnen als Geschenk einpacken?",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "bestellen_0.mp3": {
+      "text": "bestellen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "bestellen_1.mp3": {
+      "text": "bestellte. hat bestellt.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "bestellen_2.mp3": {
+      "text": "Ich habe einen Rucksack online bestellt, aber er ist noch nicht da.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "umtauschen_0.mp3": {
+      "text": "umtauschen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "umtauschen_1.mp3": {
+      "text": "tauschte um. hat umgetauscht.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "umtauschen_2.mp3": {
+      "text": "Der Pullover ist zu klein. Kann ich ihn umtauschen?",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "zurueckgeben_0.mp3": {
+      "text": "zurückgeben.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "zurueckgeben_1.mp3": {
+      "text": "gab zurück. hat zurückgegeben.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "zurueckgeben_2.mp3": {
+      "text": "Der Toaster war kaputt, also habe ich ihn zurückgegeben.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ausgeben_0.mp3": {
+      "text": "ausgeben.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ausgeben_1.mp3": {
+      "text": "gab aus. hat ausgegeben.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ausgeben_2.mp3": {
+      "text": "Im Urlaub habe ich viel zu viel Geld ausgegeben.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sparen_0.mp3": {
+      "text": "sparen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sparen_1.mp3": {
+      "text": "sparte. hat gespart.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sparen_2.mp3": {
+      "text": "Ich muss für ein neues Handy sparen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sparen_3.mp3": {
+      "text": "sparen für.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    }
+  },
+  "deck": "a2-einkaufen-verben",
+  "deck_version": "0.1.0"
+}

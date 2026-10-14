@@ -1,0 +1,15 @@
+build/
+managed_components/
+sdkconfig
+sdkconfig.old
+sim/build/
+sim/out/
+.DS_Store
+.cache/
+__pycache__/
+# Content packs, built by tools/import_decks.py
+packs/
+# Editor settings hold paths of one machine
+.vscode/
+content/*/preview.html
+sim/out*/

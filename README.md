@@ -1,0 +1,138 @@
+# Deutsch mit Knödel
+
+English | [中文](README.zh.md)
+
+German vocabulary cards for the M5Stack StopWatch Dev Kit (ESP32-S3, round AMOLED touch screen, speaker, motion sensor). Two characters act out every word: **Knödel**, a dumpling, shows adjectives and expressions; **Brezel**, a ginger cat, does the verbs.
+
+Each card has up to three faces: the word with its animation, the grammar line with an example sentence and its translation, and a tip. Every German line is spoken; short dialogues are spoken in two voices. Around the cards the watch has a practice mode with spaced repetition, a clock with a word of the day, and a focus timer.
+
+> **About the content.** The cards were written by an AI and have not been proofread by a native speaker yet. If you find a mistake, please open an issue: it will be fixed in the next content pack.
+
+## Hardware
+
+One [M5Stack StopWatch Dev Kit](https://openelab.io/products/m5stack-stopwatch-dev-kit-esp32-s3?sca_ref=12520936.Zn0RxZ6jdFG) and a USB-C cable. Nothing else is needed.
+
+That is an affiliate link: if you buy through it, the author of this project earns a commission, at no extra cost to you. The kit is also sold by M5Stack directly and by other shops.
+
+## First start
+
+The watch starts in English. To switch to Chinese: *Settings* → *Language*, tap. Then set the clock: *Settings* → *Time*, tap, and set hour, minute, day, month and year in turn (keys change the value, a tap moves on, the last tap saves). Learning works without the clock; only the clock face needs it.
+
+## The main menu
+
+| | |
+|---|---|
+| **Clock** | the time and a word of the day |
+| **Learn German** | the decks, card by card |
+| **Practice** | a few cards you have seen, asked again |
+| **Focus timer** | 25 minutes of focus, 5 of break |
+| **Settings** | language, time, volume, brightness, power off |
+
+Menus are in the language chosen in the settings. The watch remembers where you were.
+
+## Controls
+
+| | |
+|---|---|
+| KEY B (blue, right) or swipe left | next |
+| KEY A (yellow, left) or swipe right | previous |
+| Tap the screen | open, next face of a card, change a setting |
+| Hold KEY A | back |
+
+The motion sensor adds three gestures: **pick the watch up** to wake a dimmed screen, **turn it face down** to darken it (on the focus timer this also starts the timer), and **shake it** on the clock for another word.
+
+On battery the screen dims after a minute and the watch switches itself off after five idle minutes. On USB power it stays on and, left alone, shows the clock.
+
+## Learn German
+
+Main menu → *Learn German* → a deck → its cards. Tap to turn a card over:
+
+1. the character acts the word out, with the word and its meaning;
+2. the grammar line (past tense and perfect, plural, or a pattern with its case) and an example with its translation;
+3. a tip.
+
+## Practice
+
+Main menu → *Practice* asks you a handful of the cards you have already seen, a minute or two at a time.
+
+1. The character acts the word out, with no text. After two seconds the meaning appears as a hint.
+2. Say the German word to yourself, then press any key or tap to see and hear the answer.
+3. KEY B (blue, ✓): you knew it. KEY A (yellow, ✗): not yet; the card comes back before the session ends.
+
+Three right answers in a row earn a short celebration. Words you know return after 1, 2, 4 … 64 days; a word you missed starts again. There is no backlog to work off and nothing to configure.
+
+## Clock
+
+The time, the date, and a word of the day: its character acts it out, then the word and its meaning take the picture's place, in turns. Tap to hear the word; a key or a shake picks another one. The seconds run round the edge.
+
+## Focus timer
+
+The ring around the screen runs down with the time left: red while you focus, green during the break. Brezel writes along while you work; Knödel hums during the break. Tap to start or pause, KEY B skips to the other phase, KEY A starts the phase again. Or simply turn the watch face down: the timer starts and the screen goes dark.
+
+When a phase ends, the watch calls with a short tune and a German *Pause!* or *Weiter!*, even if you have left the timer screen. A tap starts the next phase.
+
+## What is on the watch
+
+The program and the learning content are separate:
+
+| | Program (firmware) | Content pack |
+|---|---|---|
+| Holds | menus, characters, clock, timer, audio player | decks, fonts, audio |
+| Changes | when the code changes | when decks are added or corrected |
+| Written with | `idf.py flash` | `python3 tools/flash_content.py` |
+
+So new content does not need a new firmware, and a watch can be moved from one pack to another (say, from A2 to B1) in under a minute.
+
+The first pack, `a2-start`, has eight decks of 12 cards at level A2: moods and emotions, body and health, personality, household chores, on the go, quick reactions, shopping, appointments. Translations are in English and Chinese.
+
+## Build and flash
+
+You need [ESP-IDF](https://docs.espressif.com/projects/esp-idf/) v6.0, and for the content pack Python 3 with `pip install jsonschema pillow fonttools esptool`, plus `cmake` and SDL2 (`brew install sdl2`) for the layout check.
+
+```bash
+# 1. the program
+idf.py -p <port> flash
+
+# 2. the content pack
+python3 tools/import_decks.py          # builds packs/a2-start.bin from content/
+python3 tools/flash_content.py         # writes it to the watch
+```
+
+A watch without a content pack says "No content" and waits for step 2.
+
+`import_decks.py` checks every deck, lays out every text of every language with the firmware's own drawing code, and refuses a pack with text that does not fit the round screen. To skip that check (no cmake or SDL2), pass `--skip-fit`. `--locale zh-Hans` makes Chinese the language a new watch starts in.
+
+### Audio
+
+The repository's audio was generated with Azure Speech. You only need a speech service if you change or add German text:
+
+- `--paid` generates the missing clips with Azure (`SPEECH_KEY` and `SPEECH_REGION` in the environment). Without it the importer only reports what would be generated.
+- `--audio edge` uses the free edge-tts instead (`pip install edge-tts`), good enough for trying your own cards. Such clips are kept out of git.
+
+## Make your own decks
+
+A deck is one folder, `content/<deck-id>/`, with a `deck.json`. The format is described in [FORMAT.md](FORMAT.md) and checked by `tools/check_deck.py`; `tools/build_preview.py` gives you a web preview of a deck with the same animations.
+
+`content/library.json` names a content pack and lists its decks. For another pack, write another library file and pass it with `--library`.
+
+Animations are data: a card names a pose, motions, effects, props and a thought bubble from `registry/<character>.json`. What those names draw is in `main/knoedel.cpp`, `main/knoedel_bubbles.cpp` and `main/katze.cpp`, with `tools/preview/*.js` as the drawing reference.
+
+## Repository
+
+```
+main/          firmware (ESP-IDF, M5Unified)
+sim/           desktop build of the screens, used for the layout check
+tools/         importer, deck checker, audio, web preview, flashing
+content/       decks and their audio
+registry/      what each character can do
+curriculum/    plan of the decks to come, and every word taught so far
+FORMAT.md      the deck format
+```
+
+## Licenses
+
+- Source code: MIT ([LICENSE](LICENSE)).
+- Learning content (`content/`, `curriculum/`): CC BY-NC-SA 4.0 ([content/LICENSE](content/LICENSE)). Share and adapt it for non-commercial use, with credit and under the same license.
+- The characters Knödel and Brezel and the name "Deutsch mit Knödel": all rights reserved. Build, run and modify the project with them; do not use them for your own brand, product or merchandise.
+
+Details and third-party components: [LICENSES.md](LICENSES.md).

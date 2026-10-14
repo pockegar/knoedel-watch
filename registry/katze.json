@@ -1,0 +1,36 @@
+{
+  "character": "katze",
+  "maintained_by": "firmware: list only what is implemented on the device",
+  "pose": {
+    "jump": 0, "rot": 0, "sx": 1, "sy": 1, "open": 1,
+    "lid": 0, "happy": 0, "shut": 0, "lookX": 0, "lookY": 0,
+    "smile": 0.25, "mopen": 0, "blush": 0, "earL": 0, "earR": 0,
+    "tail": 0, "hLx": -28, "hLy": -31, "hRx": 28, "hRy": -31,
+    "fLx": -12, "fLy": 0, "fRx": 12, "fRy": 0
+  },
+  "motion": [
+    "tail-wag", "breathe", "bounce", "hop", "walk", "scrub",
+    "push", "sweep", "smooth", "reach-up", "pour", "watch-spin",
+    "pedal", "run", "tap", "look-around", "tremble", "type",
+    "drop", "knock", "write", "dance"
+  ],
+  "fx": [
+    "sparkles", "bubbles", "dust", "shine", "steam", "stink",
+    "drops", "sun", "speed-lines", "sweat", "sigh-puffs", "question",
+    "hearts", "rain", "contactless", "parcel", "swap", "coins",
+    "ring", "callback", "checkmark", "knock-lines", "signature"
+  ],
+  "prop": [
+    "bed", "window", "washing-machine", "drying-rack", "ironing-board", "plant",
+    "box", "sponge", "towel", "plate", "sock", "iron",
+    "trash-bag", "watering-can", "vacuum", "mop", "bike", "bus",
+    "bus-stop", "train-door", "bus-door", "departure-board", "transfer-sign", "station-sign",
+    "suitcase", "map", "welcome-sign", "umbrella", "clothes-rack", "mirror",
+    "shoe-shelf", "card-terminal", "counter", "piggy-bank", "jacket", "scarf",
+    "shoe-small", "card", "gift", "phone", "sweater-small", "toaster",
+    "wallet", "coin", "phone-ear", "calendar", "calendar-move", "calendar-x",
+    "thermometer", "big-clock", "door", "number-display", "ticket", "clipboard",
+    "pen", "folder"
+  ],
+  "bubble": []
+}

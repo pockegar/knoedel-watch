@@ -1,0 +1,597 @@
+{
+  "format": 1,
+  "id": "gefuehle",
+  "version": "1.3.2",
+  "episode": 4,
+  "title": {
+    "de": "Wie fühlst du dich?",
+    "zh-Hans": "情绪形容词",
+    "en": "Moods & emotions"
+  },
+  "level": "A2-B1",
+  "character": "knoedel",
+  "locales": [
+    "zh-Hans",
+    "en"
+  ],
+  "license": "CC-BY-NC-SA-4.0",
+  "review": {
+    "status": "draft",
+    "notes": "German as in the web version (reviewed for Ep.4). Since 1.1.0: English glosses/translations, all tips, shortened 'stolz' example, tightened English translations (≤60). These need review. 1.3.0: pattern must be visible in the example: removed for entspannt, erleichtert, aufgeregt; new example and tip for ueberrascht (1.3.1 merges both sides' versions)."
+  },
+  "cards": [
+    {
+      "id": "gluecklich",
+      "pos": "adjective",
+      "headword": "glücklich",
+      "gloss": {
+        "zh-Hans": "高兴、幸福",
+        "en": "happy"
+      },
+      "pattern": {
+        "text": "glücklich über",
+        "case": "Akk"
+      },
+      "example": {
+        "de": "Wir sind so {{glücklich über}} unsere neue Wohnung, weil wir endlich einen Balkon haben.",
+        "translations": {
+          "zh-Hans": "搬进新家我们特别开心，因为终于有阳台了。",
+          "en": "We're so happy with our new flat: finally a balcony!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "über + Akk，问句用 Worüber?",
+        "en": "über + Akk – ask: Worüber?"
+      },
+      "style": {
+        "color": "#B7791F",
+        "background": "#FFF1C4"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 1,
+          "mopen": 0.55,
+          "blush": 0.8,
+          "browY": -2,
+          "armL": 150,
+          "armR": 150
+        },
+        "tint": null,
+        "motion": [
+          "bounce"
+        ],
+        "fx": [
+          "confetti"
+        ],
+        "bubble": "house"
+      }
+    },
+    {
+      "id": "traurig",
+      "pos": "adjective",
+      "headword": "traurig",
+      "gloss": {
+        "zh-Hans": "难过、不开心",
+        "en": "sad"
+      },
+      "pattern": {
+        "text": "traurig über",
+        "case": "Akk"
+      },
+      "example": {
+        "de": "Sie ist {{traurig darüber}}, dass ihre beste Freundin nach Berlin zieht.",
+        "translations": {
+          "zh-Hans": "她最好的朋友要搬去柏林了，她很难过。",
+          "en": "She's sad that her best friend is moving to Berlin."
+        }
+      },
+      "tip": {
+        "zh-Hans": "后面接从句时：darüber, dass …",
+        "en": "Before a clause: darüber, dass …"
+      },
+      "style": {
+        "color": "#3B6BB0",
+        "background": "#DCE6F3"
+      },
+      "anim": {
+        "pose": {
+          "open": 0.85,
+          "lookY": 2,
+          "browT": 1.1,
+          "smile": -0.85,
+          "mw": 0.75,
+          "tint": 1,
+          "sy": 0.95,
+          "sx": 1.03,
+          "armL": 3,
+          "armR": 3
+        },
+        "tint": "#A9C1E0",
+        "motion": [
+          "sway-slow"
+        ],
+        "fx": [
+          "rain-cloud",
+          "tear"
+        ],
+        "bubble": "sign-berlin"
+      }
+    },
+    {
+      "id": "nervoes",
+      "pos": "adjective",
+      "headword": "nervös",
+      "gloss": {
+        "zh-Hans": "紧张",
+        "en": "nervous"
+      },
+      "pattern": {
+        "text": "nervös vor",
+        "case": "Dat"
+      },
+      "example": {
+        "de": "{{Vor}} der Prüfung war ich so {{nervös}}, dass ich die ganze Nacht nicht schlafen konnte.",
+        "translations": {
+          "zh-Hans": "考试前我紧张得一整晚都没睡着。",
+          "en": "Before the exam I was so nervous I couldn't sleep all night."
+        }
+      },
+      "tip": {
+        "zh-Hans": "so … dass … ＝ “……得……”",
+        "en": "so … dass … = so … that …"
+      },
+      "style": {
+        "color": "#7A4FD6",
+        "background": "#ECE4F8"
+      },
+      "anim": {
+        "pose": {
+          "open": 1.2,
+          "browT": 0.9,
+          "browY": -2,
+          "smile": -0.15,
+          "wob": 1,
+          "blush": 0.3,
+          "armL": 24,
+          "armR": 24
+        },
+        "tint": null,
+        "motion": [
+          "shiver",
+          "eye-dart"
+        ],
+        "fx": [
+          "sweat"
+        ],
+        "bubble": "exam"
+      }
+    },
+    {
+      "id": "aufgeregt",
+      "pos": "adjective",
+      "headword": "aufgeregt",
+      "gloss": {
+        "zh-Hans": "激动、兴奋",
+        "en": "excited"
+      },
+      "example": {
+        "de": "Die Kinder sind ganz {{aufgeregt}}, weil morgen endlich die Sommerferien beginnen.",
+        "translations": {
+          "zh-Hans": "孩子们特别激动，因为明天暑假终于开始了。",
+          "en": "The kids are so excited: summer holidays start tomorrow!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "aufgeregt 也可以指“紧张”",
+        "en": "aufgeregt can also mean 'nervous'"
+      },
+      "style": {
+        "color": "#D9620F",
+        "background": "#FFE3CC"
+      },
+      "anim": {
+        "pose": {
+          "open": 1.45,
+          "browY": -4,
+          "smile": 1,
+          "mopen": 0.9,
+          "blush": 0.6,
+          "armL": 165,
+          "armR": 165
+        },
+        "tint": null,
+        "motion": [
+          "jump-wave"
+        ],
+        "fx": [
+          "star-orbit"
+        ],
+        "bubble": "beach"
+      },
+      "notes": "Pattern 'aufgeregt vor' removed (not in the example, and less common than nervös vor)."
+    },
+    {
+      "id": "gestresst",
+      "pos": "adjective",
+      "headword": "gestresst",
+      "gloss": {
+        "zh-Hans": "有压力的",
+        "en": "stressed"
+      },
+      "pattern": {
+        "text": "gestresst von",
+        "case": "Dat"
+      },
+      "example": {
+        "de": "Seit ich den neuen Job habe, bin ich ständig {{gestresst von}} den vielen Meetings.",
+        "translations": {
+          "zh-Hans": "自从换了新工作，各种会议让我压力一直很大。",
+          "en": "Since my new job, all the meetings keep me stressed."
+        }
+      },
+      "tip": {
+        "zh-Hans": "seit + 现在时：一直持续到现在",
+        "en": "seit + present tense: still ongoing"
+      },
+      "style": {
+        "color": "#C2413B",
+        "background": "#F6DCDB"
+      },
+      "anim": {
+        "pose": {
+          "open": 1.35,
+          "browT": 0.7,
+          "smile": -0.55,
+          "mopen": 0.3,
+          "wob": 0.4,
+          "tint": 0.6,
+          "armL": 168,
+          "armR": 168
+        },
+        "tint": "#E9A68E",
+        "motion": [
+          "tremble"
+        ],
+        "fx": [
+          "scribble",
+          "paper-orbit",
+          "sweat"
+        ],
+        "bubble": "calendar"
+      }
+    },
+    {
+      "id": "enttaeuscht",
+      "pos": "adjective",
+      "headword": "enttäuscht",
+      "gloss": {
+        "zh-Hans": "失望",
+        "en": "disappointed"
+      },
+      "pattern": {
+        "text": "enttäuscht von",
+        "case": "Dat"
+      },
+      "example": {
+        "de": "Ich bin {{enttäuscht von}} ihm, weil er sein Versprechen nicht gehalten hat.",
+        "translations": {
+          "zh-Hans": "我对他很失望，因为他没有遵守承诺。",
+          "en": "I'm disappointed in him because he didn't keep his promise."
+        }
+      },
+      "tip": {
+        "zh-Hans": "对人用 von，对事也常用 über",
+        "en": "von for people, über for things"
+      },
+      "style": {
+        "color": "#5F6B7D",
+        "background": "#E3E6EB"
+      },
+      "anim": {
+        "pose": {
+          "open": 0.95,
+          "lid": 0.45,
+          "lookY": 2,
+          "browT": 0.5,
+          "smile": -0.6,
+          "mw": 0.8,
+          "sx": 1.07,
+          "sy": 0.89,
+          "armL": 2,
+          "armR": 2,
+          "tint": 0.45
+        },
+        "tint": "#C9CFD8",
+        "motion": [],
+        "fx": [
+          "sigh-puffs"
+        ],
+        "bubble": "heart-broken"
+      }
+    },
+    {
+      "id": "entspannt",
+      "pos": "adjective",
+      "headword": "entspannt",
+      "gloss": {
+        "zh-Hans": "放松",
+        "en": "relaxed"
+      },
+      "example": {
+        "de": "Im Urlaub bin ich viel {{entspannter}}, weil ich keine E-Mails lesen muss.",
+        "translations": {
+          "zh-Hans": "度假的时候我放松多了，因为不用看邮件。",
+          "en": "On holiday I'm much more relaxed – no emails to read."
+        }
+      },
+      "tip": {
+        "zh-Hans": "动词是 {{sich entspannen}}；entspannter 是比较级",
+        "en": "Verb: {{sich entspannen}}; entspannter = comparative"
+      },
+      "style": {
+        "color": "#138A6B",
+        "background": "#D6F1E8"
+      },
+      "anim": {
+        "pose": {
+          "shut": 1,
+          "smile": 0.65,
+          "blush": 0.45,
+          "browY": 1,
+          "armL": 52,
+          "armR": 52
+        },
+        "tint": null,
+        "motion": [
+          "sway",
+          "breathe"
+        ],
+        "fx": [
+          "music-notes"
+        ],
+        "bubble": "no-mail"
+      }
+    },
+    {
+      "id": "sauer",
+      "pos": "adjective",
+      "headword": "sauer",
+      "gloss": {
+        "zh-Hans": "生气（口语）",
+        "en": "mad (colloquial)"
+      },
+      "pattern": {
+        "text": "sauer auf",
+        "case": "Akk"
+      },
+      "example": {
+        "de": "Mein Chef ist {{sauer auf}} mich, weil ich schon wieder zu spät gekommen bin.",
+        "translations": {
+          "zh-Hans": "老板生我的气了，因为我又迟到了。",
+          "en": "My boss is mad at me because I was late again."
+        }
+      },
+      "tip": {
+        "zh-Hans": "本义是“酸”，口语里指生气",
+        "en": "Literally 'sour' – colloquially 'mad'"
+      },
+      "style": {
+        "color": "#D23A2E",
+        "background": "#FBD9D4"
+      },
+      "anim": {
+        "pose": {
+          "open": 0.95,
+          "browT": -1.4,
+          "browY": 1,
+          "smile": -0.9,
+          "mw": 0.8,
+          "tint": 1,
+          "armL": 34,
+          "armR": 34
+        },
+        "tint": "#F08A72",
+        "motion": [
+          "shake"
+        ],
+        "fx": [
+          "steam",
+          "anger-vein"
+        ],
+        "bubble": "clock-late"
+      }
+    },
+    {
+      "id": "erleichtert",
+      "pos": "adjective",
+      "headword": "erleichtert",
+      "gloss": {
+        "zh-Hans": "松了一口气",
+        "en": "relieved"
+      },
+      "example": {
+        "de": "Als ich hörte, dass ich die Prüfung bestanden hatte, war ich total {{erleichtert}}.",
+        "translations": {
+          "zh-Hans": "听到自己考试通过了，我彻底松了一口气。",
+          "en": "When I heard I had passed the exam, I was hugely relieved."
+        }
+      },
+      "tip": {
+        "zh-Hans": "als：过去发生过一次的事",
+        "en": "als: a single event in the past"
+      },
+      "style": {
+        "color": "#3E8E2F",
+        "background": "#E0F3D7"
+      },
+      "anim": {
+        "pose": {
+          "shut": 1,
+          "smile": 0.75,
+          "browT": 0.6,
+          "blush": 0.3,
+          "armL": 18,
+          "armR": 18,
+          "sy": 0.97
+        },
+        "tint": null,
+        "motion": [
+          "exhale"
+        ],
+        "fx": [
+          "puh-cloud",
+          "sweat-fly"
+        ],
+        "bubble": "exam-passed"
+      }
+    },
+    {
+      "id": "ueberrascht",
+      "pos": "adjective",
+      "headword": "überrascht",
+      "gloss": {
+        "zh-Hans": "惊讶",
+        "en": "surprised"
+      },
+      "pattern": {
+        "text": "überrascht über",
+        "case": "Akk"
+      },
+      "example": {
+        "de": "Wir waren {{überrascht über}} ihr gutes Deutsch.",
+        "translations": {
+          "zh-Hans": "她的德语这么好，让我们很惊讶。",
+          "en": "We were surprised by how good her German is."
+        }
+      },
+      "tip": {
+        "zh-Hans": "也可用 von：{{überrascht von}} der Nachricht",
+        "en": "Also with von: {{überrascht von}} der Nachricht"
+      },
+      "style": {
+        "color": "#C23D7A",
+        "background": "#FBE0EB"
+      },
+      "anim": {
+        "pose": {
+          "open": 1.75,
+          "browY": -7,
+          "smile": 0,
+          "mopen": 1.25,
+          "mw": 0.68,
+          "armL": 118,
+          "armR": 118
+        },
+        "tint": null,
+        "motion": [
+          "hop"
+        ],
+        "fx": [
+          "exclamation"
+        ],
+        "bubble": "greeting"
+      },
+      "notes": "1.3.1: example by Claude Chat (Knödel is the one surprised, by someone else's German, matching the bubble 'Grüß Gott! Wie geht's?'); tip über/von by the firmware side. Old 1.2.0 example used 'überrascht, wie …'."
+    },
+    {
+      "id": "stolz",
+      "pos": "adjective",
+      "headword": "stolz",
+      "gloss": {
+        "zh-Hans": "自豪",
+        "en": "proud"
+      },
+      "pattern": {
+        "text": "stolz auf",
+        "case": "Akk"
+      },
+      "example": {
+        "de": "Ich bin {{stolz darauf}}, dass ich Termine jetzt auf Deutsch vereinbaren kann.",
+        "translations": {
+          "zh-Hans": "我很自豪，现在能用德语预约了。",
+          "en": "I'm proud that I can now make appointments in German."
+        }
+      },
+      "tip": {
+        "zh-Hans": "接从句时：darauf, dass …",
+        "en": "Before a clause: darauf, dass …"
+      },
+      "style": {
+        "color": "#A6780C",
+        "background": "#FFF0BF"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 0.85,
+          "browY": -3,
+          "rot": -6,
+          "sx": 1.08,
+          "sy": 1.08,
+          "armL": 40,
+          "armR": 40,
+          "blush": 0.4
+        },
+        "tint": null,
+        "motion": [
+          "breathe"
+        ],
+        "fx": [
+          "sparkles"
+        ],
+        "bubble": "phone-ok"
+      },
+      "notes": "Shortened from the Ep.4 web version (87 chars, dropped 'telefonisch') to fit the 85-char back budget."
+    },
+    {
+      "id": "genervt",
+      "pos": "adjective",
+      "headword": "genervt",
+      "gloss": {
+        "zh-Hans": "烦、不耐烦",
+        "en": "annoyed"
+      },
+      "pattern": {
+        "text": "genervt von",
+        "case": "Dat"
+      },
+      "example": {
+        "de": "Ich bin total {{genervt von}} dem Baulärm vor meinem Fenster.",
+        "translations": {
+          "zh-Hans": "窗外的施工噪音让我烦死了。",
+          "en": "I'm so annoyed by the building noise outside my window."
+        }
+      },
+      "tip": {
+        "zh-Hans": "比 sauer 轻：是“烦”，不是“气”",
+        "en": "Milder than sauer: annoyed, not angry"
+      },
+      "style": {
+        "color": "#7A7A2A",
+        "background": "#ECEED6"
+      },
+      "anim": {
+        "pose": {
+          "open": 0.9,
+          "lid": 0.5,
+          "lookY": -2.4,
+          "browT": -0.4,
+          "smile": -0.45,
+          "mw": 0.85,
+          "tint": 0.35,
+          "armL": 8,
+          "armR": 8
+        },
+        "tint": "#C8C9A0",
+        "motion": [
+          "twitch"
+        ],
+        "fx": [
+          "noise-waves"
+        ],
+        "bubble": "noise"
+      }
+    }
+  ]
+}

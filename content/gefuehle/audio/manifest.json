@@ -1,0 +1,271 @@
+{
+  "format": 1,
+  "files": {
+    "gluecklich_0.mp3": {
+      "text": "glücklich.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "gluecklich_1.mp3": {
+      "text": "glücklich über.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "gluecklich_2.mp3": {
+      "text": "Wir sind so glücklich über unsere neue Wohnung, weil wir endlich einen Balkon haben.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "traurig_0.mp3": {
+      "text": "traurig.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "traurig_1.mp3": {
+      "text": "traurig über.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "traurig_2.mp3": {
+      "text": "Sie ist traurig darüber, dass ihre beste Freundin nach Berlin zieht.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "nervoes_0.mp3": {
+      "text": "nervös.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "nervoes_1.mp3": {
+      "text": "nervös vor.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "nervoes_2.mp3": {
+      "text": "Vor der Prüfung war ich so nervös, dass ich die ganze Nacht nicht schlafen konnte.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "aufgeregt_0.mp3": {
+      "text": "aufgeregt.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "aufgeregt_2.mp3": {
+      "text": "Die Kinder sind ganz aufgeregt, weil morgen endlich die Sommerferien beginnen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "gestresst_0.mp3": {
+      "text": "gestresst.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "gestresst_1.mp3": {
+      "text": "gestresst von.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "gestresst_2.mp3": {
+      "text": "Seit ich den neuen Job habe, bin ich ständig gestresst von den vielen Meetings.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "enttaeuscht_0.mp3": {
+      "text": "enttäuscht.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "enttaeuscht_1.mp3": {
+      "text": "enttäuscht von.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "enttaeuscht_2.mp3": {
+      "text": "Ich bin enttäuscht von ihm, weil er sein Versprechen nicht gehalten hat.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "entspannt_0.mp3": {
+      "text": "entspannt.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "entspannt_2.mp3": {
+      "text": "Im Urlaub bin ich viel entspannter, weil ich keine E-Mails lesen muss.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sauer_0.mp3": {
+      "text": "sauer.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sauer_1.mp3": {
+      "text": "sauer auf.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sauer_2.mp3": {
+      "text": "Mein Chef ist sauer auf mich, weil ich schon wieder zu spät gekommen bin.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "erleichtert_0.mp3": {
+      "text": "erleichtert.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "erleichtert_2.mp3": {
+      "text": "Als ich hörte, dass ich die Prüfung bestanden hatte, war ich total erleichtert.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ueberrascht_0.mp3": {
+      "text": "überrascht.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ueberrascht_1.mp3": {
+      "text": "überrascht über.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ueberrascht_2.mp3": {
+      "text": "Wir waren überrascht über ihr gutes Deutsch.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "stolz_0.mp3": {
+      "text": "stolz.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "stolz_1.mp3": {
+      "text": "stolz auf.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "stolz_2.mp3": {
+      "text": "Ich bin stolz darauf, dass ich Termine jetzt auf Deutsch vereinbaren kann.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "genervt_0.mp3": {
+      "text": "genervt.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "genervt_1.mp3": {
+      "text": "genervt von.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "genervt_2.mp3": {
+      "text": "Ich bin total genervt von dem Baulärm vor meinem Fenster.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    }
+  },
+  "deck": "gefuehle",
+  "deck_version": "1.3.2"
+}

@@ -1,0 +1,303 @@
+{
+  "format": 1,
+  "files": {
+    "anrufen_0.mp3": {
+      "text": "anrufen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "anrufen_1.mp3": {
+      "text": "rief an. hat angerufen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "anrufen_2.mp3": {
+      "text": "Ich rufe dich heute Abend an, okay?",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "zurueckrufen_0.mp3": {
+      "text": "zurückrufen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "zurueckrufen_1.mp3": {
+      "text": "rief zurück. hat zurückgerufen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "zurueckrufen_2.mp3": {
+      "text": "Frau Weber ist gerade nicht da. Kann sie Sie zurückrufen?",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "termin-vereinbaren_0.mp3": {
+      "text": "einen Termin vereinbaren.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "termin-vereinbaren_1.mp3": {
+      "text": "vereinbarte. hat vereinbart.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "termin-vereinbaren_2.mp3": {
+      "text": "Ich möchte gern einen Termin beim Zahnarzt vereinbaren.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "bestaetigen_0.mp3": {
+      "text": "bestätigen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "bestaetigen_1.mp3": {
+      "text": "bestätigte. hat bestätigt.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "bestaetigen_2.mp3": {
+      "text": "Wir bestätigen Ihren Termin per E-Mail.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "verschieben_0.mp3": {
+      "text": "verschieben.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "verschieben_1.mp3": {
+      "text": "verschob. hat verschoben.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "verschieben_2.mp3": {
+      "text": "Können wir das Meeting auf nächsten Montag verschieben?",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "verschieben_3.mp3": {
+      "text": "verschieben auf.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "absagen_0.mp3": {
+      "text": "absagen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "absagen_1.mp3": {
+      "text": "sagte ab. hat abgesagt.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "absagen_2.mp3": {
+      "text": "Ich bin krank und muss den Termin leider absagen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sich-verspaeten_0.mp3": {
+      "text": "sich verspäten.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sich-verspaeten_1.mp3": {
+      "text": "verspätete sich. hat sich verspätet.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sich-verspaeten_2.mp3": {
+      "text": "Entschuldigung, ich habe mich verspätet – der Bus ist nicht gekommen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "vorbeikommen_0.mp3": {
+      "text": "vorbeikommen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "vorbeikommen_1.mp3": {
+      "text": "kam vorbei. ist vorbeigekommen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "vorbeikommen_2.mp3": {
+      "text": "Sie können morgen um zehn Uhr in der Praxis vorbeikommen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sich-anmelden_0.mp3": {
+      "text": "sich anmelden.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sich-anmelden_1.mp3": {
+      "text": "meldete sich an. hat sich angemeldet.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sich-anmelden_2.mp3": {
+      "text": "Nach dem Umzug muss man sich beim Bürgeramt anmelden.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ausfuellen_0.mp3": {
+      "text": "ausfüllen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ausfuellen_1.mp3": {
+      "text": "füllte aus. hat ausgefüllt.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ausfuellen_2.mp3": {
+      "text": "Bitte füllen Sie zuerst dieses Formular aus.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "unterschreiben_0.mp3": {
+      "text": "unterschreiben.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "unterschreiben_1.mp3": {
+      "text": "unterschrieb. hat unterschrieben.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "unterschreiben_2.mp3": {
+      "text": "Unterschreiben Sie bitte hier unten.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "abgeben_0.mp3": {
+      "text": "abgeben.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "abgeben_1.mp3": {
+      "text": "gab ab. hat abgegeben.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "abgeben_2.mp3": {
+      "text": "Ihre Unterlagen können Sie am Schalter 3 abgeben.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    }
+  },
+  "deck": "a2-termine-verben",
+  "deck_version": "0.1.0"
+}

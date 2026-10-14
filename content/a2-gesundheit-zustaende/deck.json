@@ -1,0 +1,579 @@
+{
+  "format": 1,
+  "id": "a2-gesundheit-zustaende",
+  "version": "0.2.1",
+  "episode": 6,
+  "title": {
+    "de": "Wie geht's dir?",
+    "zh-Hans": "身体状态",
+    "en": "Body & health"
+  },
+  "level": "A2",
+  "character": "knoedel",
+  "locales": [
+    "zh-Hans",
+    "en"
+  ],
+  "license": "CC-BY-NC-SA-4.0",
+  "review": {
+    "status": "draft",
+    "notes": "Season 1 (A2), deck 1. Please check every 'notes' entry, especially the connotations claimed in the tips (Ich bin voll / kalt / heiß)."
+  },
+  "cards": [
+    {
+      "id": "muede",
+      "pos": "adjective",
+      "headword": "müde",
+      "gloss": {
+        "zh-Hans": "困、累",
+        "en": "tired"
+      },
+      "example": {
+        "de": "Ich habe nur fünf Stunden geschlafen, deshalb bin ich heute so {{müde}}.",
+        "translations": {
+          "zh-Hans": "我只睡了五个小时，所以今天特别困。",
+          "en": "I only slept five hours, so I'm really tired today."
+        }
+      },
+      "tip": {
+        "zh-Hans": "困得要命：{{todmüde}}",
+        "en": "Really tired? {{todmüde}} – 'dead tired'"
+      },
+      "style": {
+        "color": "#6B5FA8",
+        "background": "#E6E2F3"
+      },
+      "anim": {
+        "pose": {
+          "lid": 0.6,
+          "lookY": 1.5,
+          "browT": 0.3,
+          "smile": -0.2,
+          "mw": 0.8,
+          "sy": 0.95,
+          "sx": 1.03,
+          "armL": 6,
+          "armR": 6
+        },
+        "tint": null,
+        "motion": [
+          "sway-slow",
+          "yawn"
+        ],
+        "fx": [
+          "zzz"
+        ],
+        "bubble": "bed"
+      },
+      "notes": "deshalb + inversion is A2."
+    },
+    {
+      "id": "wach",
+      "pos": "adjective",
+      "headword": "wach",
+      "gloss": {
+        "zh-Hans": "清醒的",
+        "en": "awake"
+      },
+      "example": {
+        "de": "Nach zwei Tassen Kaffee bin ich endlich {{wach}}.",
+        "translations": {
+          "zh-Hans": "喝了两杯咖啡，我终于清醒了。",
+          "en": "After two cups of coffee, I'm finally awake."
+        }
+      },
+      "tip": {
+        "zh-Hans": "{{aufwachen}} 是醒来的动作，wach 是醒着的状态",
+        "en": "{{aufwachen}} = to wake up, wach = awake"
+      },
+      "style": {
+        "color": "#C9730C",
+        "background": "#FFEBCB"
+      },
+      "anim": {
+        "pose": {
+          "open": 1.45,
+          "browY": -3,
+          "smile": 0.6,
+          "mopen": 0.2,
+          "blush": 0.3,
+          "armL": 40,
+          "armR": 40
+        },
+        "tint": null,
+        "motion": [
+          "bounce"
+        ],
+        "fx": [
+          "sparkles"
+        ],
+        "bubble": "coffee-cups"
+      }
+    },
+    {
+      "id": "hungrig",
+      "pos": "adjective",
+      "headword": "hungrig",
+      "gloss": {
+        "zh-Hans": "饿的",
+        "en": "hungry"
+      },
+      "example": {
+        "de": "Wann gibt es endlich Essen? Ich bin so {{hungrig}}!",
+        "translations": {
+          "zh-Hans": "什么时候开饭啊？我饿死了！",
+          "en": "When's dinner? I'm so hungry!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "日常更常说：Ich habe {{Hunger}}.",
+        "en": "In everyday speech: Ich habe {{Hunger}}."
+      },
+      "style": {
+        "color": "#C8622A",
+        "background": "#FCE2D2"
+      },
+      "anim": {
+        "pose": {
+          "open": 1.1,
+          "browT": 0.5,
+          "smile": -0.15,
+          "mopen": 0.3,
+          "mw": 0.8,
+          "armL": -35,
+          "armR": -35
+        },
+        "tint": null,
+        "motion": [
+          "shiver"
+        ],
+        "fx": [
+          "noise-waves"
+        ],
+        "bubble": "brezel"
+      },
+      "notes": "noise-waves reused as stomach rumble, drawn next to the belly. Pattern removed: Hunger/Durst haben is taught in the tip, since the example uses the adjective."
+    },
+    {
+      "id": "durstig",
+      "pos": "adjective",
+      "headword": "durstig",
+      "gloss": {
+        "zh-Hans": "渴的",
+        "en": "thirsty"
+      },
+      "example": {
+        "de": "Nach dem Joggen bin ich immer total {{durstig}}.",
+        "translations": {
+          "zh-Hans": "跑完步我总是渴得要命。",
+          "en": "After jogging I'm always really thirsty."
+        }
+      },
+      "tip": {
+        "zh-Hans": "常说 Ich habe {{Durst}}，夸张说 Ich verdurste!",
+        "en": "Dying of thirst? Ich verdurste!"
+      },
+      "style": {
+        "color": "#2E8FC7",
+        "background": "#D9EEF9"
+      },
+      "anim": {
+        "pose": {
+          "open": 0.95,
+          "lid": 0.2,
+          "browT": 0.5,
+          "smile": -0.3,
+          "mopen": 0.55,
+          "mw": 0.75,
+          "armL": 10,
+          "armR": 10
+        },
+        "tint": null,
+        "motion": [
+          "breathe"
+        ],
+        "fx": [
+          "sweat"
+        ],
+        "bubble": "water-glass"
+      },
+      "notes": "'Ich verdurste!' is colloquial exaggeration, check it is fine for A2 learners. Pattern removed: Hunger/Durst haben is taught in the tip, since the example uses the adjective."
+    },
+    {
+      "id": "satt",
+      "pos": "adjective",
+      "headword": "satt",
+      "gloss": {
+        "zh-Hans": "吃饱了",
+        "en": "full (after eating)"
+      },
+      "example": {
+        "de": "Danke, das war sehr lecker, aber ich bin wirklich {{satt}}.",
+        "translations": {
+          "zh-Hans": "谢谢，很好吃，不过我真的吃饱了。",
+          "en": "Thanks, that was delicious, but I'm really full."
+        }
+      },
+      "tip": {
+        "zh-Hans": "别说 Ich bin voll，那是“喝醉了”",
+        "en": "Don't say Ich bin voll – it means 'drunk'."
+      },
+      "style": {
+        "color": "#8A6D1F",
+        "background": "#F7EDCC"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 0.7,
+          "blush": 0.35,
+          "sx": 1.12,
+          "sy": 0.93,
+          "armL": -35,
+          "armR": -35
+        },
+        "tint": null,
+        "motion": [
+          "breathe"
+        ],
+        "fx": [
+          "sigh-puffs"
+        ],
+        "bubble": "plate-empty"
+      },
+      "notes": "Ich bin voll = drunk is colloquial; widely taught as a pitfall."
+    },
+    {
+      "id": "krank",
+      "pos": "adjective",
+      "headword": "krank",
+      "gloss": {
+        "zh-Hans": "生病的",
+        "en": "sick, ill"
+      },
+      "example": {
+        "de": "Ich bin seit Montag {{krank}} und kann leider nicht arbeiten.",
+        "translations": {
+          "zh-Hans": "我从周一开始生病，没法去上班。",
+          "en": "I've been sick since Monday and can't work, sadly."
+        }
+      },
+      "tip": {
+        "zh-Hans": "名词“疾病”：die {{Krankheit}}",
+        "en": "The noun: die {{Krankheit}} (illness)"
+      },
+      "style": {
+        "color": "#76893A",
+        "background": "#E6EDD6"
+      },
+      "anim": {
+        "pose": {
+          "open": 0.8,
+          "lid": 0.4,
+          "browT": 0.9,
+          "smile": -0.55,
+          "wob": 0.3,
+          "tint": 1,
+          "sy": 0.96,
+          "armL": 4,
+          "armR": 4
+        },
+        "tint": "#CBD8A8",
+        "motion": [
+          "shiver"
+        ],
+        "fx": [
+          "thermometer"
+        ],
+        "bubble": "pills"
+      },
+      "notes": "seit + Präsens for an ongoing state."
+    },
+    {
+      "id": "gesund",
+      "pos": "adjective",
+      "headword": "gesund",
+      "gloss": {
+        "zh-Hans": "健康的",
+        "en": "healthy"
+      },
+      "pattern": {
+        "text": "gesund bleiben",
+        "case": null
+      },
+      "example": {
+        "de": "Ich esse viel Obst und Gemüse, weil ich {{gesund}} bleiben will.",
+        "translations": {
+          "zh-Hans": "我吃很多水果蔬菜，因为我想保持健康。",
+          "en": "I eat lots of fruit and veg because I want to stay healthy."
+        }
+      },
+      "tip": {
+        "zh-Hans": "也能说食物：Gemüse ist {{gesund}}.",
+        "en": "Food can be gesund too: Gemüse ist {{gesund}}."
+      },
+      "style": {
+        "color": "#2E9A5A",
+        "background": "#DDF2E3"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 0.85,
+          "blush": 0.4,
+          "browY": -2,
+          "sy": 1.02,
+          "armL": 150,
+          "armR": 150
+        },
+        "tint": null,
+        "motion": [
+          "bounce"
+        ],
+        "fx": [
+          "sparkles"
+        ],
+        "bubble": "apple"
+      },
+      "notes": "weil + modal at the end: weil ich gesund bleiben will."
+    },
+    {
+      "id": "erkaeltet",
+      "pos": "adjective",
+      "headword": "erkältet",
+      "gloss": {
+        "zh-Hans": "感冒了",
+        "en": "having a cold"
+      },
+      "example": {
+        "de": "Ich bin {{erkältet}} und habe Schnupfen und Husten.",
+        "translations": {
+          "zh-Hans": "我感冒了，又流鼻涕又咳嗽。",
+          "en": "I have a cold, with a runny nose and a cough."
+        }
+      },
+      "tip": {
+        "zh-Hans": "也常说 Ich habe {{mich erkältet}}（着凉了）",
+        "en": "Also common: Ich habe {{mich erkältet}} (I caught a cold)."
+      },
+      "style": {
+        "color": "#C2415A",
+        "background": "#F9DDE2"
+      },
+      "anim": {
+        "pose": {
+          "open": 0.85,
+          "lid": 0.35,
+          "browT": 0.6,
+          "smile": -0.3,
+          "blush": 0.9,
+          "armL": 8,
+          "armR": 8
+        },
+        "tint": null,
+        "motion": [
+          "sneeze"
+        ],
+        "fx": [
+          "sneeze"
+        ],
+        "bubble": "tissues"
+      },
+      "notes": "Ich bin erkältet = state (adjective with sein). Ich habe mich erkältet = the event (reflexive verb sich erkälten, Perfekt with haben). Schnupfen and Husten are planned as cards in a2-gesundheit-nomen."
+    },
+    {
+      "id": "fit",
+      "pos": "adjective",
+      "headword": "fit",
+      "gloss": {
+        "zh-Hans": "身体好、有活力",
+        "en": "fit"
+      },
+      "example": {
+        "de": "Seit ich jeden Tag Rad fahre, fühle ich mich viel {{fitter}}.",
+        "translations": {
+          "zh-Hans": "自从每天骑自行车，我觉得身体好多了。",
+          "en": "Since I started cycling every day, I feel much fitter."
+        }
+      },
+      "tip": {
+        "zh-Hans": "来自英语，比较级是 {{fitter}}",
+        "en": "From English; comparative: {{fitter}}"
+      },
+      "style": {
+        "color": "#D9532F",
+        "background": "#FFE1D6"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 0.9,
+          "browY": -3,
+          "blush": 0.3,
+          "armL": 160,
+          "armR": 20
+        },
+        "tint": null,
+        "motion": [
+          "hop"
+        ],
+        "fx": [
+          "sparkles"
+        ],
+        "bubble": "bike"
+      },
+      "notes": "seit + Präsens: still cycling. Rad fahren is A2."
+    },
+    {
+      "id": "mir-ist-kalt",
+      "pos": "phrase",
+      "lead": "Mir ist",
+      "headword": "kalt",
+      "gloss": {
+        "zh-Hans": "我觉得冷",
+        "en": "I'm cold"
+      },
+      "pattern": {
+        "text": "mir ist kalt",
+        "case": "Dat"
+      },
+      "example": {
+        "de": "Kannst du bitte das Fenster zumachen? {{Mir ist kalt}}.",
+        "translations": {
+          "zh-Hans": "你能把窗户关上吗？我好冷。",
+          "en": "Can you close the window, please? I'm cold."
+        }
+      },
+      "tip": {
+        "zh-Hans": "Ich bin kalt＝我很冷漠！要说 {{Mir ist kalt}}",
+        "en": "Ich bin kalt = I'm cold-hearted! Say {{Mir ist kalt}}."
+      },
+      "style": {
+        "color": "#3576C4",
+        "background": "#DCEAF8"
+      },
+      "anim": {
+        "pose": {
+          "open": 1,
+          "browT": 0.7,
+          "smile": -0.4,
+          "wob": 0.8,
+          "tint": 1,
+          "sx": 0.96,
+          "armL": -55,
+          "armR": -55
+        },
+        "tint": "#BFD7F0",
+        "motion": [
+          "shiver"
+        ],
+        "fx": [
+          "snowflakes"
+        ],
+        "bubble": "window-open"
+      },
+      "notes": "Check the tip: 'Ich bin kalt' read as describing a cold personality (or body temperature)."
+    },
+    {
+      "id": "mir-ist-warm",
+      "pos": "phrase",
+      "lead": "Mir ist",
+      "headword": "warm",
+      "gloss": {
+        "zh-Hans": "我觉得热",
+        "en": "I'm warm"
+      },
+      "pattern": {
+        "text": "mir ist warm",
+        "case": "Dat"
+      },
+      "example": {
+        "de": "{{Mir ist}} so {{warm}} – ich ziehe meine Jacke aus.",
+        "translations": {
+          "zh-Hans": "我好热，把外套脱了吧。",
+          "en": "I'm so warm – I'm taking my jacket off."
+        }
+      },
+      "tip": {
+        "zh-Hans": "Ich bin heiß 有歧义，要说 {{Mir ist heiß}}",
+        "en": "Careful: Ich bin heiß sounds flirty. Say {{Mir ist heiß}}."
+      },
+      "style": {
+        "color": "#D9711C",
+        "background": "#FFE6CC"
+      },
+      "anim": {
+        "pose": {
+          "open": 0.9,
+          "lid": 0.3,
+          "smile": -0.2,
+          "mopen": 0.2,
+          "tint": 1,
+          "armL": 10,
+          "armR": 120
+        },
+        "tint": "#F7B985",
+        "motion": [
+          "fan"
+        ],
+        "fx": [
+          "sweat"
+        ],
+        "bubble": "heater"
+      },
+      "notes": "Check the tip wording: 'Ich bin heiß' as flirty/aroused is a common pitfall; keep it tasteful."
+    },
+    {
+      "id": "mir-ist-schlecht",
+      "pos": "phrase",
+      "lead": "Mir ist",
+      "headword": "schlecht",
+      "gloss": {
+        "zh-Hans": "我想吐",
+        "en": "I feel sick"
+      },
+      "pattern": {
+        "text": "mir ist schlecht",
+        "case": "Dat"
+      },
+      "example": {
+        "de": "Ich habe zu viel Kuchen gegessen, jetzt {{ist mir schlecht}}.",
+        "translations": {
+          "zh-Hans": "我蛋糕吃多了，现在想吐。",
+          "en": "I ate too much cake – now I feel sick."
+        }
+      },
+      "tip": {
+        "zh-Hans": "Mir ist schlecht＝想吐，不是“我很差”",
+        "en": "Mir ist schlecht = I feel sick, not 'I'm bad'."
+      },
+      "style": {
+        "color": "#4C8A6E",
+        "background": "#DCEFE6"
+      },
+      "anim": {
+        "pose": {
+          "open": 0.85,
+          "lid": 0.3,
+          "browT": 0.8,
+          "smile": -0.5,
+          "wob": 0.6,
+          "mw": 0.7,
+          "tint": 1,
+          "sx": 1.02,
+          "armL": -35,
+          "armR": -35
+        },
+        "tint": "#B5D39C",
+        "motion": [
+          "sway-slow"
+        ],
+        "fx": [
+          "swirl"
+        ],
+        "bubble": "cake"
+      },
+      "notes": "Word order after jetzt: jetzt ist mir schlecht (verb second)."
+    }
+  ]
+}

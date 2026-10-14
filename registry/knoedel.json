@@ -1,0 +1,32 @@
+{
+  "character": "knoedel",
+  "maintained_by": "firmware: list only what is implemented on the device",
+  "pose": {
+    "jump": 0, "rot": 0, "sx": 1, "sy": 1, "open": 1,
+    "lid": 0, "happy": 0, "shut": 0, "lookX": 0, "lookY": 0,
+    "browY": 0, "browT": 0, "smile": 0.25, "mopen": 0, "mw": 1,
+    "wob": 0, "blush": 0, "tint": 0, "armL": 14, "armR": 14
+  },
+  "motion": [
+    "bounce", "sway-slow", "shiver", "eye-dart", "jump-wave", "tremble",
+    "sway", "breathe", "shake", "exhale", "hop", "twitch",
+    "yawn", "sneeze", "fan", "type", "nod", "shrug",
+    "wave", "spin"
+  ],
+  "fx": [
+    "confetti", "rain-cloud", "tear", "sweat", "star-orbit", "scribble",
+    "paper-orbit", "sigh-puffs", "music-notes", "steam", "anger-vein", "puh-cloud",
+    "sweat-fly", "exclamation", "sparkles", "noise-waves", "zzz", "thermometer",
+    "sneeze", "snowflakes", "swirl", "haha", "question"
+  ],
+  "prop": [],
+  "bubble": [
+    "house", "sign-berlin", "exam", "beach", "calendar", "heart-broken",
+    "no-mail", "clock-late", "exam-passed", "greeting", "phone-ok", "noise",
+    "bed", "coffee-cups", "brezel", "water-glass", "plate-empty", "pills",
+    "apple", "tissues", "bike", "window-open", "heater", "cake",
+    "clock-ok", "books", "sofa", "shelf", "keys", "joke",
+    "tie", "book", "speaker", "handshake", "friends", "lightbulb",
+    "soup", "flowers", "clover"
+  ]
+}

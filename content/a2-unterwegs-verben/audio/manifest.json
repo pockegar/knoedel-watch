@@ -1,0 +1,311 @@
+{
+  "format": 1,
+  "files": {
+    "fahrrad-fahren_0.mp3": {
+      "text": "Fahrrad fahren.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "fahrrad-fahren_1.mp3": {
+      "text": "fuhr. ist gefahren.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "fahrrad-fahren_2.mp3": {
+      "text": "Meine Oma ist 80 und fährt immer noch jeden Tag Fahrrad.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sich-beeilen_0.mp3": {
+      "text": "sich beeilen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sich-beeilen_1.mp3": {
+      "text": "beeilte sich. hat sich beeilt.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sich-beeilen_2.mp3": {
+      "text": "Beeil dich, der Bus kommt in zwei Minuten!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "verpassen_0.mp3": {
+      "text": "verpassen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "verpassen_1.mp3": {
+      "text": "verpasste. hat verpasst.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "verpassen_2.mp3": {
+      "text": "Mist, ich habe den letzten Bus verpasst!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "warten_0.mp3": {
+      "text": "warten.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "warten_1.mp3": {
+      "text": "wartete. hat gewartet.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "warten_2.mp3": {
+      "text": "Wie lange müssen wir noch auf den Bus warten?",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "warten_3.mp3": {
+      "text": "warten auf.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "einsteigen_0.mp3": {
+      "text": "einsteigen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "einsteigen_1.mp3": {
+      "text": "stieg ein. ist eingestiegen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "einsteigen_2.mp3": {
+      "text": "Schnell, wir müssen jetzt in den Zug einsteigen!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "einsteigen_3.mp3": {
+      "text": "einsteigen in.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "abfahren_0.mp3": {
+      "text": "abfahren.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "abfahren_1.mp3": {
+      "text": "fuhr ab. ist abgefahren.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "abfahren_2.mp3": {
+      "text": "Der Zug fährt um 8:15 Uhr von Gleis 3 ab.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "umsteigen_0.mp3": {
+      "text": "umsteigen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "umsteigen_1.mp3": {
+      "text": "stieg um. ist umgestiegen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "umsteigen_2.mp3": {
+      "text": "In Nürnberg müssen wir in den ICE nach Berlin umsteigen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "aussteigen_0.mp3": {
+      "text": "aussteigen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "aussteigen_1.mp3": {
+      "text": "stieg aus. ist ausgestiegen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "aussteigen_2.mp3": {
+      "text": "Wir steigen an der nächsten Haltestelle aus.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sich-verlaufen_0.mp3": {
+      "text": "sich verlaufen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sich-verlaufen_1.mp3": {
+      "text": "verlief sich. hat sich verlaufen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sich-verlaufen_2.mp3": {
+      "text": "In der Altstadt habe ich mich total verlaufen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ankommen_0.mp3": {
+      "text": "ankommen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ankommen_1.mp3": {
+      "text": "kam an. ist angekommen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ankommen_2.mp3": {
+      "text": "Der Zug hatte Verspätung, deshalb sind wir erst um Mitternacht angekommen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "abholen_0.mp3": {
+      "text": "abholen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "abholen_1.mp3": {
+      "text": "holte ab. hat abgeholt.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "abholen_2.mp3": {
+      "text": "Kannst du mich um sechs vom Bahnhof abholen?",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "mitnehmen_0.mp3": {
+      "text": "mitnehmen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "mitnehmen_1.mp3": {
+      "text": "nahm mit. hat mitgenommen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "mitnehmen_2.mp3": {
+      "text": "Es regnet – nimm lieber einen Schirm mit!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    }
+  },
+  "deck": "a2-unterwegs-verben",
+  "deck_version": "0.1.0"
+}

@@ -1,0 +1,512 @@
+{
+  "format": 1,
+  "id": "a2-reaktionen",
+  "version": "0.1.0",
+  "episode": 10,
+  "title": {
+    "de": "Reaktionen",
+    "zh-Hans": "日常反应",
+    "en": "Quick reactions"
+  },
+  "level": "A2",
+  "character": "knoedel",
+  "locales": [
+    "zh-Hans",
+    "en"
+  ],
+  "license": "CC-BY-NC-SA-4.0",
+  "review": {
+    "status": "draft",
+    "notes": "Season 1 (A2), deck 3: short reactions as mini dialogues. Each tip gives register or a common mix-up. Please check every notes entry."
+  },
+  "cards": [
+    {
+      "id": "wie-bitte",
+      "pos": "phrase",
+      "headword": "Wie bitte?",
+      "gloss": {
+        "zh-Hans": "您说什么？",
+        "en": "Sorry? / Pardon?"
+      },
+      "example": {
+        "de": "– Wir treffen uns um halb acht.\n– {{Wie bitte?}} Um wie viel Uhr?",
+        "translations": {
+          "zh-Hans": "—我们七点半见。\n—什么？几点？",
+          "en": "– Let's meet at half past seven.\n– Sorry? What time?"
+        }
+      },
+      "tip": {
+        "zh-Hans": "只说 Was? 听起来很冲，{{Wie bitte?}} 才礼貌",
+        "en": "A bare Was? sounds rude – {{Wie bitte?}} is polite"
+      },
+      "style": {
+        "color": "#3B6BB0",
+        "background": "#DCE6F3"
+      },
+      "anim": {
+        "pose": {
+          "rot": 8,
+          "browY": -3,
+          "open": 1.1,
+          "lookX": 1.5,
+          "smile": 0,
+          "mw": 0.7,
+          "armR": 125
+        },
+        "tint": null,
+        "motion": [
+          "sway-slow"
+        ],
+        "fx": [
+          "question"
+        ],
+        "bubble": null
+      },
+      "notes": "halb acht = 7:30."
+    },
+    {
+      "id": "ach-so",
+      "pos": "phrase",
+      "headword": "Ach so!",
+      "gloss": {
+        "zh-Hans": "原来如此",
+        "en": "Oh, I see!"
+      },
+      "example": {
+        "de": "– Heute ist Feiertag, die Läden sind zu.\n– {{Ach so!}} Das habe ich nicht gewusst.",
+        "translations": {
+          "zh-Hans": "—今天过节，商店都关了。\n—原来如此！我不知道。",
+          "en": "– Holiday today, shops are shut.\n– Oh, I see! I didn't know."
+        }
+      },
+      "tip": {
+        "zh-Hans": "语调上扬的 {{Ach so?}} 是“是吗？”，带点怀疑",
+        "en": "With a rising tone, {{Ach so?}} means 'Is that so?' – a bit doubtful"
+      },
+      "style": {
+        "color": "#B7791F",
+        "background": "#FFF1C4"
+      },
+      "anim": {
+        "pose": {
+          "open": 1.2,
+          "browY": -3,
+          "smile": 0.6,
+          "mopen": 0.35,
+          "mw": 0.8,
+          "armR": 150
+        },
+        "tint": null,
+        "motion": [
+          "hop"
+        ],
+        "fx": [],
+        "bubble": "lightbulb"
+      }
+    },
+    {
+      "id": "genau",
+      "pos": "phrase",
+      "headword": "Genau!",
+      "gloss": {
+        "zh-Hans": "对！没错！",
+        "en": "Exactly!"
+      },
+      "example": {
+        "de": "– Wir brauchen also Milch, Eier und Butter?\n– {{Genau!}}",
+        "translations": {
+          "zh-Hans": "—所以要买牛奶、鸡蛋和黄油？\n—对！",
+          "en": "– So we need milk, eggs and butter?\n– Exactly!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "德国人聊天常说 genau，表示“我在听”",
+        "en": "Germans say genau all the time, just to show they're listening"
+      },
+      "style": {
+        "color": "#2E9A7A",
+        "background": "#DAF1E9"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 1,
+          "armR": 130
+        },
+        "tint": null,
+        "motion": [
+          "nod"
+        ],
+        "fx": [],
+        "bubble": null
+      }
+    },
+    {
+      "id": "echt",
+      "pos": "phrase",
+      "headword": "Echt?",
+      "gloss": {
+        "zh-Hans": "真的吗？",
+        "en": "Really?"
+      },
+      "example": {
+        "de": "– Ich habe im Lotto gewonnen!\n– {{Echt?}} Das glaube ich nicht!",
+        "translations": {
+          "zh-Hans": "—我中彩票了！\n—真的？我不信！",
+          "en": "– I won the lottery!\n– Really? I don't believe it!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "正式一点：Wirklich? 特别惊讶：{{Echt jetzt?}}",
+        "en": "More formal: Wirklich? Very surprised: {{Echt jetzt?}}"
+      },
+      "style": {
+        "color": "#C2553A",
+        "background": "#F9E0D8"
+      },
+      "anim": {
+        "pose": {
+          "open": 1.35,
+          "browY": -4,
+          "mopen": 0.7,
+          "mw": 0.7,
+          "smile": 0.3,
+          "armL": 60,
+          "armR": 60
+        },
+        "tint": null,
+        "motion": [
+          "hop"
+        ],
+        "fx": [
+          "exclamation"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "keine-ahnung",
+      "pos": "phrase",
+      "headword": "Keine Ahnung",
+      "gloss": {
+        "zh-Hans": "不知道",
+        "en": "No idea."
+      },
+      "example": {
+        "de": "– Wo sind meine Schlüssel?\n– {{Keine Ahnung}}. Hast du schon in der Jacke nachgeschaut?",
+        "translations": {
+          "zh-Hans": "—我钥匙呢？\n—不知道。你看过外套里面了吗？",
+          "en": "– Where are my keys?\n– No idea. Did you check your jacket?"
+        }
+      },
+      "tip": {
+        "zh-Hans": "对陌生人更礼貌：Das {{weiß}} ich leider nicht.",
+        "en": "Politer with strangers: Das {{weiß}} ich leider nicht."
+      },
+      "style": {
+        "color": "#7A4FD6",
+        "background": "#ECE4F8"
+      },
+      "anim": {
+        "pose": {
+          "browY": -1.5,
+          "smile": -0.1,
+          "mw": 0.8,
+          "lookX": -1,
+          "armL": 70,
+          "armR": 70
+        },
+        "tint": null,
+        "motion": [
+          "shrug"
+        ],
+        "fx": [],
+        "bubble": "keys"
+      }
+    },
+    {
+      "id": "schade",
+      "pos": "phrase",
+      "headword": "Schade!",
+      "gloss": {
+        "zh-Hans": "真可惜！",
+        "en": "What a pity!"
+      },
+      "example": {
+        "de": "– Ich kann heute Abend leider nicht kommen.\n– {{Schade}}! Vielleicht nächstes Mal?",
+        "translations": {
+          "zh-Hans": "—我今晚去不了了。\n—好可惜！下次吧？",
+          "en": "– I can't come tonight, sorry.\n– Shame! Maybe next time?"
+        }
+      },
+      "tip": {
+        "zh-Hans": "说原因：{{Schade, dass}} du nicht kommst.",
+        "en": "With a reason: {{Schade, dass}} du nicht kommst."
+      },
+      "style": {
+        "color": "#6B5FA8",
+        "background": "#E6E2F3"
+      },
+      "anim": {
+        "pose": {
+          "smile": -0.6,
+          "browT": 0.7,
+          "lid": 0.3,
+          "lookY": 1.2,
+          "armL": 6,
+          "armR": 6,
+          "sy": 0.96,
+          "sx": 1.03
+        },
+        "tint": null,
+        "motion": [
+          "sway-slow"
+        ],
+        "fx": [
+          "sigh-puffs"
+        ],
+        "bubble": null
+      },
+      "notes": "dass-clause with the verb last (A2)."
+    },
+    {
+      "id": "macht-nichts",
+      "pos": "phrase",
+      "headword": "Macht nichts",
+      "gloss": {
+        "zh-Hans": "没关系",
+        "en": "Never mind."
+      },
+      "example": {
+        "de": "– Sorry, ich habe deinen Kuli verloren!\n– {{Macht nichts}}, ich habe noch einen.",
+        "translations": {
+          "zh-Hans": "—抱歉，你的笔被我弄丢了！\n—没事，我还有一支。",
+          "en": "– Sorry, I lost your pen!\n– Never mind, I've got another."
+        }
+      },
+      "tip": {
+        "zh-Hans": "回应道歉用它；回应感谢说 {{Gern geschehen}}",
+        "en": "It answers an apology; thanks get {{Gern geschehen}}"
+      },
+      "style": {
+        "color": "#1F8FA8",
+        "background": "#D8F0F5"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 0.6,
+          "armR": 100
+        },
+        "tint": null,
+        "motion": [
+          "wave"
+        ],
+        "fx": [],
+        "bubble": null
+      },
+      "notes": "Kuli = everyday word for Kugelschreiber. Sorry is common in spoken German."
+    },
+    {
+      "id": "gute-besserung",
+      "pos": "phrase",
+      "lead": "Gute",
+      "headword": "Besserung!",
+      "gloss": {
+        "zh-Hans": "早日康复",
+        "en": "Get well soon!"
+      },
+      "example": {
+        "de": "– Ich habe Fieber und bleibe heute im Bett.\n– Oh nein! {{Gute Besserung!}}",
+        "translations": {
+          "zh-Hans": "—我发烧了，今天在床上躺着。\n—哎呀！早日康复！",
+          "en": "– I have a fever, so I'm in bed.\n– Oh no! Get well soon!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "打喷嚏要说 {{Gesundheit!}}，不是 Gute Besserung",
+        "en": "After a sneeze: {{Gesundheit!}} – not Gute Besserung"
+      },
+      "style": {
+        "color": "#C0567A",
+        "background": "#FBE3EC"
+      },
+      "anim": {
+        "pose": {
+          "smile": 0.4,
+          "browT": 0.35,
+          "blush": 0.4,
+          "armL": 40,
+          "armR": 40
+        },
+        "tint": null,
+        "motion": [
+          "breathe"
+        ],
+        "fx": [],
+        "bubble": "soup"
+      }
+    },
+    {
+      "id": "kein-problem",
+      "pos": "phrase",
+      "headword": "Kein Problem",
+      "gloss": {
+        "zh-Hans": "没问题",
+        "en": "No problem."
+      },
+      "example": {
+        "de": "– Kannst du mir am Samstag beim Umzug helfen?\n– {{Kein Problem}}!",
+        "translations": {
+          "zh-Hans": "—周六你能帮我搬家吗？\n—没问题！",
+          "en": "– Can you help me move on Saturday?\n– No problem!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "helfen 接 Dativ：Kannst du {{mir}} helfen?",
+        "en": "helfen takes the dative: Kannst du {{mir}} helfen?"
+      },
+      "style": {
+        "color": "#5E8C31",
+        "background": "#E5F1D6"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 1,
+          "armR": 160
+        },
+        "tint": null,
+        "motion": [
+          "bounce"
+        ],
+        "fx": [
+          "sparkles"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "gern-geschehen",
+      "pos": "phrase",
+      "lead": "Gern",
+      "headword": "geschehen",
+      "gloss": {
+        "zh-Hans": "不客气",
+        "en": "You're welcome."
+      },
+      "example": {
+        "de": "– Danke für die Blumen!\n– {{Gern geschehen}}, die sind aus meinem Garten.",
+        "translations": {
+          "zh-Hans": "—谢谢你的花！\n—不客气，是我自家花园种的。",
+          "en": "– Thanks for the flowers!\n– My pleasure, they're homegrown."
+        }
+      },
+      "tip": {
+        "zh-Hans": "更短更口语：{{Gerne!}} 或 {{Bitte!}}",
+        "en": "Shorter and casual: {{Gerne!}} or {{Bitte!}}"
+      },
+      "style": {
+        "color": "#C9730C",
+        "background": "#FFEBCB"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 0.8,
+          "blush": 0.8,
+          "armL": 30,
+          "armR": 30
+        },
+        "tint": null,
+        "motion": [
+          "hop"
+        ],
+        "fx": [],
+        "bubble": "flowers"
+      },
+      "notes": "die sind aus meinem Garten: demonstrative die, everyday spoken German."
+    },
+    {
+      "id": "viel-glueck",
+      "pos": "phrase",
+      "headword": "Viel Glück!",
+      "gloss": {
+        "zh-Hans": "祝你好运！",
+        "en": "Good luck!"
+      },
+      "example": {
+        "de": "– Morgen habe ich meine Deutschprüfung.\n– {{Viel Glück!}} Du schaffst das!",
+        "translations": {
+          "zh-Hans": "—我明天考德语。\n—祝你好运！你一定行！",
+          "en": "– My German exam is tomorrow.\n– Good luck! You can do it!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "也常说：Ich drücke dir die {{Daumen}}!",
+        "en": "Germans also say: Ich drücke dir die {{Daumen}}! (fingers crossed)"
+      },
+      "style": {
+        "color": "#3E8E2F",
+        "background": "#E1F3DA"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 1,
+          "armL": 150,
+          "armR": 150
+        },
+        "tint": null,
+        "motion": [
+          "jump-wave"
+        ],
+        "fx": [],
+        "bubble": "clover"
+      }
+    },
+    {
+      "id": "herzlichen-glueckwunsch",
+      "pos": "phrase",
+      "lead": "Herzlichen",
+      "headword": "Glückwunsch!",
+      "gloss": {
+        "zh-Hans": "恭喜！",
+        "en": "Congratulations!"
+      },
+      "example": {
+        "de": "– Ich habe die Prüfung bestanden!\n– {{Herzlichen Glückwunsch!}} Das müssen wir feiern!",
+        "translations": {
+          "zh-Hans": "—我考试通过了！\n—恭喜恭喜！我们得庆祝一下！",
+          "en": "– I passed the exam!\n– Congratulations! Let's celebrate!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "生日：{{Alles Gute zum Geburtstag!}}，别提前说",
+        "en": "Birthdays: {{Alles Gute zum Geburtstag!}} – never before the day"
+      },
+      "style": {
+        "color": "#D9620F",
+        "background": "#FFE3CC"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 1,
+          "mopen": 0.5,
+          "armL": 150,
+          "armR": 150
+        },
+        "tint": null,
+        "motion": [
+          "bounce"
+        ],
+        "fx": [
+          "confetti"
+        ],
+        "bubble": "cake"
+      },
+      "notes": "In Germany, wishing a happy birthday before the day is widely considered bad luck."
+    }
+  ]
+}

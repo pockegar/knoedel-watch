@@ -1,0 +1,207 @@
+{
+  "format": 1,
+  "files": {
+    "fleissig_0.mp3": {
+      "text": "fleißig.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "fleissig_2.mp3": {
+      "text": "Meine Schwester ist sehr fleißig: Sie lernt jeden Abend zwei Stunden Deutsch.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "faul_0.mp3": {
+      "text": "faul.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "faul_2.mp3": {
+      "text": "Am Sonntag bin ich gern faul und bleibe den ganzen Tag auf dem Sofa.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ordentlich_0.mp3": {
+      "text": "ordentlich.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ordentlich_2.mp3": {
+      "text": "Mein Kollege ist sehr ordentlich: Sein Schreibtisch ist immer aufgeräumt.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "chaotisch_0.mp3": {
+      "text": "chaotisch.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "chaotisch_2.mp3": {
+      "text": "Ich bin ein bisschen chaotisch und suche jeden Morgen meinen Schlüssel.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "puenktlich_0.mp3": {
+      "text": "pünktlich.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "puenktlich_2.mp3": {
+      "text": "Sei bitte pünktlich, der Film fängt um acht an.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "unpuenktlich_0.mp3": {
+      "text": "unpünktlich.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "unpuenktlich_2.mp3": {
+      "text": "Mein Bruder ist oft unpünktlich, deshalb muss ich immer auf ihn warten.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "lustig_0.mp3": {
+      "text": "lustig.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "lustig_2.mp3": {
+      "text": "Mein Opa ist sehr lustig und erzählt immer Witze.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ernst_0.mp3": {
+      "text": "ernst.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ernst_2.mp3": {
+      "text": "Mein Chef sieht ernst aus, aber eigentlich ist er sehr nett.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ruhig_0.mp3": {
+      "text": "ruhig.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ruhig_2.mp3": {
+      "text": "Meine Nachbarin ist sehr ruhig – ich höre sie fast nie.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "laut_0.mp3": {
+      "text": "laut.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "laut_2.mp3": {
+      "text": "Die Kinder von nebenan sind abends oft sehr laut.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sympathisch_0.mp3": {
+      "text": "sympathisch.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sympathisch_1.mp3": {
+      "text": "mir sympathisch.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "sympathisch_2.mp3": {
+      "text": "Die neue Kollegin war mir sofort sympathisch.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "schuechtern_0.mp3": {
+      "text": "schüchtern.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "schuechtern_2.mp3": {
+      "text": "Am Anfang war mein Sohn schüchtern, aber jetzt hat er viele Freunde.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    }
+  },
+  "deck": "a2-charakter",
+  "deck_version": "0.1.0"
+}

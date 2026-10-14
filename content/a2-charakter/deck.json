@@ -1,0 +1,169 @@
+{
+  "format": 1,
+  "id": "a2-charakter",
+  "version": "0.1.0",
+  "episode": 7,
+  "title": { "de": "Wie bist du?", "zh-Hans": "性格", "en": "Personality" },
+  "level": "A2",
+  "character": "knoedel",
+  "locales": ["zh-Hans", "en"],
+  "license": "CC-BY-NC-SA-4.0",
+  "review": {
+    "status": "draft",
+    "notes": "Season 1 (A2), deck 2. Six pairs of opposites. Tips are written per locale (lustig: false friend only for English speakers). Please check every 'notes' entry."
+  },
+  "cards": [
+    {
+      "id": "fleissig", "pos": "adjective",
+      "headword": "fleißig",
+      "gloss": { "zh-Hans": "勤奋的", "en": "hard-working" },
+      "example": {
+        "de": "Meine Schwester ist sehr {{fleißig}}: Sie lernt jeden Abend zwei Stunden Deutsch.",
+        "translations": { "zh-Hans": "我姐姐很勤奋：她每天晚上学两小时德语。", "en": "My sister is so diligent: two hours of German every evening." }
+      },
+      "tip": { "zh-Hans": "反义词：{{faul}}（懒）", "en": "Opposite: {{faul}} (lazy)" },
+      "style": { "color": "#2F7DB8", "background": "#DCEBF7" },
+      "anim": { "pose": { "open": 1.1, "browY": -2, "browT": 0.2, "smile": 0.4, "armL": 60, "armR": 60 }, "tint": null, "motion": ["type"], "fx": ["sweat"], "bubble": "books" },
+      "notes": "Schwester can be older or younger; the Chinese translation picks 姐姐."
+    },
+    {
+      "id": "faul", "pos": "adjective",
+      "headword": "faul",
+      "gloss": { "zh-Hans": "懒的", "en": "lazy" },
+      "example": {
+        "de": "Am Sonntag bin ich gern {{faul}} und bleibe den ganzen Tag auf dem Sofa.",
+        "translations": { "zh-Hans": "星期天我喜欢偷懒，整天待在沙发上。", "en": "On Sundays I like being lazy and stay on the sofa all day." }
+      },
+      "tip": { "zh-Hans": "水果烂了也说 faul：Der Apfel ist {{faul}}.", "en": "Fruit can be faul too – rotten: Der Apfel ist {{faul}}." },
+      "style": { "color": "#8A7A5C", "background": "#EFE9DD" },
+      "anim": { "pose": { "lid": 0.65, "smile": 0.3, "sx": 1.12, "sy": 0.9, "armL": -10, "armR": -10 }, "tint": null, "motion": ["sway-slow"], "fx": ["zzz"], "bubble": "sofa" }
+    },
+    {
+      "id": "ordentlich", "pos": "adjective",
+      "headword": "ordentlich",
+      "gloss": { "zh-Hans": "有条理、整洁", "en": "tidy, orderly" },
+      "example": {
+        "de": "Mein Kollege ist sehr {{ordentlich}}: Sein Schreibtisch ist immer aufgeräumt.",
+        "translations": { "zh-Hans": "我同事很有条理：他的办公桌总是整整齐齐。", "en": "My colleague is very tidy: his desk is always neat." }
+      },
+      "tip": { "zh-Hans": "还表示“像样的”：ein {{ordentliches}} Frühstück", "en": "Also 'proper': ein {{ordentliches}} Frühstück" },
+      "style": { "color": "#2E9A7A", "background": "#DAF1E9" },
+      "anim": { "pose": { "happy": 1, "smile": 0.7, "browY": -2, "blush": 0.2, "armL": 20, "armR": 20 }, "tint": null, "motion": ["breathe"], "fx": ["sparkles"], "bubble": "shelf" }
+    },
+    {
+      "id": "chaotisch", "pos": "adjective",
+      "headword": "chaotisch",
+      "gloss": { "zh-Hans": "乱糟糟的", "en": "chaotic, messy" },
+      "example": {
+        "de": "Ich bin ein bisschen {{chaotisch}} und suche jeden Morgen meinen Schlüssel.",
+        "translations": { "zh-Hans": "我有点丢三落四，每天早上都在找钥匙。", "en": "I'm a bit chaotic – every morning I look for my keys." }
+      },
+      "tip": { "zh-Hans": "ch 在这里读 k：Chaos, {{chaotisch}}", "en": "Here ch sounds like k: Chaos, {{chaotisch}}" },
+      "style": { "color": "#C2553A", "background": "#F9E0D8" },
+      "anim": { "pose": { "open": 1.2, "browT": 0.6, "smile": -0.1, "wob": 0.3, "rot": -4, "armL": 120, "armR": 150 }, "tint": null, "motion": ["eye-dart", "tremble"], "fx": ["scribble", "paper-orbit"], "bubble": "keys" },
+      "notes": "Level: chaotisch may be listed above A2; kept as the natural opposite of ordentlich (unordentlich is the textbook alternative)."
+    },
+    {
+      "id": "puenktlich", "pos": "adjective",
+      "headword": "pünktlich",
+      "gloss": { "zh-Hans": "准时的", "en": "punctual, on time" },
+      "example": {
+        "de": "Sei bitte {{pünktlich}}, der Film fängt um acht an.",
+        "translations": { "zh-Hans": "请准时，电影八点开始。", "en": "Please be on time – the film starts at eight." }
+      },
+      "tip": { "zh-Hans": "{{pünktlich}} um acht＝八点整", "en": "{{pünktlich}} um acht = at eight sharp" },
+      "style": { "color": "#3E8E2F", "background": "#E0F3D7" },
+      "anim": { "pose": { "happy": 1, "smile": 0.8, "browY": -2, "armL": 14, "armR": 110 }, "tint": null, "motion": ["hop"], "fx": ["sparkles"], "bubble": "clock-ok" }
+    },
+    {
+      "id": "unpuenktlich", "pos": "adjective",
+      "headword": "unpünktlich",
+      "gloss": { "zh-Hans": "不守时的", "en": "often late" },
+      "example": {
+        "de": "Mein Bruder ist oft {{unpünktlich}}, deshalb muss ich immer auf ihn warten.",
+        "translations": { "zh-Hans": "我哥哥经常不准时，所以我总得等他。", "en": "My brother is often late, so I always have to wait for him." }
+      },
+      "tip": { "zh-Hans": "un- 构成反义词：unfreundlich, unordentlich", "en": "un- makes opposites: unfreundlich, unordentlich" },
+      "style": { "color": "#D2402A", "background": "#FBDCD5" },
+      "anim": { "pose": { "open": 1.3, "browT": 0.8, "smile": -0.4, "mopen": 0.4, "armL": 150, "armR": 150 }, "tint": null, "motion": ["shiver"], "fx": ["sweat", "sweat-fly"], "bubble": "clock-late" },
+      "notes": "warten auf + Akk, and deshalb + inversion with a modal verb."
+    },
+    {
+      "id": "lustig", "pos": "adjective",
+      "headword": "lustig",
+      "gloss": { "zh-Hans": "风趣、好笑", "en": "funny" },
+      "example": {
+        "de": "Mein Opa ist sehr {{lustig}} und erzählt immer Witze.",
+        "translations": { "zh-Hans": "我爷爷很风趣，总是讲笑话。", "en": "My grandpa is really funny and always tells jokes." }
+      },
+      "tip": { "zh-Hans": "说人＝风趣，说事＝好笑：Das ist {{lustig}}!", "en": "False friend: {{lustig}} = funny, not 'lustful'." },
+      "style": { "color": "#D9820F", "background": "#FFEBCB" },
+      "anim": { "pose": { "happy": 1, "smile": 1, "mopen": 0.9, "blush": 0.7, "armL": 40, "armR": 40 }, "tint": null, "motion": ["bounce"], "fx": ["haha"], "bubble": "joke" },
+      "notes": "Opa: Chinese translation picks 爷爷 (could also be 外公)."
+    },
+    {
+      "id": "ernst", "pos": "adjective",
+      "headword": "ernst",
+      "gloss": { "zh-Hans": "严肃的", "en": "serious" },
+      "example": {
+        "de": "Mein Chef sieht {{ernst}} aus, aber eigentlich ist er sehr nett.",
+        "translations": { "zh-Hans": "我老板看起来很严肃，其实人很好。", "en": "My boss looks serious, but he's actually very nice." }
+      },
+      "tip": { "zh-Hans": "“你认真的吗？”：Im {{Ernst}}?", "en": "'Seriously?' = Im {{Ernst}}?" },
+      "style": { "color": "#4A5875", "background": "#E1E5ED" },
+      "anim": { "pose": { "open": 0.95, "browY": 2, "browT": -0.3, "smile": -0.15, "mw": 0.7, "armL": -30, "armR": -30 }, "tint": null, "motion": [], "fx": [], "bubble": "tie" },
+      "notes": "aussehen + adjective: sieht ernst aus (separable prefix at the end)."
+    },
+    {
+      "id": "ruhig", "pos": "adjective",
+      "headword": "ruhig",
+      "gloss": { "zh-Hans": "安静、文静", "en": "quiet, calm" },
+      "example": {
+        "de": "Meine Nachbarin ist sehr {{ruhig}} – ich höre sie fast nie.",
+        "translations": { "zh-Hans": "我的女邻居很安静，我几乎听不到她。", "en": "My neighbour is very quiet – I almost never hear her." }
+      },
+      "tip": { "zh-Hans": "冷静点！＝ Bleib {{ruhig}}!", "en": "Stay calm! = Bleib {{ruhig}}!" },
+      "style": { "color": "#5B7FB0", "background": "#DFE8F4" },
+      "anim": { "pose": { "shut": 1, "smile": 0.4, "browY": 1, "armL": -20, "armR": -20 }, "tint": null, "motion": ["breathe"], "fx": [], "bubble": "book" }
+    },
+    {
+      "id": "laut", "pos": "adjective",
+      "headword": "laut",
+      "gloss": { "zh-Hans": "吵闹的", "en": "loud, noisy" },
+      "example": {
+        "de": "Die Kinder von nebenan sind abends oft sehr {{laut}}.",
+        "translations": { "zh-Hans": "隔壁的孩子晚上经常很吵。", "en": "The kids next door are often very loud in the evening." }
+      },
+      "tip": { "zh-Hans": "还能当“根据”：{{laut}} Wetterbericht", "en": "Also 'according to': {{laut}} Wetterbericht" },
+      "style": { "color": "#C23D7A", "background": "#FBE0EB" },
+      "anim": { "pose": { "open": 1.3, "browY": -4, "smile": 0.6, "mopen": 1.1, "mw": 0.9, "armL": 150, "armR": 150 }, "tint": null, "motion": ["jump-wave"], "fx": ["noise-waves"], "bubble": "speaker" },
+      "notes": "laut as a preposition (laut Wetterbericht) is B1; mentioned only as a reading tip."
+    },
+    {
+      "id": "sympathisch", "pos": "adjective",
+      "headword": "sympathisch",
+      "gloss": { "zh-Hans": "讨人喜欢的", "en": "likeable" },
+      "pattern": { "text": "mir sympathisch", "case": "Dat" },
+      "example": {
+        "de": "Die neue Kollegin war {{mir}} sofort {{sympathisch}}.",
+        "translations": { "zh-Hans": "我一下子就对新来的女同事很有好感。", "en": "I liked my new colleague right away." }
+      },
+      "tip": { "zh-Hans": "假朋友：{{sympathisch}}＝讨人喜欢，不是“同情”", "en": "False friend: {{sympathisch}} = likeable, not 'sympathetic'." },
+      "style": { "color": "#D9532F", "background": "#FFE1D6" },
+      "anim": { "pose": { "happy": 1, "smile": 0.9, "blush": 0.8, "armL": 14, "armR": 120 }, "tint": null, "motion": ["fan"], "fx": ["sparkles"], "bubble": "handshake" },
+      "notes": "jemandem sympathisch sein (Dativ). The waving arm reuses motion 'fan'."
+    },
+    {
+      "id": "schuechtern", "pos": "adjective",
+      "headword": "schüchtern",
+      "gloss": { "zh-Hans": "害羞的", "en": "shy" },
+      "example": {
+        "de": "Am Anfang war mein Sohn {{schüchtern}}, aber jetzt hat er viele Freunde.",
+        "translations": { "zh-Hans": "我儿子一开始很害羞，现在他有很多朋友了。", "en": "At first my son was shy, but now he has lots of friends." }
+      },
+      "tip": { "zh-Hans": "别害羞！＝ Sei nicht so {{schüchtern}}!", "en": "Don't be shy! = Sei nicht so {{schüchtern}}!" },
+      "style": { "color": "#B5487A", "background": "#F8E1EC" },
+      "anim": { "pose": { "lookY": 2, "lookX": -2.5, "blush": 1, "smile": 0.2, "mw": 0.6, "armL": -45, "armR": -45, "sy": 0.97 }, "tint": null, "motion": ["sway-slow"], "fx": [], "bubble": "friends" }
+    }
+  ]
+}

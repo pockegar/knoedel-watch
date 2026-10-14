@@ -1,0 +1,698 @@
+{
+  "format": 1,
+  "id": "a2-haushalt-verben",
+  "version": "0.1.1",
+  "episode": 8,
+  "title": {
+    "de": "Hausarbeit",
+    "zh-Hans": "做家务",
+    "en": "Household chores"
+  },
+  "level": "A2",
+  "character": "katze",
+  "locales": [
+    "zh-Hans",
+    "en"
+  ],
+  "license": "CC-BY-NC-SA-4.0",
+  "review": {
+    "status": "draft",
+    "notes": "Season 1 (A2), deck 4, the first verb deck and the cat's first deck. Please check every 'notes' entry: staubsaugen forms, ich bügle, the imperative Räum, colloquial raus."
+  },
+  "cards": [
+    {
+      "id": "bett-machen",
+      "pos": "verb",
+      "lead": "das Bett",
+      "headword": "machen",
+      "gloss": {
+        "zh-Hans": "铺床",
+        "en": "to make the bed"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "machte",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "gemacht"
+        }
+      },
+      "example": {
+        "de": "Nach dem Aufstehen {{mache}} ich sofort mein {{Bett}}.",
+        "translations": {
+          "zh-Hans": "起床后，我马上把床铺好。",
+          "en": "After I get up, I make my bed right away."
+        }
+      },
+      "tip": {
+        "zh-Hans": "换床单：das Bett {{beziehen}}",
+        "en": "Changing the sheets: das Bett {{beziehen}}"
+      },
+      "style": {
+        "color": "#C0567A",
+        "background": "#FBE3EC"
+      },
+      "anim": {
+        "pose": {
+          "rot": 7,
+          "hLx": 34,
+          "hLy": -42,
+          "hRx": 50,
+          "hRy": -44,
+          "lookX": 1.6,
+          "lookY": 1,
+          "smile": 0.55
+        },
+        "tint": null,
+        "motion": [
+          "smooth",
+          "tail-wag"
+        ],
+        "fx": [
+          "sparkles"
+        ],
+        "props": [
+          "bed"
+        ],
+        "bubble": null
+      },
+      "notes": "aufstehen is a card in other decks; here it only appears nominalised (Nach dem Aufstehen)."
+    },
+    {
+      "id": "aufraeumen",
+      "pos": "verb",
+      "headword": "{{auf|prefix}}räumen",
+      "gloss": {
+        "zh-Hans": "收拾、整理",
+        "en": "to tidy up"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "räumte {{auf|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{auf|prefix}}geräumt"
+        }
+      },
+      "example": {
+        "de": "{{Räum}} bitte dein Zimmer {{auf|prefix}}! Heute Abend kommen Gäste.",
+        "translations": {
+          "zh-Hans": "快把你房间收拾一下！今晚有客人来。",
+          "en": "Please tidy your room! We've got guests tonight."
+        }
+      },
+      "tip": {
+        "zh-Hans": "前缀放句末：Ich {{räume}} mein Zimmer {{auf|prefix}}.",
+        "en": "Separable: the prefix goes last. Ich {{räume}} mein Zimmer {{auf|prefix}}."
+      },
+      "style": {
+        "color": "#2F7DB8",
+        "background": "#DCEBF7"
+      },
+      "anim": {
+        "pose": {
+          "hLx": -17,
+          "hLy": -44,
+          "hRx": 17,
+          "hRy": -44,
+          "smile": 0.6,
+          "lookY": -0.5
+        },
+        "tint": null,
+        "motion": [
+          "walk",
+          "tail-wag"
+        ],
+        "fx": [],
+        "props": [
+          "box"
+        ],
+        "bubble": null
+      },
+      "notes": "Imperative Räum (without -e) is the everyday form; Räume is also correct."
+    },
+    {
+      "id": "putzen",
+      "pos": "verb",
+      "headword": "putzen",
+      "gloss": {
+        "zh-Hans": "打扫、擦洗",
+        "en": "to clean"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "putzte",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "geputzt"
+        }
+      },
+      "example": {
+        "de": "Am Samstag {{putzen}} wir immer zusammen das Bad und die Küche.",
+        "translations": {
+          "zh-Hans": "每周六我们都一起打扫浴室和厨房。",
+          "en": "Every Saturday we clean the bathroom and kitchen together."
+        }
+      },
+      "tip": {
+        "zh-Hans": "刷牙、擦鞋也用它：Zähne {{putzen}}、Schuhe {{putzen}}",
+        "en": "Teeth and shoes too: Zähne {{putzen}}, Schuhe {{putzen}}"
+      },
+      "style": {
+        "color": "#2E9A7A",
+        "background": "#DAF1E9"
+      },
+      "anim": {
+        "pose": {
+          "rot": 4,
+          "hRx": 46,
+          "hRy": -74,
+          "lookX": 1.6,
+          "lookY": -1,
+          "smile": 0.5
+        },
+        "tint": null,
+        "motion": [
+          "scrub",
+          "tail-wag"
+        ],
+        "fx": [
+          "bubbles",
+          "sparkles"
+        ],
+        "props": [
+          "window",
+          "sponge"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "staubsaugen",
+      "pos": "verb",
+      "headword": "staubsaugen",
+      "gloss": {
+        "zh-Hans": "吸尘",
+        "en": "to vacuum"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "staubsaugte",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "gestaubsaugt"
+        }
+      },
+      "example": {
+        "de": "Überall liegen Katzenhaare – ich muss dringend {{staubsaugen}}.",
+        "translations": {
+          "zh-Hans": "到处都是猫毛，我得赶紧吸尘了。",
+          "en": "There's cat hair everywhere – I really need to vacuum."
+        }
+      },
+      "tip": {
+        "zh-Hans": "也可拆开说：Ich {{sauge}} Staub.",
+        "en": "Also as two words: Ich {{sauge}} Staub. Ich habe Staub {{gesaugt}}."
+      },
+      "style": {
+        "color": "#7A4FD6",
+        "background": "#ECE4F8"
+      },
+      "anim": {
+        "pose": {
+          "hLx": 12,
+          "hLy": -46,
+          "hRx": 26,
+          "hRy": -54,
+          "lookX": 1.2,
+          "lookY": 1.6,
+          "mopen": 0.25,
+          "earL": -8,
+          "earR": -8
+        },
+        "tint": null,
+        "motion": [
+          "push"
+        ],
+        "fx": [
+          "dust"
+        ],
+        "props": [
+          "vacuum"
+        ],
+        "bubble": null
+      },
+      "notes": "Duden: staubsaugen, staubsaugte, hat gestaubsaugt; also Staub saugen, saugte Staub, hat Staub gesaugt."
+    },
+    {
+      "id": "boden-wischen",
+      "pos": "verb",
+      "lead": "den Boden",
+      "headword": "wischen",
+      "gloss": {
+        "zh-Hans": "拖地",
+        "en": "to mop the floor"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "wischte",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "gewischt"
+        }
+      },
+      "example": {
+        "de": "Vorsicht, der Boden ist noch nass – ich habe gerade {{gewischt}}.",
+        "translations": {
+          "zh-Hans": "小心，地还湿着，我刚拖完地。",
+          "en": "Careful, the floor's still wet – I've just mopped."
+        }
+      },
+      "tip": {
+        "zh-Hans": "用抹布擦灰：Staub {{wischen}}",
+        "en": "Dusting with a cloth: Staub {{wischen}}"
+      },
+      "style": {
+        "color": "#1F8FA8",
+        "background": "#D8F0F5"
+      },
+      "anim": {
+        "pose": {
+          "hLx": 10,
+          "hLy": -42,
+          "hRx": 24,
+          "hRy": -56,
+          "lookX": 1,
+          "lookY": 1.8,
+          "smile": 0.4
+        },
+        "tint": null,
+        "motion": [
+          "sweep",
+          "tail-wag"
+        ],
+        "fx": [
+          "shine"
+        ],
+        "props": [
+          "mop"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "waesche-waschen",
+      "pos": "verb",
+      "lead": "Wäsche",
+      "headword": "waschen",
+      "gloss": {
+        "zh-Hans": "洗衣服",
+        "en": "to do the laundry"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "wusch",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "gewaschen"
+        }
+      },
+      "example": {
+        "de": "Mein Mitbewohner {{wäscht}} seine {{Wäsche}} nur einmal im Monat.",
+        "translations": {
+          "zh-Hans": "我室友一个月才洗一次衣服。",
+          "en": "My flatmate only does his laundry once a month."
+        }
+      },
+      "tip": {
+        "zh-Hans": "现在时要变音：du {{wäschst}}，er {{wäscht}}",
+        "en": "Umlaut in the present: du {{wäschst}}, er {{wäscht}}"
+      },
+      "style": {
+        "color": "#3B6BB0",
+        "background": "#DCE6F3"
+      },
+      "anim": {
+        "pose": {
+          "rot": 3,
+          "smile": 0.35,
+          "earL": 6,
+          "earR": 6
+        },
+        "tint": null,
+        "motion": [
+          "watch-spin",
+          "tail-wag"
+        ],
+        "fx": [
+          "bubbles"
+        ],
+        "props": [
+          "washing-machine"
+        ],
+        "bubble": null
+      },
+      "notes": "Strong verb: waschen, wäscht, wusch, hat gewaschen."
+    },
+    {
+      "id": "waesche-aufhaengen",
+      "pos": "verb",
+      "lead": "Wäsche",
+      "headword": "{{auf|prefix}}hängen",
+      "gloss": {
+        "zh-Hans": "晾衣服",
+        "en": "to hang up laundry"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "hängte {{auf|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{auf|prefix}}gehängt"
+        }
+      },
+      "example": {
+        "de": "Die Sonne scheint, also {{hänge}} ich die Wäsche draußen {{auf|prefix}}.",
+        "translations": {
+          "zh-Hans": "出太阳了，我把衣服晾到外面去。",
+          "en": "The sun's out, so I'm hanging the washing outside."
+        }
+      },
+      "tip": {
+        "zh-Hans": "挂上去：hängte；挂着：{{hing}}, gehangen",
+        "en": "Putting it up: hängte. Being there: {{hing}}, gehangen."
+      },
+      "style": {
+        "color": "#C9730C",
+        "background": "#FFEBCB"
+      },
+      "anim": {
+        "pose": {
+          "rot": 4,
+          "hRx": 42,
+          "hRy": -68,
+          "lookX": 1.4,
+          "lookY": -1,
+          "smile": 0.6
+        },
+        "tint": null,
+        "motion": [
+          "reach-up",
+          "tail-wag"
+        ],
+        "fx": [
+          "sun"
+        ],
+        "props": [
+          "drying-rack",
+          "sock"
+        ],
+        "bubble": null
+      },
+      "notes": "Transitive hängen (put up) is weak: hängte, gehängt. Intransitive hängen (be hanging) is strong: hing, gehangen."
+    },
+    {
+      "id": "buegeln",
+      "pos": "verb",
+      "headword": "bügeln",
+      "gloss": {
+        "zh-Hans": "熨（衣服）",
+        "en": "to iron"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "bügelte",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "gebügelt"
+        }
+      },
+      "example": {
+        "de": "Morgen habe ich einen wichtigen Termin, deshalb {{bügle}} ich heute mein Hemd.",
+        "translations": {
+          "zh-Hans": "明天有个重要的会，所以我今天熨衬衫。",
+          "en": "Big meeting tomorrow, so I'm ironing my shirt today."
+        }
+      },
+      "tip": {
+        "zh-Hans": "ich {{bügle}} 比 ich bügele 更常用",
+        "en": "ich {{bügle}} is more common than ich bügele"
+      },
+      "style": {
+        "color": "#C2553A",
+        "background": "#F9E0D8"
+      },
+      "anim": {
+        "pose": {
+          "rot": 5,
+          "hRx": 50,
+          "hRy": -50,
+          "hLx": 30,
+          "hLy": -46,
+          "lookX": 1.6,
+          "lookY": 1.2,
+          "smile": 0.4
+        },
+        "tint": null,
+        "motion": [
+          "push"
+        ],
+        "fx": [
+          "steam"
+        ],
+        "props": [
+          "ironing-board",
+          "iron"
+        ],
+        "bubble": null
+      },
+      "notes": "Duden lists ich bügle and ich bügele; bügle is the usual spoken form."
+    },
+    {
+      "id": "geschirr-spuelen",
+      "pos": "verb",
+      "lead": "Geschirr",
+      "headword": "spülen",
+      "gloss": {
+        "zh-Hans": "洗碗",
+        "en": "to do the dishes"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "spülte",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "gespült"
+        }
+      },
+      "example": {
+        "de": "Du hast gekocht, also {{spüle}} ich jetzt das {{Geschirr}}.",
+        "translations": {
+          "zh-Hans": "饭是你做的，那我来洗碗。",
+          "en": "You cooked, so I'll do the dishes now."
+        }
+      },
+      "tip": {
+        "zh-Hans": "洗碗机：die {{Spülmaschine}}（Geschirrspüler）",
+        "en": "Dishwasher: die {{Spülmaschine}} or der Geschirrspüler"
+      },
+      "style": {
+        "color": "#2E8FC7",
+        "background": "#D9EEF9"
+      },
+      "anim": {
+        "pose": {
+          "hLx": -4,
+          "hLy": -48,
+          "hRx": 12,
+          "hRy": -50,
+          "lookY": 1.2,
+          "smile": 0.45
+        },
+        "tint": null,
+        "motion": [
+          "scrub",
+          "tail-wag"
+        ],
+        "fx": [
+          "bubbles"
+        ],
+        "props": [
+          "plate",
+          "sponge"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "abtrocknen",
+      "pos": "verb",
+      "headword": "{{ab|prefix}}trocknen",
+      "gloss": {
+        "zh-Hans": "擦干（碗盘）",
+        "en": "to dry (the dishes)"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "trocknete {{ab|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{ab|prefix}}getrocknet"
+        }
+      },
+      "example": {
+        "de": "Ich spüle, und du {{trocknest}} {{ab|prefix}}. Dann sind wir schnell fertig.",
+        "translations": {
+          "zh-Hans": "我洗你擦，这样很快就弄完了。",
+          "en": "I'll wash, you dry – then we'll be done quickly."
+        }
+      },
+      "tip": {
+        "zh-Hans": "注意加 e：du {{trocknest}}，er {{trocknet}}",
+        "en": "Extra e: du {{trocknest}}, er {{trocknet}}"
+      },
+      "style": {
+        "color": "#B7791F",
+        "background": "#FFF1C4"
+      },
+      "anim": {
+        "pose": {
+          "hLx": -4,
+          "hLy": -48,
+          "hRx": 12,
+          "hRy": -50,
+          "lookY": 1,
+          "happy": 1,
+          "smile": 0.7
+        },
+        "tint": null,
+        "motion": [
+          "scrub",
+          "tail-wag"
+        ],
+        "fx": [
+          "sparkles"
+        ],
+        "props": [
+          "plate",
+          "towel"
+        ],
+        "bubble": null
+      },
+      "notes": "trocknen: stem ends in consonant + n, so du trocknest, er trocknet."
+    },
+    {
+      "id": "muell-rausbringen",
+      "pos": "verb",
+      "lead": "den Müll",
+      "headword": "{{raus|prefix}}bringen",
+      "gloss": {
+        "zh-Hans": "倒垃圾",
+        "en": "to take the bin out"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "brachte {{raus|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{raus|prefix}}gebracht"
+        }
+      },
+      "example": {
+        "de": "Wer {{bringt}} heute den Müll {{raus|prefix}}? Ich habe das gestern gemacht!",
+        "translations": {
+          "zh-Hans": "今天谁去倒垃圾？我昨天倒过了！",
+          "en": "Who's taking the bin out today? I did it yesterday!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "垃圾分类：Papier、Bio、Gelber Sack、Restmüll",
+        "en": "Germans sort it: Papier, Bio, Gelber Sack, Restmüll"
+      },
+      "style": {
+        "color": "#5E8C31",
+        "background": "#E5F1D6"
+      },
+      "anim": {
+        "pose": {
+          "rot": -5,
+          "hRx": 46,
+          "hRy": -42,
+          "lookX": 1.6,
+          "lid": 0.35,
+          "smile": -0.4,
+          "earL": -14,
+          "earR": -14
+        },
+        "tint": null,
+        "motion": [
+          "walk"
+        ],
+        "fx": [
+          "stink"
+        ],
+        "props": [
+          "trash-bag"
+        ],
+        "bubble": null
+      },
+      "notes": "raus is the colloquial short form of heraus / hinaus; rausbringen is the everyday verb."
+    },
+    {
+      "id": "blumen-giessen",
+      "pos": "verb",
+      "lead": "die Blumen",
+      "headword": "gießen",
+      "gloss": {
+        "zh-Hans": "浇花",
+        "en": "to water the plants"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "goss",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "gegossen"
+        }
+      },
+      "example": {
+        "de": "Kannst du meine Blumen {{gießen}}, wenn ich im Urlaub bin?",
+        "translations": {
+          "zh-Hans": "我去度假的时候，你能帮我浇花吗？",
+          "en": "Can you water my plants while I'm on holiday?"
+        }
+      },
+      "tip": {
+        "zh-Hans": "{{goss}}、gegossen：短元音后 ß 变成 ss",
+        "en": "{{goss}}, gegossen: ß becomes ss after a short vowel"
+      },
+      "style": {
+        "color": "#3E8E2F",
+        "background": "#E1F3DA"
+      },
+      "anim": {
+        "pose": {
+          "rot": 4,
+          "hRx": 38,
+          "hRy": -58,
+          "happy": 1,
+          "smile": 0.7,
+          "lookX": 1.5
+        },
+        "tint": null,
+        "motion": [
+          "pour",
+          "tail-wag"
+        ],
+        "fx": [
+          "drops"
+        ],
+        "props": [
+          "watering-can",
+          "plant"
+        ],
+        "bubble": null
+      }
+    }
+  ]
+}

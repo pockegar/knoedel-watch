@@ -1,0 +1,686 @@
+{
+  "format": 1,
+  "id": "a2-einkaufen-verben",
+  "version": "0.1.0",
+  "episode": 11,
+  "title": {
+    "de": "Einkaufen",
+    "zh-Hans": "去购物",
+    "en": "Shopping"
+  },
+  "level": "A2",
+  "character": "katze",
+  "locales": [
+    "zh-Hans",
+    "en"
+  ],
+  "license": "CC-BY-NC-SA-4.0",
+  "review": {
+    "status": "draft",
+    "notes": "Season 1 (A2), deck 6. Theme: verbs with a dative person (passen, stehen, gefallen) and separable prefixes. Please check every notes entry."
+  },
+  "cards": [
+    {
+      "id": "aussuchen",
+      "pos": "verb",
+      "headword": "{{aus|prefix}}suchen",
+      "gloss": {
+        "zh-Hans": "挑选",
+        "en": "to pick, choose"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "suchte {{aus|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{aus|prefix}}gesucht"
+        }
+      },
+      "example": {
+        "de": "Du darfst dir ein T-Shirt {{aussuchen}} – ich bezahle!",
+        "translations": {
+          "zh-Hans": "你随便挑一件T恤，我来付钱！",
+          "en": "You can pick a T-shirt – I'm paying!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "给自己挑加 Dativ：{{Such}} dir was {{aus|prefix}}!",
+        "en": "For yourself, add a dative: {{Such}} dir was {{aus|prefix}}!"
+      },
+      "style": {
+        "color": "#C0567A",
+        "background": "#FBE3EC"
+      },
+      "anim": {
+        "pose": {
+          "hRx": 46,
+          "hRy": -64,
+          "lookX": 1.6,
+          "smile": 0.5
+        },
+        "tint": null,
+        "motion": [
+          "look-around",
+          "tail-wag"
+        ],
+        "fx": [],
+        "props": [
+          "clothes-rack"
+        ],
+        "bubble": null
+      },
+      "notes": "was = colloquial etwas."
+    },
+    {
+      "id": "anprobieren",
+      "pos": "verb",
+      "headword": "{{an|prefix}}probieren",
+      "gloss": {
+        "zh-Hans": "试穿",
+        "en": "to try on"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "probierte {{an|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{an|prefix}}probiert"
+        }
+      },
+      "example": {
+        "de": "– Kann ich die Jacke {{anprobieren}}?\n– Klar, die Kabine ist da hinten.",
+        "translations": {
+          "zh-Hans": "—这件夹克能试穿吗？\n—当然，试衣间在后面。",
+          "en": "– Can I try this on?\n– Sure, the fitting room is back there."
+        }
+      },
+      "tip": {
+        "zh-Hans": "-ieren 动词完成时不加 ge-：{{anprobiert}}",
+        "en": "-ieren verbs get no ge-: {{anprobiert}}"
+      },
+      "style": {
+        "color": "#2F7DB8",
+        "background": "#DCEBF7"
+      },
+      "anim": {
+        "pose": {
+          "rot": -4,
+          "hRx": 34,
+          "hRy": -40,
+          "lookX": 1.6,
+          "smile": 0.7
+        },
+        "tint": null,
+        "motion": [
+          "tail-wag"
+        ],
+        "fx": [],
+        "props": [
+          "mirror",
+          "jacket"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "passen",
+      "pos": "verb",
+      "headword": "passen",
+      "gloss": {
+        "zh-Hans": "（尺码）合适",
+        "en": "to fit"
+      },
+      "pattern": {
+        "text": "jemandem passen",
+        "case": "Dat"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "passte",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "gepasst"
+        }
+      },
+      "example": {
+        "de": "Die Schuhe sind schön, aber sie {{passen mir}} leider nicht.",
+        "translations": {
+          "zh-Hans": "鞋子很好看，可惜我穿不下。",
+          "en": "The shoes are nice, but they don't fit me, sadly."
+        }
+      },
+      "tip": {
+        "zh-Hans": "衣服做主语，人用 Dat：Die Schuhe passen {{mir}}.",
+        "en": "The clothes are the subject, the person is dative: passen {{mir}}"
+      },
+      "style": {
+        "color": "#C2553A",
+        "background": "#F9E0D8"
+      },
+      "anim": {
+        "pose": {
+          "hRx": 30,
+          "hRy": -66,
+          "lookX": 1.2,
+          "open": 1.15,
+          "smile": -0.35,
+          "earL": -8,
+          "earR": -8
+        },
+        "tint": null,
+        "motion": [
+          "tremble"
+        ],
+        "fx": [
+          "sweat"
+        ],
+        "props": [
+          "shoe-small"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "stehen",
+      "pos": "verb",
+      "headword": "stehen",
+      "gloss": {
+        "zh-Hans": "（衣服）衬人",
+        "en": "to suit"
+      },
+      "pattern": {
+        "text": "jemandem stehen",
+        "case": "Dat"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "stand",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "gestanden"
+        }
+      },
+      "example": {
+        "de": "Die neuen Sachen {{stehen dir}} richtig gut!",
+        "translations": {
+          "zh-Hans": "这些新衣服你穿着真好看！",
+          "en": "Your new clothes really suit you!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "passen 是尺码合适，stehen 是穿着好看",
+        "en": "passen: the size is right. stehen: it looks good on you."
+      },
+      "style": {
+        "color": "#B7791F",
+        "background": "#FFF1C4"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 0.9,
+          "blush": 0.9,
+          "rot": 4,
+          "hRx": 34,
+          "hRy": -40,
+          "hLx": -34,
+          "hLy": -40
+        },
+        "tint": null,
+        "motion": [
+          "tail-wag",
+          "hop"
+        ],
+        "fx": [
+          "sparkles"
+        ],
+        "props": [
+          "mirror",
+          "scarf"
+        ],
+        "bubble": null
+      },
+      "notes": "Perfekt: hat gestanden; in southern Germany, Austria and Switzerland also ist gestanden."
+    },
+    {
+      "id": "gefallen",
+      "pos": "verb",
+      "headword": "gefallen",
+      "gloss": {
+        "zh-Hans": "喜欢、中意",
+        "en": "to like (+Dat)"
+      },
+      "pattern": {
+        "text": "jemandem gefallen",
+        "case": "Dat"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "gefiel",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "gefallen"
+        }
+      },
+      "example": {
+        "de": "{{Mir gefallen}} die blauen Sneaker am besten.",
+        "translations": {
+          "zh-Hans": "我最喜欢那双蓝色运动鞋。",
+          "en": "I like the blue trainers best."
+        }
+      },
+      "tip": {
+        "zh-Hans": "东西做主语：Das Hemd {{gefällt mir}}.",
+        "en": "The thing is the subject: Das Hemd {{gefällt mir}}."
+      },
+      "style": {
+        "color": "#7A4FD6",
+        "background": "#ECE4F8"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 1,
+          "blush": 0.6,
+          "hLx": -8,
+          "hLy": -54,
+          "hRx": 8,
+          "hRy": -54
+        },
+        "tint": null,
+        "motion": [
+          "tail-wag",
+          "bounce"
+        ],
+        "fx": [
+          "hearts"
+        ],
+        "props": [
+          "shoe-shelf"
+        ],
+        "bubble": null
+      },
+      "notes": "der Sneaker, die Sneaker."
+    },
+    {
+      "id": "bezahlen",
+      "pos": "verb",
+      "headword": "bezahlen",
+      "gloss": {
+        "zh-Hans": "付钱",
+        "en": "to pay"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "bezahlte",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "bezahlt"
+        }
+      },
+      "example": {
+        "de": "– Kann ich mit Karte {{bezahlen}}?\n– Tut mir leid, nur bar.",
+        "translations": {
+          "zh-Hans": "—能刷卡吗？\n—不好意思，只收现金。",
+          "en": "– Can I pay by card?\n– Sorry, cash only."
+        }
+      },
+      "tip": {
+        "zh-Hans": "德国不少小店只收现金，记得带 {{Bargeld}}",
+        "en": "Plenty of small shops only take cash – carry some {{Bargeld}}"
+      },
+      "style": {
+        "color": "#2E9A7A",
+        "background": "#DAF1E9"
+      },
+      "anim": {
+        "pose": {
+          "hRx": 44,
+          "hRy": -58,
+          "lookX": 1.4,
+          "smile": 0.5
+        },
+        "tint": null,
+        "motion": [
+          "tail-wag"
+        ],
+        "fx": [
+          "contactless"
+        ],
+        "props": [
+          "card",
+          "card-terminal"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "einpacken",
+      "pos": "verb",
+      "headword": "{{ein|prefix}}packen",
+      "gloss": {
+        "zh-Hans": "包装、装起来",
+        "en": "to wrap, pack"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "packte {{ein|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{ein|prefix}}gepackt"
+        }
+      },
+      "example": {
+        "de": "Soll ich es Ihnen als Geschenk {{einpacken}}?",
+        "translations": {
+          "zh-Hans": "需要帮您包成礼物吗？",
+          "en": "Shall I gift-wrap it for you?"
+        }
+      },
+      "tip": {
+        "zh-Hans": "收银台常听到：Brauchen Sie eine {{Tüte}}?",
+        "en": "At the till: Brauchen Sie eine {{Tüte}}? (Need a bag?)"
+      },
+      "style": {
+        "color": "#D9620F",
+        "background": "#FFE3CC"
+      },
+      "anim": {
+        "pose": {
+          "hLx": -14,
+          "hLy": -46,
+          "hRx": 14,
+          "hRy": -46,
+          "happy": 1,
+          "smile": 0.8
+        },
+        "tint": null,
+        "motion": [
+          "tail-wag"
+        ],
+        "fx": [
+          "sparkles"
+        ],
+        "props": [
+          "gift"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "bestellen",
+      "pos": "verb",
+      "headword": "bestellen",
+      "gloss": {
+        "zh-Hans": "订购、点（菜）",
+        "en": "to order"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "bestellte",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "bestellt"
+        }
+      },
+      "example": {
+        "de": "Ich habe einen Rucksack online {{bestellt}}, aber er ist noch nicht da.",
+        "translations": {
+          "zh-Hans": "我在网上订了个背包，可是还没到。",
+          "en": "I ordered a backpack online, but it hasn't arrived yet."
+        }
+      },
+      "tip": {
+        "zh-Hans": "在餐厅点菜也用它：Wir möchten {{bestellen}}.",
+        "en": "In restaurants too: Wir möchten {{bestellen}}."
+      },
+      "style": {
+        "color": "#3B6BB0",
+        "background": "#DCE6F3"
+      },
+      "anim": {
+        "pose": {
+          "hRx": 8,
+          "hRy": -50,
+          "hLx": -8,
+          "hLy": -46,
+          "lookY": 1.6,
+          "smile": 0.5
+        },
+        "tint": null,
+        "motion": [
+          "type",
+          "tail-wag"
+        ],
+        "fx": [
+          "parcel"
+        ],
+        "props": [
+          "phone"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "umtauschen",
+      "pos": "verb",
+      "headword": "{{um|prefix}}tauschen",
+      "gloss": {
+        "zh-Hans": "换货",
+        "en": "to exchange"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "tauschte {{um|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{um|prefix}}getauscht"
+        }
+      },
+      "example": {
+        "de": "Der Pullover ist zu klein. Kann ich ihn {{umtauschen}}?",
+        "translations": {
+          "zh-Hans": "毛衣太小了，可以换一件吗？",
+          "en": "The jumper is too small. Can I exchange it?"
+        }
+      },
+      "tip": {
+        "zh-Hans": "换货退货要带小票：der {{Kassenbon}}",
+        "en": "Keep the receipt: der {{Kassenbon}}"
+      },
+      "style": {
+        "color": "#1F8FA8",
+        "background": "#D8F0F5"
+      },
+      "anim": {
+        "pose": {
+          "hLx": -14,
+          "hLy": -60,
+          "hRx": 14,
+          "hRy": -60,
+          "open": 1.15,
+          "smile": -0.3,
+          "earL": -6,
+          "earR": -6
+        },
+        "tint": null,
+        "motion": [],
+        "fx": [
+          "swap"
+        ],
+        "props": [
+          "sweater-small"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "zurueckgeben",
+      "pos": "verb",
+      "headword": "{{zurück|prefix}}geben",
+      "gloss": {
+        "zh-Hans": "退还、退货",
+        "en": "to return"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "gab {{zurück|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{zurück|prefix}}gegeben"
+        }
+      },
+      "example": {
+        "de": "Der Toaster war kaputt, also habe ich ihn {{zurückgegeben}}.",
+        "translations": {
+          "zh-Hans": "烤面包机是坏的，所以我把它退了。",
+          "en": "The toaster was broken, so I took it back."
+        }
+      },
+      "tip": {
+        "zh-Hans": "拿回钱：das Geld {{zurückbekommen}}",
+        "en": "Getting a refund: das Geld {{zurückbekommen}}"
+      },
+      "style": {
+        "color": "#6B5FA8",
+        "background": "#E6E2F3"
+      },
+      "anim": {
+        "pose": {
+          "rot": 4,
+          "hLx": 16,
+          "hLy": -50,
+          "hRx": 36,
+          "hRy": -50,
+          "smile": -0.2,
+          "lookX": 1.4
+        },
+        "tint": null,
+        "motion": [
+          "push"
+        ],
+        "fx": [],
+        "props": [
+          "counter",
+          "toaster"
+        ],
+        "bubble": null
+      },
+      "notes": "geben: gibt, gab, gegeben."
+    },
+    {
+      "id": "ausgeben",
+      "pos": "verb",
+      "headword": "{{aus|prefix}}geben",
+      "gloss": {
+        "zh-Hans": "花（钱）",
+        "en": "to spend (money)"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "gab {{aus|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{aus|prefix}}gegeben"
+        }
+      },
+      "example": {
+        "de": "Im Urlaub habe ich viel zu viel Geld {{ausgegeben}}.",
+        "translations": {
+          "zh-Hans": "度假时我花了太多钱。",
+          "en": "I spent way too much money on holiday."
+        }
+      },
+      "tip": {
+        "zh-Hans": "花钱 ausgeben，花时间 {{verbringen}}",
+        "en": "Money: ausgeben. Time: {{verbringen}}."
+      },
+      "style": {
+        "color": "#C0392B",
+        "background": "#FADBD8"
+      },
+      "anim": {
+        "pose": {
+          "hRx": 30,
+          "hRy": -62,
+          "open": 1.25,
+          "mopen": 0.7,
+          "smile": -0.3,
+          "earL": -12,
+          "earR": -12,
+          "lookX": 1.2
+        },
+        "tint": null,
+        "motion": [
+          "tremble"
+        ],
+        "fx": [
+          "coins"
+        ],
+        "props": [
+          "wallet"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "sparen",
+      "pos": "verb",
+      "headword": "sparen",
+      "gloss": {
+        "zh-Hans": "存钱、节省",
+        "en": "to save"
+      },
+      "pattern": {
+        "text": "sparen für",
+        "case": "Akk"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "sparte",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "gespart"
+        }
+      },
+      "example": {
+        "de": "Ich muss {{für}} ein neues Handy {{sparen}}.",
+        "translations": {
+          "zh-Hans": "我得攒钱买个新手机。",
+          "en": "I have to save up for a new phone."
+        }
+      },
+      "tip": {
+        "zh-Hans": "存钱罐：das {{Sparschwein}}（存钱猪）",
+        "en": "Piggy bank: das {{Sparschwein}} (a 'savings pig')"
+      },
+      "style": {
+        "color": "#3E8E2F",
+        "background": "#E1F3DA"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 0.8,
+          "hRx": 44,
+          "hRy": -58,
+          "rot": 4
+        },
+        "tint": null,
+        "motion": [
+          "drop",
+          "tail-wag"
+        ],
+        "fx": [
+          "sparkles"
+        ],
+        "props": [
+          "piggy-bank",
+          "coin"
+        ],
+        "bubble": null
+      },
+      "notes": "auf etwas sparen is equally common."
+    }
+  ]
+}

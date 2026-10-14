@@ -1,0 +1,658 @@
+{
+  "format": 1,
+  "id": "a2-termine-verben",
+  "version": "0.1.0",
+  "episode": 12,
+  "title": {
+    "de": "Termine",
+    "zh-Hans": "预约和办事",
+    "en": "Appointments"
+  },
+  "level": "A2",
+  "character": "katze",
+  "locales": [
+    "zh-Hans",
+    "en"
+  ],
+  "license": "CC-BY-NC-SA-4.0",
+  "review": {
+    "status": "draft",
+    "notes": "Season 1 (A2), deck 7. Theme: separable (anrufen, absagen, ausfüllen) against inseparable prefixes (be-, ver-, unter-). Please check every notes entry."
+  },
+  "cards": [
+    {
+      "id": "anrufen",
+      "pos": "verb",
+      "headword": "{{an|prefix}}rufen",
+      "gloss": {
+        "zh-Hans": "打电话（给）",
+        "en": "to call (phone)"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "rief {{an|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{an|prefix}}gerufen"
+        }
+      },
+      "example": {
+        "de": "Ich {{rufe}} {{dich}} heute Abend {{an|prefix}}, okay?",
+        "translations": {
+          "zh-Hans": "我今晚给你打电话，好吗？",
+          "en": "I'll call you tonight, okay?"
+        }
+      },
+      "tip": {
+        "zh-Hans": "anrufen 接 Akk：{{dich}} anrufen，不是 dir",
+        "en": "anrufen takes the accusative: Ich rufe {{dich}} an (not dir)"
+      },
+      "style": {
+        "color": "#2E9A7A",
+        "background": "#DAF1E9"
+      },
+      "anim": {
+        "pose": {
+          "hRx": 28,
+          "hRy": -80,
+          "smile": 0.7,
+          "happy": 1
+        },
+        "tint": null,
+        "motion": [
+          "tail-wag"
+        ],
+        "fx": [
+          "ring"
+        ],
+        "props": [
+          "phone-ear"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "zurueckrufen",
+      "pos": "verb",
+      "headword": "{{zurück|prefix}}rufen",
+      "gloss": {
+        "zh-Hans": "回电话",
+        "en": "to call back"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "rief {{zurück|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{zurück|prefix}}gerufen"
+        }
+      },
+      "example": {
+        "de": "Frau Weber ist gerade nicht da. Kann sie Sie {{zurückrufen}}?",
+        "translations": {
+          "zh-Hans": "韦伯女士现在不在，她给您回电话可以吗？",
+          "en": "Ms Weber isn't here right now. Can she call you back?"
+        }
+      },
+      "tip": {
+        "zh-Hans": "留言：eine {{Nachricht}} hinterlassen",
+        "en": "Leave a message: eine {{Nachricht}} hinterlassen"
+      },
+      "style": {
+        "color": "#2F7DB8",
+        "background": "#DCEBF7"
+      },
+      "anim": {
+        "pose": {
+          "hRx": 8,
+          "hRy": -50,
+          "hLx": -8,
+          "hLy": -46,
+          "lookY": 1.6,
+          "smile": 0.3
+        },
+        "tint": null,
+        "motion": [
+          "tail-wag"
+        ],
+        "fx": [
+          "callback"
+        ],
+        "props": [
+          "phone"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "termin-vereinbaren",
+      "pos": "verb",
+      "lead": "einen Termin",
+      "headword": "vereinbaren",
+      "gloss": {
+        "zh-Hans": "预约",
+        "en": "to schedule"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "vereinbarte",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "vereinbart"
+        }
+      },
+      "example": {
+        "de": "Ich möchte gern einen Termin beim Zahnarzt {{vereinbaren}}.",
+        "translations": {
+          "zh-Hans": "我想约个牙医。",
+          "en": "I'd like to make an appointment with the dentist."
+        }
+      },
+      "tip": {
+        "zh-Hans": "口语更简单：einen Termin {{machen}}",
+        "en": "In everyday speech: einen Termin {{machen}}"
+      },
+      "style": {
+        "color": "#7A4FD6",
+        "background": "#ECE4F8"
+      },
+      "anim": {
+        "pose": {
+          "hRx": 28,
+          "hRy": -80,
+          "lookX": 1.6,
+          "smile": 0.6
+        },
+        "tint": null,
+        "motion": [
+          "tail-wag"
+        ],
+        "fx": [],
+        "props": [
+          "calendar",
+          "phone-ear"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "bestaetigen",
+      "pos": "verb",
+      "headword": "bestätigen",
+      "gloss": {
+        "zh-Hans": "确认",
+        "en": "to confirm"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "bestätigte",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "bestätigt"
+        }
+      },
+      "example": {
+        "de": "Wir {{bestätigen}} Ihren Termin per E-Mail.",
+        "translations": {
+          "zh-Hans": "我们会发邮件确认您的预约。",
+          "en": "We'll confirm your appointment by email."
+        }
+      },
+      "tip": {
+        "zh-Hans": "be-、ver- 不拆开，完成时没有 ge-：{{bestätigt}}",
+        "en": "be- and ver- never split and get no ge-: hat {{bestätigt}}"
+      },
+      "style": {
+        "color": "#3E8E2F",
+        "background": "#E1F3DA"
+      },
+      "anim": {
+        "pose": {
+          "hRx": 8,
+          "hRy": -50,
+          "hLx": -8,
+          "hLy": -46,
+          "happy": 1,
+          "smile": 0.8
+        },
+        "tint": null,
+        "motion": [
+          "hop"
+        ],
+        "fx": [
+          "checkmark"
+        ],
+        "props": [
+          "phone"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "verschieben",
+      "pos": "verb",
+      "headword": "verschieben",
+      "gloss": {
+        "zh-Hans": "推迟、改期",
+        "en": "to postpone, move"
+      },
+      "pattern": {
+        "text": "verschieben auf",
+        "case": "Akk"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "verschob",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "verschoben"
+        }
+      },
+      "example": {
+        "de": "Können wir das Meeting {{auf}} nächsten Montag {{verschieben}}?",
+        "translations": {
+          "zh-Hans": "我们能把会议改到下周一吗？",
+          "en": "Can we move the meeting to next Monday?"
+        }
+      },
+      "tip": {
+        "zh-Hans": "改早一点：einen Termin {{vorverlegen}}",
+        "en": "Moving it earlier: einen Termin {{vorverlegen}}"
+      },
+      "style": {
+        "color": "#B7791F",
+        "background": "#FFF1C4"
+      },
+      "anim": {
+        "pose": {
+          "hRx": 44,
+          "hRy": -70,
+          "lookX": 1.6,
+          "smile": 0.3
+        },
+        "tint": null,
+        "motion": [
+          "tail-wag"
+        ],
+        "fx": [],
+        "props": [
+          "calendar-move"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "absagen",
+      "pos": "verb",
+      "headword": "{{ab|prefix}}sagen",
+      "gloss": {
+        "zh-Hans": "取消",
+        "en": "to cancel"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "sagte {{ab|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{ab|prefix}}gesagt"
+        }
+      },
+      "example": {
+        "de": "Ich bin krank und muss den Termin leider {{absagen}}.",
+        "translations": {
+          "zh-Hans": "我病了，只好取消预约。",
+          "en": "I'm ill, so I have to cancel the appointment."
+        }
+      },
+      "tip": {
+        "zh-Hans": "不来也不取消，有的诊所会收 {{Ausfallgebühr}}",
+        "en": "No-show without cancelling? Some practices charge an {{Ausfallgebühr}}"
+      },
+      "style": {
+        "color": "#C2553A",
+        "background": "#F9E0D8"
+      },
+      "anim": {
+        "pose": {
+          "lid": 0.35,
+          "smile": -0.4,
+          "earL": -10,
+          "earR": -10,
+          "blush": 0.8,
+          "lookX": 1
+        },
+        "tint": null,
+        "motion": [
+          "tremble"
+        ],
+        "fx": [],
+        "props": [
+          "calendar-x",
+          "thermometer"
+        ],
+        "bubble": null
+      },
+      "notes": "Ausfallgebühr / Ausfallhonorar: charged by some practices, not all."
+    },
+    {
+      "id": "sich-verspaeten",
+      "pos": "verb",
+      "lead": "sich",
+      "headword": "verspäten",
+      "gloss": {
+        "zh-Hans": "迟到",
+        "en": "to be late"
+      },
+      "verb": {
+        "reflexive": "acc",
+        "praeteritum": "verspätete {{sich|refl}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{sich|refl}} verspätet"
+        }
+      },
+      "example": {
+        "de": "Entschuldigung, ich habe {{mich|refl}} {{verspätet}} – der Bus ist nicht gekommen.",
+        "translations": {
+          "zh-Hans": "抱歉我迟到了，公交车一直没来。",
+          "en": "Sorry I'm late – the bus didn't come."
+        }
+      },
+      "tip": {
+        "zh-Hans": "口语更常说：Ich bin zu {{spät}}.",
+        "en": "In speech, more often: Ich bin zu {{spät}}."
+      },
+      "style": {
+        "color": "#C0392B",
+        "background": "#FADBD8"
+      },
+      "anim": {
+        "pose": {
+          "rot": 9,
+          "mopen": 0.45,
+          "lookX": 1.6,
+          "earL": -8,
+          "earR": -8
+        },
+        "tint": null,
+        "motion": [
+          "run"
+        ],
+        "fx": [
+          "sweat",
+          "speed-lines"
+        ],
+        "props": [
+          "big-clock"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "vorbeikommen",
+      "pos": "verb",
+      "headword": "{{vorbei|prefix}}kommen",
+      "gloss": {
+        "zh-Hans": "顺便来一趟",
+        "en": "to drop by"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "kam {{vorbei|prefix}}",
+        "perfekt": {
+          "aux": "sein",
+          "rest": "{{vorbei|prefix}}gekommen"
+        }
+      },
+      "example": {
+        "de": "Sie können morgen um zehn Uhr in der Praxis {{vorbeikommen}}.",
+        "translations": {
+          "zh-Hans": "您明天十点可以来诊所一趟。",
+          "en": "You can come by the practice tomorrow at ten."
+        }
+      },
+      "tip": {
+        "zh-Hans": "朋友邀请：Komm doch mal {{vorbei}}!",
+        "en": "Friendly invite: Komm doch mal {{vorbei}}! (Come round sometime)"
+      },
+      "style": {
+        "color": "#C9730C",
+        "background": "#FFEBCB"
+      },
+      "anim": {
+        "pose": {
+          "rot": 5,
+          "hRx": 44,
+          "hRy": -74,
+          "lookX": 1.6,
+          "smile": 0.6
+        },
+        "tint": null,
+        "motion": [
+          "knock",
+          "tail-wag"
+        ],
+        "fx": [
+          "knock-lines"
+        ],
+        "props": [
+          "door"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "sich-anmelden",
+      "pos": "verb",
+      "lead": "sich",
+      "headword": "{{an|prefix}}melden",
+      "gloss": {
+        "zh-Hans": "登记、报名",
+        "en": "to register"
+      },
+      "verb": {
+        "reflexive": "acc",
+        "praeteritum": "meldete {{sich|refl}} {{an|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{sich|refl}} {{an|prefix}}gemeldet"
+        }
+      },
+      "example": {
+        "de": "Nach dem Umzug muss man {{sich|refl}} beim Bürgeramt {{anmelden}}.",
+        "translations": {
+          "zh-Hans": "搬家以后要去市民局登记。",
+          "en": "After moving, you have to register at the Bürgeramt."
+        }
+      },
+      "tip": {
+        "zh-Hans": "德国规定：搬家后两周内要做 {{Anmeldung}}",
+        "en": "German rule: register within two weeks of moving – die {{Anmeldung}}"
+      },
+      "style": {
+        "color": "#1F8FA8",
+        "background": "#D8F0F5"
+      },
+      "anim": {
+        "pose": {
+          "hRx": 30,
+          "hRy": -62,
+          "lookX": 1.2,
+          "lookY": -1.8,
+          "smile": 0.3
+        },
+        "tint": null,
+        "motion": [
+          "tap"
+        ],
+        "fx": [],
+        "props": [
+          "counter",
+          "number-display",
+          "ticket"
+        ],
+        "bubble": null
+      },
+      "notes": "Bundesmeldegesetz: register within two weeks of moving in. The office name varies (Bürgeramt, Bürgerbüro, in Munich the KVR). Also: sich für einen Kurs anmelden."
+    },
+    {
+      "id": "ausfuellen",
+      "pos": "verb",
+      "headword": "{{aus|prefix}}füllen",
+      "gloss": {
+        "zh-Hans": "填写",
+        "en": "to fill in"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "füllte {{aus|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{aus|prefix}}gefüllt"
+        }
+      },
+      "example": {
+        "de": "Bitte {{füllen}} Sie zuerst dieses Formular {{aus|prefix}}.",
+        "translations": {
+          "zh-Hans": "请先填写这张表格。",
+          "en": "Please fill in this form first."
+        }
+      },
+      "tip": {
+        "zh-Hans": "表格常见：Vorname, Nachname, {{Geburtsdatum}}",
+        "en": "On forms: Vorname, Nachname, {{Geburtsdatum}} (date of birth)"
+      },
+      "style": {
+        "color": "#5E8C31",
+        "background": "#E5F1D6"
+      },
+      "anim": {
+        "pose": {
+          "hLx": -6,
+          "hLy": -48,
+          "hRx": 10,
+          "hRy": -50,
+          "lookY": 1.8,
+          "smile": 0.2
+        },
+        "tint": null,
+        "motion": [
+          "write"
+        ],
+        "fx": [],
+        "props": [
+          "clipboard",
+          "pen"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "unterschreiben",
+      "pos": "verb",
+      "headword": "unterschreiben",
+      "gloss": {
+        "zh-Hans": "签字",
+        "en": "to sign"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "unterschrieb",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "unterschrieben"
+        }
+      },
+      "example": {
+        "de": "{{Unterschreiben}} Sie bitte hier unten.",
+        "translations": {
+          "zh-Hans": "请在下面这里签字。",
+          "en": "Please sign down here."
+        }
+      },
+      "tip": {
+        "zh-Hans": "unter- 在这里不拆开：Ich {{unterschreibe}}.",
+        "en": "unter- doesn't split here: Ich {{unterschreibe}}."
+      },
+      "style": {
+        "color": "#3B6BB0",
+        "background": "#DCE6F3"
+      },
+      "anim": {
+        "pose": {
+          "hLx": -6,
+          "hLy": -48,
+          "hRx": 10,
+          "hRy": -50,
+          "lookY": 1.8,
+          "smile": 0.5
+        },
+        "tint": null,
+        "motion": [
+          "write"
+        ],
+        "fx": [
+          "signature"
+        ],
+        "props": [
+          "clipboard",
+          "pen"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "abgeben",
+      "pos": "verb",
+      "headword": "{{ab|prefix}}geben",
+      "gloss": {
+        "zh-Hans": "交（材料）",
+        "en": "to hand in"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "gab {{ab|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{ab|prefix}}gegeben"
+        }
+      },
+      "example": {
+        "de": "Ihre Unterlagen können Sie am Schalter 3 {{abgeben}}.",
+        "translations": {
+          "zh-Hans": "您的材料可以交到3号窗口。",
+          "en": "You can hand in your documents at counter 3."
+        }
+      },
+      "tip": {
+        "zh-Hans": "{{Unterlagen}}（材料）总是用复数",
+        "en": "{{Unterlagen}} (documents) is always plural"
+      },
+      "style": {
+        "color": "#C0567A",
+        "background": "#FBE3EC"
+      },
+      "anim": {
+        "pose": {
+          "rot": 4,
+          "hLx": 16,
+          "hLy": -50,
+          "hRx": 36,
+          "hRy": -50,
+          "smile": 0.5,
+          "lookX": 1.4
+        },
+        "tint": null,
+        "motion": [
+          "push"
+        ],
+        "fx": [],
+        "props": [
+          "counter",
+          "folder"
+        ],
+        "bubble": null
+      }
+    }
+  ]
+}

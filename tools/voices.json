@@ -1,0 +1,28 @@
+{
+  "final": "azure",
+  "azure": {
+    "language": "de-DE",
+    "word_voice": "de-DE-KatjaNeural",
+    "example_voices": ["de-DE-KatjaNeural", "de-DE-FlorianMultilingualNeural"],
+    "speed_word": 0.88,
+    "speed_example": 0.95,
+    "output_format": "audio-24khz-48kbitrate-mono-mp3"
+  },
+  "elevenlabs": {
+    "model": "eleven_multilingual_v2",
+    "word_voice": "PUT_VOICE_ID_HERE",
+    "example_voices": ["PUT_VOICE_ID_HERE", "PUT_SECOND_VOICE_ID_HERE"],
+    "speed_word": 0.88,
+    "speed_example": 0.95,
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "language_code": null,
+    "output_format": "mp3_22050_32"
+  },
+  "edge": {
+    "word_voice": "de-DE-KatjaNeural",
+    "example_voices": ["de-DE-KatjaNeural", "de-DE-FlorianMultilingualNeural"],
+    "speed_word": 0.88,
+    "speed_example": 0.95
+  }
+}

@@ -1,0 +1,680 @@
+{
+  "format": 1,
+  "id": "a2-unterwegs-verben",
+  "version": "0.1.0",
+  "episode": 9,
+  "title": {
+    "de": "Unterwegs",
+    "zh-Hans": "出门在外",
+    "en": "On the go"
+  },
+  "level": "A2",
+  "character": "katze",
+  "locales": [
+    "zh-Hans",
+    "en"
+  ],
+  "license": "CC-BY-NC-SA-4.0",
+  "review": {
+    "status": "draft",
+    "notes": "Season 1 (A2), deck 5. Theme of the deck: movement verbs with sein in the Perfekt, against haben (warten, verpassen, sich beeilen, sich verlaufen). Please check every 'notes' entry."
+  },
+  "cards": [
+    {
+      "id": "fahrrad-fahren",
+      "pos": "verb",
+      "lead": "Fahrrad",
+      "headword": "fahren",
+      "gloss": {
+        "zh-Hans": "骑自行车",
+        "en": "to ride a bike"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "fuhr",
+        "perfekt": {
+          "aux": "sein",
+          "rest": "gefahren"
+        }
+      },
+      "example": {
+        "de": "Meine Oma ist 80 und {{fährt}} immer noch jeden Tag {{Fahrrad}}.",
+        "translations": {
+          "zh-Hans": "我奶奶80岁了，还每天骑自行车。",
+          "en": "My grandma is 80 and still rides her bike every day."
+        }
+      },
+      "tip": {
+        "zh-Hans": "口语常说 {{Rad fahren}}：Rad = Fahrrad",
+        "en": "Often just {{Rad fahren}} (Rad = Fahrrad)"
+      },
+      "style": {
+        "color": "#2E9A7A",
+        "background": "#DAF1E9"
+      },
+      "anim": {
+        "pose": {
+          "jump": 20,
+          "rot": 3,
+          "hLx": 32,
+          "hLy": -40,
+          "hRx": 44,
+          "hRy": -40,
+          "lookX": 1.4,
+          "happy": 1,
+          "smile": 0.8
+        },
+        "tint": null,
+        "motion": [
+          "pedal",
+          "tail-wag"
+        ],
+        "fx": [
+          "speed-lines"
+        ],
+        "props": [
+          "bike"
+        ],
+        "bubble": null
+      },
+      "notes": "Fahrrad fahren: Perfekt with sein (ist Fahrrad gefahren)."
+    },
+    {
+      "id": "sich-beeilen",
+      "pos": "verb",
+      "lead": "sich",
+      "headword": "beeilen",
+      "gloss": {
+        "zh-Hans": "赶紧、抓紧",
+        "en": "to hurry"
+      },
+      "verb": {
+        "reflexive": "acc",
+        "praeteritum": "beeilte {{sich|refl}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{sich|refl}} beeilt"
+        }
+      },
+      "example": {
+        "de": "{{Beeil}} {{dich|refl}}, der Bus kommt in zwei Minuten!",
+        "translations": {
+          "zh-Hans": "快点，公交车两分钟后就来了！",
+          "en": "Hurry up, the bus is coming in two minutes!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "对几个人说：{{Beeilt}} {{euch|refl}}!",
+        "en": "To several people: {{Beeilt}} {{euch|refl}}!"
+      },
+      "style": {
+        "color": "#C2553A",
+        "background": "#F9E0D8"
+      },
+      "anim": {
+        "pose": {
+          "rot": 9,
+          "mopen": 0.45,
+          "lookX": 1.6,
+          "earL": -8,
+          "earR": -8
+        },
+        "tint": null,
+        "motion": [
+          "run"
+        ],
+        "fx": [
+          "speed-lines",
+          "sweat"
+        ],
+        "props": [],
+        "bubble": null
+      }
+    },
+    {
+      "id": "verpassen",
+      "pos": "verb",
+      "headword": "verpassen",
+      "gloss": {
+        "zh-Hans": "错过（车）",
+        "en": "to miss (a bus)"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "verpasste",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "verpasst"
+        }
+      },
+      "example": {
+        "de": "Mist, ich habe den letzten Bus {{verpasst}}!",
+        "translations": {
+          "zh-Hans": "糟了，我错过末班车了！",
+          "en": "Oh no, I've missed the last bus!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "想念一个人是 {{vermissen}}，不是 verpassen",
+        "en": "Missing a person is {{vermissen}}, not verpassen"
+      },
+      "style": {
+        "color": "#7A4FD6",
+        "background": "#ECE4F8"
+      },
+      "anim": {
+        "pose": {
+          "rot": 4,
+          "hRx": 44,
+          "hRy": -64,
+          "open": 1.15,
+          "mopen": 0.7,
+          "smile": -0.3,
+          "lookX": 1.8,
+          "earL": -14,
+          "earR": -14
+        },
+        "tint": null,
+        "motion": [
+          "tremble"
+        ],
+        "fx": [
+          "sweat"
+        ],
+        "props": [
+          "bus"
+        ],
+        "bubble": null
+      },
+      "notes": "Mist! is a mild everyday exclamation."
+    },
+    {
+      "id": "warten",
+      "pos": "verb",
+      "headword": "warten",
+      "gloss": {
+        "zh-Hans": "等、等待",
+        "en": "to wait"
+      },
+      "pattern": {
+        "text": "warten auf",
+        "case": "Akk"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "wartete",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "gewartet"
+        }
+      },
+      "example": {
+        "de": "Wie lange müssen wir noch {{auf}} den Bus {{warten}}?",
+        "translations": {
+          "zh-Hans": "我们还得等公交车等多久啊？",
+          "en": "How much longer do we have to wait for the bus?"
+        }
+      },
+      "tip": {
+        "zh-Hans": "问句：{{Worauf}} wartest du? 问人：Auf wen?",
+        "en": "Ask: {{Worauf}} wartest du? For people: Auf wen?"
+      },
+      "style": {
+        "color": "#B7791F",
+        "background": "#FFF1C4"
+      },
+      "anim": {
+        "pose": {
+          "lid": 0.4,
+          "smile": -0.2,
+          "lookX": 1.5,
+          "lookY": -0.5
+        },
+        "tint": null,
+        "motion": [
+          "tap",
+          "tail-wag"
+        ],
+        "fx": [
+          "sigh-puffs"
+        ],
+        "props": [
+          "bus-stop"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "einsteigen",
+      "pos": "verb",
+      "headword": "{{ein|prefix}}steigen",
+      "gloss": {
+        "zh-Hans": "上车",
+        "en": "to get on"
+      },
+      "pattern": {
+        "text": "einsteigen in",
+        "case": "Akk"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "stieg {{ein|prefix}}",
+        "perfekt": {
+          "aux": "sein",
+          "rest": "{{ein|prefix}}gestiegen"
+        }
+      },
+      "example": {
+        "de": "Schnell, wir müssen jetzt {{in}} den Zug {{einsteigen}}!",
+        "translations": {
+          "zh-Hans": "快，我们得赶紧上火车了！",
+          "en": "Quick, we have to get on the train now!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "往里进，in + Akk：问 {{Wohin}}?",
+        "en": "Movement into: in + Akk. Ask: {{Wohin}}?"
+      },
+      "style": {
+        "color": "#C0392B",
+        "background": "#FADBD8"
+      },
+      "anim": {
+        "pose": {
+          "rot": 7,
+          "fRx": 20,
+          "fRy": -10,
+          "hRx": 46,
+          "hRy": -64,
+          "hLx": 22,
+          "hLy": -48,
+          "lookX": 1.6,
+          "smile": 0.5
+        },
+        "tint": null,
+        "motion": [
+          "hop",
+          "tail-wag"
+        ],
+        "fx": [],
+        "props": [
+          "train-door"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "abfahren",
+      "pos": "verb",
+      "headword": "{{ab|prefix}}fahren",
+      "gloss": {
+        "zh-Hans": "（车）出发",
+        "en": "to leave, depart"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "fuhr {{ab|prefix}}",
+        "perfekt": {
+          "aux": "sein",
+          "rest": "{{ab|prefix}}gefahren"
+        }
+      },
+      "example": {
+        "de": "Der Zug {{fährt}} um 8:15 Uhr von Gleis 3 {{ab|prefix}}.",
+        "translations": {
+          "zh-Hans": "火车8点15分从3号站台出发。",
+          "en": "The train leaves from platform 3 at 8:15."
+        }
+      },
+      "tip": {
+        "zh-Hans": "时刻表上：{{Abfahrt}} 出发，Ankunft 到达",
+        "en": "Timetable: {{Abfahrt}} = departure, Ankunft = arrival"
+      },
+      "style": {
+        "color": "#2F5DA8",
+        "background": "#DCE6F3"
+      },
+      "anim": {
+        "pose": {
+          "lookX": 1.2,
+          "lookY": -2.2,
+          "smile": 0.4,
+          "earL": 6,
+          "earR": 6
+        },
+        "tint": null,
+        "motion": [
+          "tail-wag"
+        ],
+        "fx": [],
+        "props": [
+          "departure-board",
+          "suitcase"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "umsteigen",
+      "pos": "verb",
+      "headword": "{{um|prefix}}steigen",
+      "gloss": {
+        "zh-Hans": "换乘",
+        "en": "to change (trains)"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "stieg {{um|prefix}}",
+        "perfekt": {
+          "aux": "sein",
+          "rest": "{{um|prefix}}gestiegen"
+        }
+      },
+      "example": {
+        "de": "In Nürnberg müssen wir in den ICE nach Berlin {{umsteigen}}.",
+        "translations": {
+          "zh-Hans": "我们得在纽伦堡换乘去柏林的ICE。",
+          "en": "In Nuremberg we have to change to the ICE to Berlin."
+        }
+      },
+      "tip": {
+        "zh-Hans": "直达车：{{ohne Umsteigen}}",
+        "en": "A direct train: {{ohne Umsteigen}}"
+      },
+      "style": {
+        "color": "#1F8FA8",
+        "background": "#D8F0F5"
+      },
+      "anim": {
+        "pose": {
+          "rot": 4,
+          "lookX": 1.4,
+          "smile": 0.4
+        },
+        "tint": null,
+        "motion": [
+          "walk",
+          "tail-wag"
+        ],
+        "fx": [],
+        "props": [
+          "transfer-sign",
+          "suitcase"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "aussteigen",
+      "pos": "verb",
+      "headword": "{{aus|prefix}}steigen",
+      "gloss": {
+        "zh-Hans": "下车",
+        "en": "to get off"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "stieg {{aus|prefix}}",
+        "perfekt": {
+          "aux": "sein",
+          "rest": "{{aus|prefix}}gestiegen"
+        }
+      },
+      "example": {
+        "de": "Wir {{steigen}} an der nächsten Haltestelle {{aus|prefix}}.",
+        "translations": {
+          "zh-Hans": "我们在下一站下车。",
+          "en": "We're getting off at the next stop."
+        }
+      },
+      "tip": {
+        "zh-Hans": "下车用 aus + Dat：aus dem Bus {{aussteigen}}",
+        "en": "Out of: aus + Dat. Aus dem Bus {{aussteigen}}"
+      },
+      "style": {
+        "color": "#C9730C",
+        "background": "#FFEBCB"
+      },
+      "anim": {
+        "pose": {
+          "rot": -3,
+          "happy": 1,
+          "smile": 0.8,
+          "hLx": -36,
+          "hLy": -62,
+          "hRx": 36,
+          "hRy": -62
+        },
+        "tint": null,
+        "motion": [
+          "bounce",
+          "tail-wag"
+        ],
+        "fx": [],
+        "props": [
+          "bus-door"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "sich-verlaufen",
+      "pos": "verb",
+      "lead": "sich",
+      "headword": "verlaufen",
+      "gloss": {
+        "zh-Hans": "迷路",
+        "en": "to get lost"
+      },
+      "verb": {
+        "reflexive": "acc",
+        "praeteritum": "verlief {{sich|refl}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{sich|refl}} verlaufen"
+        }
+      },
+      "example": {
+        "de": "In der Altstadt habe ich {{mich|refl}} total {{verlaufen}}.",
+        "translations": {
+          "zh-Hans": "我在老城彻底迷路了。",
+          "en": "I got completely lost in the old town."
+        }
+      },
+      "tip": {
+        "zh-Hans": "laufen 用 ist，sich verlaufen 却用 {{hat}}！",
+        "en": "laufen takes ist, but sich verlaufen takes {{hat}}!"
+      },
+      "style": {
+        "color": "#5E8C31",
+        "background": "#E5F1D6"
+      },
+      "anim": {
+        "pose": {
+          "hLx": -16,
+          "hLy": -50,
+          "hRx": 16,
+          "hRy": -50,
+          "smile": -0.2,
+          "open": 1.1,
+          "earL": -6,
+          "earR": 4
+        },
+        "tint": null,
+        "motion": [
+          "look-around"
+        ],
+        "fx": [
+          "question"
+        ],
+        "props": [
+          "map"
+        ],
+        "bubble": null
+      },
+      "notes": "B1 on most lists; kept here for the haben/sein contrast with laufen."
+    },
+    {
+      "id": "ankommen",
+      "pos": "verb",
+      "headword": "{{an|prefix}}kommen",
+      "gloss": {
+        "zh-Hans": "到达",
+        "en": "to arrive"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "kam {{an|prefix}}",
+        "perfekt": {
+          "aux": "sein",
+          "rest": "{{an|prefix}}gekommen"
+        }
+      },
+      "example": {
+        "de": "Der Zug hatte Verspätung, deshalb sind wir erst um Mitternacht {{angekommen}}.",
+        "translations": {
+          "zh-Hans": "火车晚点了，所以我们半夜才到。",
+          "en": "The train was late, so we only arrived at midnight."
+        }
+      },
+      "tip": {
+        "zh-Hans": "到了报平安：Bin gut {{angekommen}}!",
+        "en": "Text home: Bin gut {{angekommen}}! (arrived safely)"
+      },
+      "style": {
+        "color": "#3B6BB0",
+        "background": "#DCE6F3"
+      },
+      "anim": {
+        "pose": {
+          "happy": 1,
+          "smile": 0.9,
+          "hRx": 38,
+          "hRy": -72
+        },
+        "tint": null,
+        "motion": [
+          "bounce",
+          "tail-wag"
+        ],
+        "fx": [
+          "sparkles"
+        ],
+        "props": [
+          "station-sign",
+          "suitcase"
+        ],
+        "bubble": null
+      },
+      "notes": "Bin gut angekommen: everyday short form of Ich bin gut angekommen."
+    },
+    {
+      "id": "abholen",
+      "pos": "verb",
+      "headword": "{{ab|prefix}}holen",
+      "gloss": {
+        "zh-Hans": "接（人）",
+        "en": "to pick up"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "holte {{ab|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{ab|prefix}}geholt"
+        }
+      },
+      "example": {
+        "de": "Kannst du mich um sechs vom Bahnhof {{abholen}}?",
+        "translations": {
+          "zh-Hans": "你六点能来火车站接我吗？",
+          "en": "Can you pick me up from the station at six?"
+        }
+      },
+      "tip": {
+        "zh-Hans": "送人去：Ich {{bringe}} dich zum Bahnhof.",
+        "en": "Taking someone there: Ich {{bringe}} dich zum Bahnhof."
+      },
+      "style": {
+        "color": "#C0567A",
+        "background": "#FBE3EC"
+      },
+      "anim": {
+        "pose": {
+          "hLx": -15,
+          "hLy": -46,
+          "hRx": 15,
+          "hRy": -46,
+          "happy": 1,
+          "smile": 0.8,
+          "blush": 0.6
+        },
+        "tint": null,
+        "motion": [
+          "hop",
+          "tail-wag"
+        ],
+        "fx": [
+          "hearts"
+        ],
+        "props": [
+          "welcome-sign"
+        ],
+        "bubble": null
+      }
+    },
+    {
+      "id": "mitnehmen",
+      "pos": "verb",
+      "headword": "{{mit|prefix}}nehmen",
+      "gloss": {
+        "zh-Hans": "带上、带走",
+        "en": "to take along"
+      },
+      "verb": {
+        "reflexive": null,
+        "praeteritum": "nahm {{mit|prefix}}",
+        "perfekt": {
+          "aux": "haben",
+          "rest": "{{mit|prefix}}genommen"
+        }
+      },
+      "example": {
+        "de": "Es regnet – {{nimm}} lieber einen Schirm {{mit|prefix}}!",
+        "translations": {
+          "zh-Hans": "下雨了，最好带把伞！",
+          "en": "It's raining – better take an umbrella!"
+        }
+      },
+      "tip": {
+        "zh-Hans": "咖啡店：Zum {{Mitnehmen}}? = 外带吗？",
+        "en": "In a café: Zum {{Mitnehmen}}? = To go?"
+      },
+      "style": {
+        "color": "#4A6FA5",
+        "background": "#DDE6F2"
+      },
+      "anim": {
+        "pose": {
+          "hRx": 24,
+          "hRy": -72,
+          "smile": 0.5,
+          "lookY": -1.5
+        },
+        "tint": null,
+        "motion": [
+          "walk",
+          "tail-wag"
+        ],
+        "fx": [
+          "rain"
+        ],
+        "props": [
+          "umbrella"
+        ],
+        "bubble": null
+      },
+      "notes": "nehmen: nimmt, nahm, genommen; imperative nimm."
+    }
+  ]
+}

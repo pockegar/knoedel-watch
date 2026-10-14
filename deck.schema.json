@@ -1,0 +1,364 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "deck.schema.json",
+  "title": "German learning card deck",
+  "description": "One deck = one episode. German is the source language; every learner-facing explanation is a map keyed by BCP-47 locale. See FORMAT.md.",
+  "type": "object",
+  "required": [
+    "format",
+    "id",
+    "version",
+    "title",
+    "level",
+    "character",
+    "locales",
+    "cards"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": 1,
+      "description": "Format version of this file. Bump only on breaking changes."
+    },
+    "id": {
+      "$ref": "#/$defs/slug"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Content version (semver). Bump on any text change."
+    },
+    "episode": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "title": {
+      "$ref": "#/$defs/deText",
+      "description": "Deck title. 'de' required, other locales optional."
+    },
+    "level": {
+      "type": "string",
+      "pattern": "^(A1|A2|B1|B2|C1)(-(A1|A2|B1|B2|C1))?$"
+    },
+    "character": {
+      "$ref": "#/$defs/slug",
+      "description": "Must have registry/<character>.json (checked by check_deck.py)."
+    },
+    "locales": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/locale"
+      },
+      "description": "Locales that are complete for every card. Each card's gloss / example.translations / tip must contain all of them."
+    },
+    "license": {
+      "type": "string",
+      "default": "CC-BY-NC-SA-4.0"
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "draft",
+            "in_review",
+            "reviewed"
+          ]
+        },
+        "reviewer": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "cards": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 24,
+      "items": {
+        "$ref": "#/$defs/card"
+      }
+    }
+  },
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "locale": {
+      "type": "string",
+      "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-[A-Z]{2})?$",
+      "examples": [
+        "zh-Hans",
+        "en",
+        "ja"
+      ]
+    },
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+    },
+    "l10n": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "$ref": "#/$defs/locale"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "deText": {
+      "type": "object",
+      "required": [
+        "de"
+      ],
+      "propertyNames": {
+        "$ref": "#/$defs/locale"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "card": {
+      "type": "object",
+      "required": [
+        "id",
+        "pos",
+        "headword",
+        "gloss",
+        "example",
+        "style",
+        "anim"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/slug"
+        },
+        "pos": {
+          "enum": [
+            "adjective",
+            "verb",
+            "noun",
+            "phrase",
+            "preposition",
+            "adverb"
+          ]
+        },
+        "lead": {
+          "type": "string",
+          "description": "Small text above the headword, e.g. 'sich', 'sich die Zähne', 'Kaffee'."
+        },
+        "headword": {
+          "type": "string",
+          "description": "Markup allowed: {{auf|prefix}}stehen"
+        },
+        "gloss": {
+          "$ref": "#/$defs/l10n",
+          "description": "Short meaning under the headword."
+        },
+        "pattern": {
+          "type": "object",
+          "required": [
+            "text"
+          ],
+          "additionalProperties": false,
+          "description": "Collocation, e.g. 'glücklich über' + Akk. Face 2 for adjectives etc.; face 3 for verbs and nouns (their face 2 shows forms).",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "case": {
+              "enum": [
+                "Akk",
+                "Dat",
+                "Gen",
+                null
+              ]
+            }
+          }
+        },
+        "noun": {
+          "type": "object",
+          "required": [
+            "article"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "article": {
+              "enum": [
+                "der",
+                "die",
+                "das"
+              ]
+            },
+            "plural": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Full plural without article, or null if none."
+            }
+          }
+        },
+        "verb": {
+          "type": "object",
+          "required": [
+            "praeteritum",
+            "perfekt"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "reflexive": {
+              "enum": [
+                "acc",
+                "dat",
+                null
+              ]
+            },
+            "praeteritum": {
+              "type": "string",
+              "description": "3rd person singular, markup allowed: stand {{auf|prefix}}"
+            },
+            "perfekt": {
+              "type": "object",
+              "required": [
+                "aux",
+                "rest"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "aux": {
+                  "enum": [
+                    "haben",
+                    "sein"
+                  ]
+                },
+                "rest": {
+                  "type": "string",
+                  "description": "Everything after the auxiliary: {{auf|prefix}}gestanden / sich die Zähne geputzt"
+                }
+              }
+            }
+          }
+        },
+        "example": {
+          "type": "object",
+          "required": [
+            "de",
+            "translations"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "de": {
+              "type": "string",
+              "description": "Markup allowed. Keyword highlight: {{glücklich über}}."
+            },
+            "translations": {
+              "$ref": "#/$defs/l10n"
+            }
+          }
+        },
+        "tip": {
+          "$ref": "#/$defs/l10n",
+          "description": "Pitfall per locale, shown on face 3. Written per audience, not translated. Markup allowed."
+        },
+        "style": {
+          "type": "object",
+          "required": [
+            "color",
+            "background"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "color": {
+              "$ref": "#/$defs/color",
+              "description": "Accent: headword, highlights, pill."
+            },
+            "background": {
+              "$ref": "#/$defs/color",
+              "description": "Animation disc background."
+            }
+          }
+        },
+        "anim": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Character performance. Ids refer to registry/<character>.json; check_deck.py reports ids the firmware has not implemented.",
+          "properties": {
+            "pose": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              },
+              "description": "Target values that differ from neutral. Parameter names come from the registry; x and y are not allowed.",
+              "propertyNames": {
+                "not": {
+                  "enum": [
+                    "x",
+                    "y"
+                  ]
+                }
+              }
+            },
+            "tint": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/color"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "motion": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/slug"
+              }
+            },
+            "fx": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/slug"
+              }
+            },
+            "props": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/slug"
+              },
+              "description": "Objects the character holds or that stand on the stage (sponge, vacuum, washing machine). Each id defines where it attaches; verb cards need them to read."
+            },
+            "bubble": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/slug"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "notes": {
+          "type": "string",
+          "description": "Editor notes, never displayed."
+        }
+      }
+    }
+  }
+}

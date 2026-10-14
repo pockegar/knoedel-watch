@@ -1,0 +1,199 @@
+{
+  "format": 1,
+  "files": {
+    "wie-bitte_0.mp3": {
+      "text": "Wie bitte?",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "wie-bitte_2.mp3": {
+      "text": "– Wir treffen uns um halb acht. – Wie bitte? Um wie viel Uhr?",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural|de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ach-so_0.mp3": {
+      "text": "Ach so!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "ach-so_2.mp3": {
+      "text": "– Heute ist Feiertag, die Läden sind zu. – Ach so! Das habe ich nicht gewusst.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural|de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "genau_0.mp3": {
+      "text": "Genau!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "genau_2.mp3": {
+      "text": "– Wir brauchen also Milch, Eier und Butter? – Genau!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural|de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "echt_0.mp3": {
+      "text": "Echt?",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "echt_2.mp3": {
+      "text": "– Ich habe im Lotto gewonnen! – Echt? Das glaube ich nicht!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural|de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "keine-ahnung_0.mp3": {
+      "text": "Keine Ahnung.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "keine-ahnung_2.mp3": {
+      "text": "– Wo sind meine Schlüssel? – Keine Ahnung. Hast du schon in der Jacke nachgeschaut?",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural|de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "schade_0.mp3": {
+      "text": "Schade!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "schade_2.mp3": {
+      "text": "– Ich kann heute Abend leider nicht kommen. – Schade! Vielleicht nächstes Mal?",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural|de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "macht-nichts_0.mp3": {
+      "text": "Macht nichts.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "macht-nichts_2.mp3": {
+      "text": "– Sorry, ich habe deinen Kuli verloren! – Macht nichts, ich habe noch einen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural|de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "gute-besserung_0.mp3": {
+      "text": "Gute Besserung!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "gute-besserung_2.mp3": {
+      "text": "– Ich habe Fieber und bleibe heute im Bett. – Oh nein! Gute Besserung!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural|de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "kein-problem_0.mp3": {
+      "text": "Kein Problem.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "kein-problem_2.mp3": {
+      "text": "– Kannst du mir am Samstag beim Umzug helfen? – Kein Problem!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural|de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "gern-geschehen_0.mp3": {
+      "text": "Gern geschehen.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "gern-geschehen_2.mp3": {
+      "text": "– Danke für die Blumen! – Gern geschehen, die sind aus meinem Garten.",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural|de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "viel-glueck_0.mp3": {
+      "text": "Viel Glück!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "viel-glueck_2.mp3": {
+      "text": "– Morgen habe ich meine Deutschprüfung. – Viel Glück! Du schaffst das!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural|de-DE-FlorianMultilingualNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "herzlichen-glueckwunsch_0.mp3": {
+      "text": "Herzlichen Glückwunsch!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-KatjaNeural",
+      "speed": 0.88,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    },
+    "herzlichen-glueckwunsch_2.mp3": {
+      "text": "– Ich habe die Prüfung bestanden! – Herzlichen Glückwunsch! Das müssen wir feiern!",
+      "provider": "azure",
+      "model": null,
+      "voice": "de-DE-FlorianMultilingualNeural|de-DE-KatjaNeural",
+      "speed": 0.95,
+      "output_format": "audio-24khz-48kbitrate-mono-mp3"
+    }
+  },
+  "deck": "a2-reaktionen",
+  "deck_version": "0.1.0"
+}
