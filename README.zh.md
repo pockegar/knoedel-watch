@@ -2,11 +2,29 @@
 
 [English](README.md) | 中文
 
+<p align="center"><img src="docs/img/hero.gif" width="798" alt="三块手表：Knödel 撒彩纸庆祝，Brezel 在吸尘，Brezel 在骑车"></p>
+
 运行在 M5Stack StopWatch Dev Kit（ESP32-S3，圆形 AMOLED 触摸屏，带扬声器和运动传感器）上的德语单词卡片。每个词都由两个角色表演出来：团子 **Knödel** 负责形容词和日常表达，橘猫 **Brezel** 负责动词。
 
 每张卡片最多三面：单词和它的动画；语法行、例句和翻译；学习提示。所有德语内容都有配音，用的是合成语音（Microsoft Azure 神经网络语音合成，不是真人录音），一问一答的小对话由两个声音朗读。除了卡片，手表上还有按间隔重复安排的练习模式、带每日一词的时钟和番茄钟。
 
 > **关于内容。** 卡片内容由 AI 编写，尚未经母语者校对。发现错误请提 issue，我们会在下一个内容包里修正。
+
+## 认识 Knödel 和 Brezel
+
+单词不只是显示出来，而是被演出来。每张卡片都有自己的小场景，由数据在手表上实时绘制：姿势、动作、特效、道具和想法泡泡。
+
+**Knödel** 是一个巴伐利亚团子，负责情绪、状态和日常反应：它会笑、会生气、会打哈欠、会打喷嚏、会脸红，还会在泡泡里想念它惦记的东西。
+
+<p align="center"><img src="docs/img/knoedel.png" width="974" alt="Knödel 的八张卡片：glücklich、traurig、sauer、überrascht、müde、erkältet、lustig、Herzlichen Glückwunsch"></p>
+
+**Brezel** 是一只橘猫，负责动词，还会带上道具：吸尘器、浇水壶、自行车、雨中的伞、开走了没等她的公交车、刷卡机、存钱猪、诊所的门。
+
+<p align="center"><img src="docs/img/brezel.png" width="974" alt="Brezel 的八张卡片：staubsaugen、Blumen gießen、Fahrrad fahren、mitnehmen、verpassen、bezahlen、sparen、vorbeikommen"></p>
+
+卡片之外：两个声音朗读的对话例句，只看表演来出题、答对了还会为你庆祝的练习模式，带每日一词的时钟，以及番茄钟。
+
+<p align="center"><img src="docs/img/screens.png" width="1210" alt="对话例句、练习题、庆祝画面、时钟、番茄钟、主菜单里的时钟"></p>
 
 ## 硬件
 

@@ -2,11 +2,29 @@
 
 English | [中文](README.zh.md)
 
+<p align="center"><img src="docs/img/hero.gif" width="798" alt="Three watches: Knödel celebrates with confetti, Brezel vacuums, Brezel rides a bike"></p>
+
 German vocabulary cards for the M5Stack StopWatch Dev Kit (ESP32-S3, round AMOLED touch screen, speaker, motion sensor). Two characters act out every word: **Knödel**, a dumpling, shows adjectives and expressions; **Brezel**, a ginger cat, does the verbs.
 
 Each card has up to three faces: the word with its animation, the grammar line with an example sentence and its translation, and a tip. Every German line is spoken, in synthetic voices (Microsoft Azure neural text-to-speech, not recordings of real people); short dialogues are spoken in two voices. Around the cards the watch has a practice mode with spaced repetition, a clock with a word of the day, and a focus timer.
 
 > **About the content.** The cards were written by an AI and have not been proofread by a native speaker yet. If you find a mistake, please open an issue: it will be fixed in the next content pack.
+
+## Meet Knödel and Brezel
+
+The words are not just shown, they are acted out. Every card has its own little scene, drawn live on the watch from data: a pose, motions, effects, props and a thought bubble.
+
+**Knödel**, a Bavarian dumpling, does feelings, states and reactions: it beams, sulks, yawns, sneezes, blushes and thinks of what it misses in a bubble.
+
+<p align="center"><img src="docs/img/knoedel.png" width="974" alt="Knödel on eight cards: glücklich, traurig, sauer, überrascht, müde, erkältet, lustig, Herzlichen Glückwunsch"></p>
+
+**Brezel**, a ginger cat, does the verbs, and brings props: a vacuum, a watering can, a bike, an umbrella in the rain, a bus that drives off without her, a card terminal, a piggy bank, the door of a surgery.
+
+<p align="center"><img src="docs/img/brezel.png" width="974" alt="Brezel on eight cards: staubsaugen, Blumen gießen, Fahrrad fahren, mitnehmen, verpassen, bezahlen, sparen, vorbeikommen"></p>
+
+Around the cards: example dialogues in two voices, a practice mode that asks with the acting alone and cheers you on, a clock with a word of the day, and a focus timer.
+
+<p align="center"><img src="docs/img/screens.png" width="1210" alt="A dialogue example, a practice question, a celebration, the clock, the focus timer, the clock in the main menu"></p>
 
 ## Hardware
 
