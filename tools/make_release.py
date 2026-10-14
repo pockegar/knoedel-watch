@@ -11,6 +11,9 @@ It writes:
   release/site/      a static web page with ESP Web Tools: open it in Chrome or Edge,
                      plug in the watch, press Install. Publish it with GitHub Pages
                      (or any HTTPS host); the firmware files sit next to the page.
+  release/knoedel-watch-<version>-installer.zip
+                     the same page to run offline: unzip, python3 -m http.server -d <folder>,
+                     open http://localhost:8000 in Chrome or Edge.
   release/knoedel-watch-<version>-full.bin
                      everything in one image, for a fresh install with esptool:
                        python3 -m esptool --chip esp32s3 write-flash 0x0 <file>
@@ -90,10 +93,15 @@ def main():
         cmd += [hex(offset), path]
     run(cmd)
 
+    # The installer page as a zip, for installing without a network.
+    installer = OUT / f"knoedel-watch-{version}-installer"
+    shutil.make_archive(str(installer), "zip", root_dir=OUT, base_dir="site")
+
     size = sum(p.stat().st_size for p in (site / "firmware").iterdir())
     print(f"\nrelease {version} in {OUT.relative_to(ROOT)}/:")
     print(f"  site/            web installer, {len(parts)} parts, {size // 1024} KB")
     print(f"  {full.name}  {full.stat().st_size // 1024} KB")
+    print(f"  {installer.name}.zip  {(OUT / (installer.name + '.zip')).stat().st_size // 1024} KB")
     print("Try the installer locally: python3 -m http.server -d release/site 8000, then open http://localhost:8000"
           " (Web Serial works on localhost without HTTPS).")
 
