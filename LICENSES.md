@@ -33,9 +33,12 @@ brand, product or merchandise without permission.
 
 ## Audio clips
 
-The MP3 clips in `content/*/audio/` were generated with Microsoft Azure Speech
-(neural voices de-DE-KatjaNeural and de-DE-FlorianMultilingualNeural) and are
-not covered by the licenses above.
+The MP3 clips in `content/*/audio/` are synthetic speech: they were generated
+from the deck texts with Microsoft Azure Speech (standard tier, prebuilt neural
+voices de-DE-KatjaNeural and de-DE-FlorianMultilingualNeural) and are not
+recordings of real people. Microsoft lets the output be used and distributed
+when the input text is one's own, as it is here. The clips are not covered by
+the licenses above. Please report problems with them as an issue.
 
 ## Third-party components
 
