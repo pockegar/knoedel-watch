@@ -16,9 +16,9 @@
 
 ## 安装
 
-不需要任何开发工具：在电脑上用 Chrome 或 Edge 打开 **[网页安装器](https://GITHUB_USER.github.io/knoedel-watch/)**，用能传数据的 USB-C 线连上手表，点"安装"。第一次安装时选择清空手表；以后更新时选择保留数据，练习进度不会丢。
+不需要任何开发工具：在电脑上用 Chrome 或 Edge 打开 **[网页安装器](https://yanxuceo.github.io/knoedel-watch/)**，用能传数据的 USB-C 线连上手表，点"安装"。第一次安装时选择清空手表；以后更新时选择保留数据，练习进度不会丢。
 
-习惯用命令行？每个 [Release](https://github.com/GITHUB_USER/knoedel-watch/releases) 里也有一个包含全部内容的镜像：先 `pip install esptool`，然后运行 `python3 -m esptool --chip esp32s3 write-flash 0x0 knoedel-watch-<版本>-full.bin`（相当于全新安装，会清空练习进度和设置）。
+习惯用命令行？每个 [Release](https://github.com/yanxuceo/knoedel-watch/releases) 里也有一个包含全部内容的镜像：先 `pip install esptool`，然后运行 `python3 -m esptool --chip esp32s3 write-flash 0x0 knoedel-watch-<版本>-full.bin`（相当于全新安装，会清空练习进度和设置）。
 
 想自己编译，见 [编译和烧录](#编译和烧录)。
 

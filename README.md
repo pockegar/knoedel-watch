@@ -16,9 +16,9 @@ That is an affiliate link: if you buy through it, the author of this project ear
 
 ## Install
 
-No development tools needed: open the **[web installer](https://GITHUB_USER.github.io/knoedel-watch/)** in Chrome or Edge on a computer, connect the watch with a USB-C data cable and press *Install*. On the first install, let it erase the watch; when updating later, keep the data and your progress stays.
+No development tools needed: open the **[web installer](https://yanxuceo.github.io/knoedel-watch/)** in Chrome or Edge on a computer, connect the watch with a USB-C data cable and press *Install*. On the first install, let it erase the watch; when updating later, keep the data and your progress stays.
 
-Prefer the command line? Each [release](https://github.com/GITHUB_USER/knoedel-watch/releases) also has one image with everything: `pip install esptool`, then `python3 -m esptool --chip esp32s3 write-flash 0x0 knoedel-watch-<version>-full.bin` (a fresh install: it erases progress and settings).
+Prefer the command line? Each [release](https://github.com/yanxuceo/knoedel-watch/releases) also has one image with everything: `pip install esptool`, then `python3 -m esptool --chip esp32s3 write-flash 0x0 knoedel-watch-<version>-full.bin` (a fresh install: it erases progress and settings).
 
 To build it yourself, see [Build and flash](#build-and-flash).
 
