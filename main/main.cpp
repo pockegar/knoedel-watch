@@ -46,6 +46,7 @@ static Language LANGUAGES[2];
 
 static constexpr uint8_t VOLUMES[] = {0, 100, 160, 220, 255};  // speaker volume, 0..255
 static constexpr uint8_t BRIGHTNESSES[] = {60, 120, 200, 255};
+static constexpr uint8_t BRIGHTNESS_DEFAULT = 1;  // shown as 2 / 4
 static constexpr uint8_t BRIGHTNESS_IDLE = 40;
 static constexpr uint32_t IDLE_DIM_MS = 60 * 1000;
 static constexpr uint32_t IDLE_OFF_MS = 5 * 60 * 1000;  // on battery; on USB power the watch stays on
@@ -59,7 +60,7 @@ enum Setting { SET_LANGUAGE, SET_TIME, SET_VOLUME, SET_BRIGHTNESS, SET_POWER_OFF
 
 // Everything the watch remembers across power cycles.
 struct State {
-    uint8_t screen = HOME, language = 0, volume = 3, brightness = 2;
+    uint8_t screen = HOME, language = 0, volume = 3, brightness = BRIGHTNESS_DEFAULT;
     uint8_t home_item = ITEM_LEARN, deck = 0, card = 0, setting = 0;  // a new watch opens on "Learn German"
 };
 static State st;
@@ -186,7 +187,7 @@ static void clamp_state()
 {
     st.language = two_languages ? st.language & 1 : 0;
     st.volume = st.volume < sizeof(VOLUMES) ? st.volume : 3;
-    st.brightness = st.brightness < sizeof(BRIGHTNESSES) ? st.brightness : 2;
+    st.brightness = st.brightness < sizeof(BRIGHTNESSES) ? st.brightness : BRIGHTNESS_DEFAULT;
     // A practice session and the timer are not resumed; the clock is.
     st.screen = st.screen <= SETTINGS || st.screen == CLOCK ? st.screen : (uint8_t)HOME;
     st.home_item %= HOME_ITEMS;
@@ -946,7 +947,7 @@ static bool load_content()
 static void no_content_screen(bool wrong_version)
 {
     auto &d = M5.Display;
-    d.setBrightness(BRIGHTNESSES[2]);
+    d.setBrightness(BRIGHTNESSES[BRIGHTNESS_DEFAULT]);
     d.fillScreen(TFT_BLACK);
     d.setTextDatum(middle_center);
     d.setTextColor(0xE8C990u);
