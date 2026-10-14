@@ -1,10 +1,14 @@
-# Deutsch mit Knödel
+# Knödel Watch
 
 [English](README.md) | 中文
 
+**可爱的小角色把每个单词演出来，在一块小小的圆屏上学外语。**
+
+> 🇩🇪 第一个版本教的是**德语**（A2 级别），配有英文和中文翻译，这套课程叫 *Deutsch mit Knödel*。以后可以加入更多语言：卡组格式并不限于德语。
+
 <p align="center"><img src="docs/img/hero.gif" width="798" alt="三块手表：Knödel 撒彩纸庆祝，Brezel 在吸尘，Brezel 在骑车"></p>
 
-运行在 M5Stack StopWatch Dev Kit（ESP32-S3，圆形 AMOLED 触摸屏，带扬声器和运动传感器）上的德语单词卡片。每个词都由两个角色表演出来：团子 **Knödel** 负责形容词和日常表达，橘猫 **Brezel** 负责动词。
+运行在 M5Stack StopWatch Dev Kit（ESP32-S3，圆形 AMOLED 触摸屏，带扬声器和运动传感器）上的动画单词卡片。每个词都由两个角色表演出来：团子 **Knödel** 负责形容词和日常表达，橘猫 **Brezel** 负责动词。
 
 每张卡片最多三面：单词和它的动画；语法行、例句和翻译；学习提示。所有德语内容都有配音，用的是合成语音（Microsoft Azure 神经网络语音合成，不是真人录音），一问一答的小对话由两个声音朗读。除了卡片，手表上还有按间隔重复安排的练习模式、带每日一词的时钟和番茄钟。
 

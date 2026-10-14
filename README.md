@@ -1,10 +1,14 @@
-# Deutsch mit Knödel
+# Knödel Watch
 
 English | [中文](README.zh.md)
 
+**Little animated characters act out every word. Learn a language on a tiny round screen.**
+
+> 🇩🇪 This first version teaches **German** (level A2), with English and Chinese translations. Its course is called *Deutsch mit Knödel*. More languages can follow: the deck format is not tied to German.
+
 <p align="center"><img src="docs/img/hero.gif" width="798" alt="Three watches: Knödel celebrates with confetti, Brezel vacuums, Brezel rides a bike"></p>
 
-German vocabulary cards for the M5Stack StopWatch Dev Kit (ESP32-S3, round AMOLED touch screen, speaker, motion sensor). Two characters act out every word: **Knödel**, a dumpling, shows adjectives and expressions; **Brezel**, a ginger cat, does the verbs.
+Animated vocabulary cards for the M5Stack StopWatch Dev Kit (ESP32-S3, round AMOLED touch screen, speaker, motion sensor). Two characters act out every word: **Knödel**, a dumpling, shows adjectives and expressions; **Brezel**, a ginger cat, does the verbs.
 
 Each card has up to three faces: the word with its animation, the grammar line with an example sentence and its translation, and a tip. Every German line is spoken, in synthetic voices (Microsoft Azure neural text-to-speech, not recordings of real people); short dialogues are spoken in two voices. Around the cards the watch has a practice mode with spaced repetition, a clock with a word of the day, and a focus timer.
 
