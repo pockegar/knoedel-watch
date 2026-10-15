@@ -1,0 +1,75 @@
+# Checks every push and pull request: the firmware builds for every board, and
+# the content pack builds, with every text of every language fitting the screen.
+# No audio is generated here (no --paid, no keys): the clips in content/ must
+# already match the decks.
+name: build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  firmware:
+    name: firmware (${{ matrix.board }})
+    runs-on: ubuntu-latest
+    container: espressif/idf:v6.0.1
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # One entry per board in main/Kconfig.projbuild. `defaults` adds the
+          # board's sdkconfig.defaults.<board> after sdkconfig.defaults.
+          - board: m5_stopwatch
+            defaults: sdkconfig.defaults
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        shell: bash
+        run: |
+          . $IDF_PATH/export.sh
+          idf.py -B build-${{ matrix.board }} -D SDKCONFIG=sdkconfig.${{ matrix.board }} \
+                 -D "SDKCONFIG_DEFAULTS=${{ matrix.defaults }}" build
+      - name: Check the board
+        shell: bash
+        run: |
+          # The build must be for the board of this matrix entry.
+          option=$(echo "KNOEDEL_BOARD_${{ matrix.board }}" | tr a-z A-Z)
+          grep -q "^CONFIG_${option}=y" sdkconfig.${{ matrix.board }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: firmware-${{ matrix.board }}
+          path: |
+            build-${{ matrix.board }}/bootloader/bootloader.bin
+            build-${{ matrix.board }}/partition_table/partition-table.bin
+            build-${{ matrix.board }}/knoedel_watch.bin
+            build-${{ matrix.board }}/flash_args
+
+  content:
+    name: content pack
+    runs-on: ubuntu-latest
+    container: espressif/idf:v6.0.1
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install the layout checker's tools
+        shell: bash
+        run: |
+          apt-get update -qq
+          apt-get install -y -qq --no-install-recommends libsdl2-dev g++ >/dev/null
+          . $IDF_PATH/export.sh
+          python -m pip install -q jsonschema pillow fonttools
+      - name: Fetch M5GFX
+        shell: bash
+        run: |
+          # The layout checker (sim/) draws with the firmware's graphics library.
+          . $IDF_PATH/export.sh
+          idf.py reconfigure
+      - name: Build the content pack
+        shell: bash
+        run: |
+          . $IDF_PATH/export.sh
+          python tools/import_decks.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: content-pack
+          path: packs/*.bin
