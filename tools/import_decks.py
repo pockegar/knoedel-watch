@@ -267,10 +267,10 @@ def pack_audio(decks):
 
 # ---- steps -------------------------------------------------------------------
 
-def build_sim():
+def build_sim(board="m5"):
     if shutil.which("cmake") is None:
         return "cmake not found"
-    for cmd in (["cmake", "-S", "sim", "-B", "sim/build"], ["cmake", "--build", "sim/build", "-j"]):
+    for cmd in (["cmake", "-S", "sim", "-B", "sim/build", "-DKNOEDEL_WAVESHARE=" + ("ON" if board == "waveshare" else "OFF")], ["cmake", "--build", "sim/build", "-j"]):
         r = run(cmd, capture_output=True)
         if r.returncode:
             return (r.stdout + r.stderr)[-1500:]
@@ -348,6 +348,7 @@ def main():
     ap.add_argument("--update-registry", action="store_true",
                     help="firmware side: rewrite registry/<character>.json from what the code implements")
     ap.add_argument("--skip-fit", action="store_true", help="skip the registry and pixel-fit checks (no cmake/SDL2)")
+    ap.add_argument("--board", choices=("m5", "waveshare"), default="m5", help="display geometry for layout checks")
     ap.add_argument("--library", default=str(ROOT / "content" / "library.json"),
                     help="which decks make up the pack, and its name")
     ap.add_argument("--name", help="name of the pack; default: from the library, or 'custom' for decks given by hand")
@@ -394,7 +395,7 @@ def main():
     if a.skip_fit:
         print("skipped: registry and pixel-fit checks")
     else:
-        err = build_sim()
+        err = build_sim(a.board)
         if err:
             sys.exit(f"cannot build the layout checker (sim/):\n{err}\nInstall cmake and SDL2, or pass --skip-fit.")
         if a.update_registry:

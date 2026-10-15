@@ -1,3 +1,6 @@
 dependencies:
   idf: ">=5.1"
   m5stack/m5unified: "^0.2.25"
+  espressif/esp_lcd_co5300: "^2.2.0"
+  espressif/esp_codec_dev: "~1.5"
+  waveshare/esp_lcd_touch_cst9217: "*"

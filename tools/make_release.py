@@ -40,6 +40,10 @@ def main():
     ap.add_argument("--library", default=str(ROOT / "content" / "library.json"), help="which content pack to ship")
     a = ap.parse_args()
 
+    config_path = BUILD / "config" / "sdkconfig.json"
+    if config_path.exists() and json.loads(config_path.read_text()).get("KNOEDEL_BOARD_WAVESHARE_1_75C"):
+        sys.exit("This web installer targets M5Stack StopWatch. For Waveshare, use tools/device_ws.py; see ADAPTATION.md.")
+
     version = re.search(r'set\(PROJECT_VER "([^"]+)"\)', (ROOT / "CMakeLists.txt").read_text()).group(1)
     pack_name = json.loads(Path(a.library).read_text())["pack"]
     if not (BUILD / "flash_args").exists():

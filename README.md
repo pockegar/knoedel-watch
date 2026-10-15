@@ -1,5 +1,9 @@
 # Knödel Watch
 
+> **Waveshare ESP32-S3-Touch-AMOLED-1.75C** is also supported through a board-specific build.
+> Build, controls, verified firmware and recovery: [Waveshare adaptation](ADAPTATION.md).
+> The upstream M5Stack web installer below is for the M5Stack board only.
+
 English | [中文](README.zh.md)
 
 **Little animated characters act out every word. Learn a language on a tiny round screen.**

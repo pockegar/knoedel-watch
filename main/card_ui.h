@@ -9,9 +9,18 @@
 
 #include <M5GFX.h>
 
+#ifdef ESP_PLATFORM
+#include "sdkconfig.h"
+#endif
+
 namespace ui {
 
+// The M5Stack StopWatch panel is 468x468, the Waveshare 1.75C panel 466x466.
+#ifdef CONFIG_KNOEDEL_BOARD_WAVESHARE_1_75C
+constexpr int SCREEN = 466;
+#else
 constexpr int SCREEN = 468;
+#endif
 constexpr int CX = SCREEN / 2, CY = SCREEN / 2;
 
 // Area of the cover and of face 1 that changes every frame.

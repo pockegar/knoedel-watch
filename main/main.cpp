@@ -974,13 +974,12 @@ extern "C" void app_main(void)
 {
     auto cfg = M5.config();
     cfg.internal_mic = false;
-    M5.begin(cfg);
-
     esp_err_t err = nvs_flash_init();
     if (err == ESP_ERR_NVS_NO_FREE_PAGES || err == ESP_ERR_NVS_NEW_VERSION_FOUND) {
         nvs_flash_erase();
         nvs_flash_init();
     }
+    M5.begin(cfg);
     load_state();
 
     const bool mounted = content_mount();
@@ -1003,6 +1002,8 @@ extern "C" void app_main(void)
 
     apply_language();
     clamp_position();
+    ESP_LOGI(TAG, "state: screen=%u home=%u deck=%u card=%u language=%u volume=%u brightness=%u setting=%u",
+             st.screen, st.home_item, st.deck, st.card, st.language, st.volume, st.brightness, st.setting);
     if (st.screen == CLOCK) {
         pick_word(false);
     }
@@ -1041,6 +1042,14 @@ extern "C" void app_main(void)
 
         bool input = true;
         auto touch = M5.Touch.getDetail();
+#ifdef CONFIG_KNOEDEL_BOARD_WAVESHARE_1_75C
+        const auto action = M5.takeAction();
+        if (action != M5Unified::None) {
+            if (action == M5Unified::Tap) tap();
+            else if (action == M5Unified::Back) back();
+            else step(action == M5Unified::Next ? 1 : -1);
+        } else
+#endif
         if (M5.BtnA.wasHold()) {
             back();
         } else if (M5.BtnA.wasClicked()) {

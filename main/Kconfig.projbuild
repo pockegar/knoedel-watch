@@ -1,0 +1,17 @@
+choice KNOEDEL_BOARD
+    prompt "Target board"
+    default KNOEDEL_BOARD_M5_STOPWATCH
+    help
+        The upstream firmware targets the M5Stack StopWatch Dev Kit.
+        The Waveshare ESP32-S3-Touch-AMOLED-1.75C uses a board facade
+        for its 466px display, CST9217 touch, ES8311 speaker, QMI8658
+        accelerometer and AXP2101 power controller. See ADAPTATION.md
+        for its separate build configuration and system-clock limitations.
+
+config KNOEDEL_BOARD_M5_STOPWATCH
+    bool "M5Stack StopWatch Dev Kit (upstream)"
+
+config KNOEDEL_BOARD_WAVESHARE_1_75C
+    bool "Waveshare ESP32-S3-Touch-AMOLED-1.75C"
+
+endchoice

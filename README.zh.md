@@ -1,5 +1,9 @@
 # Knödel Watch
 
+> 也提供 **Waveshare ESP32-S3-Touch-AMOLED-1.75C** 的独立板型构建。
+> 编译、操作、已验证固件与恢复方法见 [微雪适配说明](ADAPTATION.md)。
+> 下文上游网页安装器适用于 M5Stack，微雪板请使用适配说明中的刷机方法。
+
 [English](README.md) | 中文
 
 **可爱的小角色把每个单词演出来，在一块小小的圆屏上学外语。**

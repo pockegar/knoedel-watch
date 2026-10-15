@@ -6,6 +6,7 @@
 #   sim/build/card_sim render packs/a2-start sim/out
 cmake_minimum_required(VERSION 3.16)
 project(card_sim C CXX)
+option(KNOEDEL_WAVESHARE "Check the Waveshare 466px display" OFF)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_BUILD_TYPE Release)
 
@@ -19,5 +20,8 @@ add_executable(card_sim sim_main.cpp
     ${ROOT}/main/character.cpp ${ROOT}/main/knoedel.cpp ${ROOT}/main/knoedel_bubbles.cpp ${ROOT}/main/katze.cpp ${ROOT}/main/card_ui.cpp ${ROOT}/main/deck.cpp ${ROOT}/main/progress.cpp ${GFX_SRC})
 target_include_directories(card_sim PRIVATE ${GFX}/src ${ROOT}/main ${SDL2_INCLUDE_DIRS} ${SDL2_INCLUDE_DIRS}/..)
 target_compile_definitions(card_sim PRIVATE LGFX_SDL)
+if(KNOEDEL_WAVESHARE)
+    target_compile_definitions(card_sim PRIVATE CONFIG_KNOEDEL_BOARD_WAVESHARE_1_75C=1)
+endif()
 target_compile_options(card_sim PRIVATE -w)
 target_link_libraries(card_sim PRIVATE SDL2::SDL2)

@@ -1,4 +1,10 @@
 build/
+build-waveshare/
+build-m5-check/
+sdkconfig.m5-check
+sdkconfig.m5-check.old
+sdkconfig.waveshare
+sdkconfig.waveshare.old
 managed_components/
 sdkconfig
 sdkconfig.old
@@ -6,6 +12,7 @@ sim/build/
 sim/out/
 .DS_Store
 .cache/
+backups/
 __pycache__/
 # Content packs, built by tools/import_decks.py
 packs/
@@ -15,3 +22,5 @@ release/
 .vscode/
 content/*/preview.html
 sim/out*/
+# Machine-specific flash backups, identities and raw validation logs stay local.
+validation/

@@ -45,6 +45,8 @@ the licenses above. Please report problems with them as an issue.
 | Component | Where | License |
 |---|---|---|
 | M5Unified, M5GFX | fetched into `managed_components/` at build time | MIT |
+| M5Unified button/touch state machines and compatible type definitions | `main/board/waveshare_1_75c/` | MIT, see `LICENSE.M5Stack` in that directory |
+| esp_lcd_co5300, esp_codec_dev, esp_lcd_touch_cst9217 | fetched into `managed_components/` for the Waveshare port | Apache-2.0 |
 | minimp3 | `main/third_party/minimp3.h` | CC0 1.0 |
 | Bricolage Grotesque | `tools/fonts/`, glyphs embedded in the content packs (`font_de_*.vlw`, `font_clock.vlw`, English `font_loc*.vlw`) | SIL OFL 1.1, see `tools/fonts/OFL-Bricolage.txt` |
 | Noto Sans SC | `tools/fonts/`, glyphs embedded in the content packs (Chinese `font_loc*.vlw`) | SIL OFL 1.1, see `tools/fonts/OFL-NotoSansSC.txt` |
