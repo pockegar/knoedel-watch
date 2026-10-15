@@ -36,6 +36,10 @@ One [M5Stack StopWatch Dev Kit](https://openelab.io/products/m5stack-stopwatch-d
 
 That is an affiliate link: if you buy through it, the author of this project earns a commission, at no extra cost to you. The kit is also sold by M5Stack directly and by other shops.
 
+### Other boards
+
+The firmware reaches the hardware through a small board layer, [`main/board/board.h`](main/board/board.h), so it can be ported to other ESP32-S3 boards with a round touch screen, two keys and a speaker. The M5Stack StopWatch is the only board supported so far. To port it to yours, see [docs/PORTING.md](docs/PORTING.md).
+
 ## Install
 
 No development tools needed: open the **[web installer](https://yanxuceo.github.io/knoedel-watch/)** in Chrome or Edge on a computer, connect the watch with a USB-C data cable and press *Install*. On the first install, let it erase the watch; when updating later, keep the data and your progress stays.
@@ -158,13 +162,15 @@ Animations are data: a card names a pose, motions, effects, props and a thought 
 ## Repository
 
 ```
-main/          firmware (ESP-IDF, M5Unified)
+main/          firmware (ESP-IDF, M5GFX)
+main/board/    the hardware of each board, behind board.h
 sim/           desktop build of the screens, used for the layout check
 tools/         importer, deck checker, audio, web preview, flashing
 content/       decks and their audio
 registry/      what each character can do
 curriculum/    plan of the decks to come, and every word taught so far
 FORMAT.md      the deck format
+docs/PORTING.md  how to port the firmware to another board
 ```
 
 ## Licenses

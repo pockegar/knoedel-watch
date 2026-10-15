@@ -36,6 +36,10 @@
 
 上面是推荐链接：通过它购买，本项目作者会获得佣金，你付的价格不变。这个套件在 M5Stack 官方和其他店铺也能买到。
 
+### 其他开发板
+
+固件只通过一层很薄的板级接口 [`main/board/board.h`](main/board/board.h) 访问硬件，所以可以移植到其他 ESP32-S3 开发板上，条件是有圆形触摸屏、两个按键和扬声器。目前只支持 M5Stack StopWatch。想移植到你的板子上，请看 [docs/PORTING.md](docs/PORTING.md)（英文）。
+
 ## 安装
 
 不需要任何开发工具：在电脑上用 Chrome 或 Edge 打开 **[网页安装器](https://yanxuceo.github.io/knoedel-watch/)**，用能传数据的 USB-C 线连上手表，点"安装"。第一次安装时选择清空手表；以后更新时选择保留数据，练习进度不会丢。
@@ -158,13 +162,15 @@ idf.py build && python3 tools/import_decks.py && python3 tools/make_release.py
 ## 目录
 
 ```
-main/          固件（ESP-IDF，M5Unified）
+main/          固件（ESP-IDF，M5GFX）
+main/board/    各开发板的硬件部分，统一实现 board.h
 sim/           界面的电脑版，用于排版检查
 tools/         导入、卡组检查、配音、网页预览、烧录
 content/       卡组和配音
 registry/      每个角色会做什么
 curriculum/    后续卡组的规划，以及至今教过的所有词
 FORMAT.md      卡组格式
+docs/PORTING.md  如何把固件移植到其他开发板
 ```
 
 ## 许可
