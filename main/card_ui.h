@@ -1,6 +1,6 @@
 #pragma once
-// Screens for the 468x468 round AMOLED: main menu, settings, and the card
-// faces (FORMAT.md, "Faces on the device").
+// Screens for a round screen of SCREEN pixels: main menu, settings, and the
+// card faces (FORMAT.md, "Faces on the device").
 //
 //   cover : the deck's title, shown when a deck is opened
 //   face 1: animated Knödel, headword, short meaning
@@ -11,6 +11,9 @@
 
 namespace ui {
 
+// Every screen is laid out for a circle this wide, that of the M5Stack
+// StopWatch. A board's screen may be a little smaller or larger: the app
+// centres the picture on it (see main/board/board.h).
 constexpr int SCREEN = 468;
 constexpr int CX = SCREEN / 2, CY = SCREEN / 2;
 

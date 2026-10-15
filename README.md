@@ -38,7 +38,7 @@ That is an affiliate link: if you buy through it, the author of this project ear
 
 ### Other boards
 
-The firmware reaches the hardware through a small board layer, [`main/board/board.h`](main/board/board.h), so it can be ported to other ESP32-S3 boards with a round touch screen, two keys and a speaker. The M5Stack StopWatch is the only board supported so far. To port it to yours, see [docs/PORTING.md](docs/PORTING.md).
+The firmware reaches the hardware through a small board layer, [`main/board/board.h`](main/board/board.h), so it can be ported to other ESP32-S3 boards with a round touch screen of about 460 to 480 px, two keys and a speaker. The M5Stack StopWatch is the only board supported so far. To port it to yours, see [docs/PORTING.md](docs/PORTING.md).
 
 ## Install
 

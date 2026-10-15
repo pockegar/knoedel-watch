@@ -19,8 +19,10 @@ void begin();
 
 // ---- screen -------------------------------------------------------------------
 
-// Square, at least ui::SCREEN pixels wide, 16-bit colour. Brightness (0..255)
-// and sleep() / wakeup() work as in LovyanGFX.
+// Round, 16-bit colour. Brightness (0..255) and sleep() / wakeup() work as
+// in LovyanGFX. The app draws for a 468 px circle (ui::SCREEN) and centres it
+// on this display: a larger screen gets a black rim, a smaller one loses the
+// outermost pixels of the ring. Screens from 460 to 480 px work well.
 lgfx::LGFX_Device &display();
 
 // ---- input --------------------------------------------------------------------

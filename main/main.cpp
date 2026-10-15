@@ -75,7 +75,10 @@ struct State {
 static State st;
 static bool st_dirty = false;
 
+// The screens are drawn for a ui::SCREEN pixel wide circle, into fb. A board's
+// screen may be a few pixels smaller or larger: fb is centred on it, at (ox, oy).
 static M5Canvas fb(&board::display());
+static int ox, oy;
 static int face = 0;
 static uint32_t face_shown_ms = 0;
 static bool two_languages = false;
@@ -222,8 +225,8 @@ static void push_stage()
 {
     int x, y, size;
     ui::stage_rect(x, y, size);
-    board::display().setClipRect(x, y, size, size);
-    fb.pushSprite(0, 0);
+    board::display().setClipRect(ox + x, oy + y, size, size);
+    fb.pushSprite(ox, oy);
     board::display().clearClipRect();
 }
 
@@ -490,7 +493,7 @@ static void show()
         progress::mark_seen(st.deck, st.card);  // from now on practice may ask for it
     }
     render();
-    fb.pushSprite(0, 0);
+    fb.pushSprite(ox, oy);
     speak();
     st_dirty = true;
 }
@@ -500,9 +503,9 @@ static void push_squashed(float zoom_x)
 {
     int half = (int)(ui::SCREEN * zoom_x / 2);
     board::display().startWrite();
-    board::display().fillRect(0, 0, ui::CX - half, ui::SCREEN, TFT_BLACK);
-    board::display().fillRect(ui::CX + half, 0, ui::SCREEN - (ui::CX + half), ui::SCREEN, TFT_BLACK);
-    fb.pushRotateZoom(&board::display(), ui::CX, ui::CY, 0, zoom_x, 1.0f);
+    board::display().fillRect(ox, oy, ui::CX - half, ui::SCREEN, TFT_BLACK);
+    board::display().fillRect(ox + ui::CX + half, oy, ui::SCREEN - (ui::CX + half), ui::SCREEN, TFT_BLACK);
+    fb.pushRotateZoom(&board::display(), ox + ui::CX, oy + ui::CY, 0, zoom_x, 1.0f);
     board::display().endWrite();
 }
 
@@ -519,7 +522,7 @@ static void next_face()
     for (int i = FLIP_STEPS; i >= 1; i--) {
         push_squashed(cosf(i * 1.5708f / (FLIP_STEPS + 0.6f)));
     }
-    fb.pushSprite(0, 0);
+    fb.pushSprite(ox, oy);
 }
 
 // ---- practice -----------------------------------------------------------------
@@ -548,7 +551,7 @@ static int clock_day()
 static void redraw()
 {
     render();
-    fb.pushSprite(0, 0);
+    fb.pushSprite(ox, oy);
 }
 
 static void practice_start()
@@ -998,6 +1001,8 @@ extern "C" void app_main(void)
         return;
     }
     fb.setPivot(ui::CX, ui::CY);
+    ox = ((int)board::display().width() - ui::SCREEN) / 2;
+    oy = ((int)board::display().height() - ui::SCREEN) / 2;
 
     apply_language();
     clamp_position();
@@ -1011,8 +1016,9 @@ extern "C" void app_main(void)
              progress::known(), !board::has_clock() ? "not found" : has_clock ? "running" : "not usable", now.year,
              now.month, now.day, now.hour, now.minute, now.second);
     ESP_LOGI(TAG, "knoedel-watch %s", esp_app_get_description()->version);
-    ESP_LOGI(TAG, "display %dx%d, pack \"%s\": %d decks, language %s%s", (int)board::display().width(), (int)board::display().height(),
-             content_name(), deck_count(), deck_locale(), two_languages ? " (two in the pack)" : "");
+    ESP_LOGI(TAG, "display %dx%d, screens drawn at %d,%d; pack \"%s\": %d decks, language %s%s", (int)board::display().width(),
+             (int)board::display().height(), ox, oy, content_name(), deck_count(), deck_locale(),
+             two_languages ? " (two in the pack)" : "");
     show();
     st_dirty = false;
 
@@ -1119,8 +1125,8 @@ extern "C" void app_main(void)
             const uint32_t e = millis() - cw.turn_ms;
             if (e < FADE_MS + 40 || e > WORD_MS - FADE_MS - 40) {
                 render();
-                board::display().setClipRect(60, 230, ui::SCREEN - 120, 160);
-                fb.pushSprite(0, 0);
+                board::display().setClipRect(ox + 60, oy + 230, ui::SCREEN - 120, 160);
+                fb.pushSprite(ox, oy);
                 board::display().clearClipRect();
             }
         }

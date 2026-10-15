@@ -38,7 +38,7 @@
 
 ### 其他开发板
 
-固件只通过一层很薄的板级接口 [`main/board/board.h`](main/board/board.h) 访问硬件，所以可以移植到其他 ESP32-S3 开发板上，条件是有圆形触摸屏、两个按键和扬声器。目前只支持 M5Stack StopWatch。想移植到你的板子上，请看 [docs/PORTING.md](docs/PORTING.md)（英文）。
+固件只通过一层很薄的板级接口 [`main/board/board.h`](main/board/board.h) 访问硬件，所以可以移植到其他 ESP32-S3 开发板上，条件是有 460～480 像素左右的圆形触摸屏、两个按键和扬声器。目前只支持 M5Stack StopWatch。想移植到你的板子上，请看 [docs/PORTING.md](docs/PORTING.md)（英文）。
 
 ## 安装
 

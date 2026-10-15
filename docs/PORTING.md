@@ -9,8 +9,9 @@ the content pack stay as they are.
 
 - an **ESP32-S3** with **PSRAM** (the frame buffer and audio live there) and at
   least 16 MB of flash (3 MB for the program, the rest for the content pack)
-- a **round touch screen**, 16-bit colour, that M5GFX/LovyanGFX can drive. If no
-  panel class fits, a panel of your own can feed the screen from a frame buffer.
+- a **round touch screen** of about **460 to 480 px**, 16-bit colour, that
+  M5GFX/LovyanGFX can drive. If no panel class fits, a panel of your own can
+  feed the screen from a frame buffer.
 - **at least two keys**, besides any power key
 - a **speaker**
 
@@ -27,7 +28,7 @@ and the keys alone cannot replace it without a worse experience everywhere.
 
 | Part | Functions | Notes |
 |---|---|---|
-| Screen | `begin()`, `display()` | `display()` is an `lgfx::LGFX_Device&`. Brightness, `sleep()` and `wakeup()` must work. |
+| Screen | `begin()`, `display()` | `display()` is an `lgfx::LGFX_Device&` whose `width()` and `height()` are the visible screen. Brightness, `sleep()` and `wakeup()` must work. |
 | Input | `update()`, `touched()` | `update()` runs once per frame and returns one event: `PREVIOUS`, `NEXT`, `SELECT`, `BACK` or `NONE`. |
 | Sound | `set_volume()`, `play_pcm()`, `stop_sound()`, `tone()` | 16-bit PCM at the clip's rate (22.05 or 24 kHz); tones play alongside speech. |
 | Motion (optional) | `has_motion()`, `acceleration()` | in g, with z pointing out of the screen |
@@ -83,11 +84,20 @@ and wake it with one of the keys (ESP32-S3 ext0/ext1 wake-up).
 Keep everything for the board inside its own files: no `#ifdef` for one board
 in the app, no changes to the content.
 
+### Screen size
+
+Every screen is laid out for a 468 px circle (`ui::SCREEN` in
+`main/card_ui.h`), and the app centres that picture on the board's display. On
+a 480 px screen it has a black rim of 6 px; on a 466 px screen the ring loses
+its outermost pixel. Text keeps inside a circle of 416 px, so it is never cut,
+and one content pack fits every board: its layout check needs no board of its
+own.
+
+Screens much smaller or larger than 468 px would need a layout of their own,
+and fonts of other sizes in the content pack. That is not supported yet.
+
 ## Not done yet
 
-- **Screen size.** The layout is drawn for a 468 px screen (`ui::SCREEN` in
-  `main/card_ui.h`). Making the size come from the board, with one content pack
-  checked for every supported screen, is the next step.
 - **Releases.** The web installer and `tools/make_release.py` build for the
   M5Stack StopWatch only. They will offer one image per board, built from the
   same commit.
