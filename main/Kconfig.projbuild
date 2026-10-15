@@ -1,0 +1,15 @@
+menu "Knödel Watch"
+
+choice KNOEDEL_BOARD
+    prompt "Target board"
+    default KNOEDEL_BOARD_M5_STOPWATCH
+    help
+        The board the firmware is built for. Each board implements
+        main/board/board.h in a file of its own.
+
+config KNOEDEL_BOARD_M5_STOPWATCH
+    bool "M5Stack StopWatch Dev Kit"
+
+endchoice
+
+endmenu

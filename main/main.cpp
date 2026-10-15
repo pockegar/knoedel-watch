@@ -1,15 +1,18 @@
-// Apps for the M5Stack StopWatch: a main menu, German vocabulary cards, settings.
+// Apps for a round watch: a main menu, German vocabulary cards, settings.
 //
-//   KEY A (yellow, left) : previous              swipe right : previous
-//   KEY B (blue, right)  : next                  swipe left  : next
-//   tap the screen       : open / next face of a card / change a setting
-//   hold KEY A           : back, everywhere
+//   previous, next : the item before or after
+//   select         : open / next face of a card / change a setting
+//   back           : back, everywhere
+//
+//   Which key or gesture gives which, and all other hardware: main/board/.
+//   On the M5Stack StopWatch: KEY A or a swipe right is previous, KEY B or a
+//   swipe left next, a tap selects, holding KEY A goes back.
 //
 //   main menu > Learn German > deck > cards (face 1: Knödel acts out the word,
 //   face 2: grammar line, example and translation, face 3: tip)
 //   main menu > Practice: The character acts a word out, the meaning
-//   follows as a hint, any key shows the answer; then KEY B: knew it,
-//   KEY A: not yet. Cards seen in a deck come back at growing intervals.
+//   follows as a hint, any key shows the answer; then next: knew it,
+//   previous: not yet. Cards seen in a deck come back at growing intervals.
 //   main menu > Settings: language, volume, brightness, power off
 //   (menus are written in the learner's language, main/ui_strings.h)
 //
@@ -18,9 +21,11 @@
 // pack in its own flash partition (content.h), built by tools/import_decks.py
 // and written to the watch by tools/flash_content.py.
 
-#include <M5Unified.h>
 #include <esp_app_desc.h>
 #include <esp_log.h>
+#include <esp_timer.h>
+#include <freertos/FreeRTOS.h>
+#include <freertos/task.h>
 #include <nvs.h>
 #include <esp_random.h>
 #include <nvs_flash.h>
@@ -28,6 +33,7 @@
 #include <string>
 
 #include "audio_player.h"
+#include "board.h"
 #include "card_ui.h"
 #include "content.h"
 #include "deck.h"
@@ -37,6 +43,9 @@
 #include "ui_strings.h"
 
 static const char *TAG = "cards";
+
+static uint32_t millis() { return (uint32_t)(esp_timer_get_time() / 1000); }
+static void sleep_ms(uint32_t ms) { vTaskDelay(pdMS_TO_TICKS(ms)); }
 
 // The two languages of the content pack: deck pack and the fonts for its script.
 struct Language {
@@ -66,7 +75,7 @@ struct State {
 static State st;
 static bool st_dirty = false;
 
-static M5Canvas fb(&M5.Display);
+static M5Canvas fb(&board::display());
 static int face = 0;
 static uint32_t face_shown_ms = 0;
 static bool two_languages = false;
@@ -109,7 +118,7 @@ static struct {
 static struct {
     bool on;
     int field;  // hour, minute, day, month, year
-    m5::rtc_datetime_t dt;
+    board::DateTime dt;
 } edit;
 
 // ---- sounds -------------------------------------------------------------------
@@ -133,7 +142,7 @@ static void play_tune(const Note *tune)
 
 static void tune_tick()
 {
-    if (s_tune == nullptr || M5.millis() < s_note_ms) {
+    if (s_tune == nullptr || millis() < s_note_ms) {
         return;
     }
     const Note n = s_tune[s_note++];
@@ -142,9 +151,9 @@ static void tune_tick()
         return;
     }
     if (n.hz) {
-        M5.Speaker.tone(n.hz, n.ms, 1);
+        board::tone(n.hz, n.ms);
     }
-    s_note_ms = M5.millis() + n.ms;
+    s_note_ms = millis() + n.ms;
 }
 
 // ---- settings -----------------------------------------------------------------
@@ -213,9 +222,9 @@ static void push_stage()
 {
     int x, y, size;
     ui::stage_rect(x, y, size);
-    M5.Display.setClipRect(x, y, size, size);
+    board::display().setClipRect(x, y, size, size);
     fb.pushSprite(0, 0);
-    M5.Display.clearClipRect();
+    board::display().clearClipRect();
 }
 
 // ---- clock --------------------------------------------------------------------
@@ -235,11 +244,11 @@ static int day_number(int year, int month, int day)
     return era * 146097 + yoe * 365 + yoe / 4 - yoe / 100 + doy - 730425;
 }
 
-static m5::rtc_datetime_t now_dt()
+static board::DateTime now_dt()
 {
-    m5::rtc_datetime_t dt = {};
-    if (!M5.Rtc.isEnabled() || !M5.Rtc.getDateTime(&dt)) {
-        dt.date = {2000, 1, 1, 6};
+    board::DateTime dt = {};
+    if (!board::get_time(dt)) {
+        dt = {2000, 1, 1, 0, 0, 0};
     }
     return dt;
 }
@@ -255,8 +264,8 @@ static void pick_word(bool another)
         cw.card = -1;
         return;
     }
-    const m5::rtc_datetime_t dt = now_dt();
-    const int today = day_number(dt.date.year, dt.date.month, dt.date.date);
+    const board::DateTime dt = now_dt();
+    const int today = day_number(dt.year, dt.month, dt.day);
     uint32_t n = another ? esp_random() : (uint32_t)today * 2654435761u;
     n %= (uint32_t)total;
     for (int d = 0; d < deck_count(); d++) {
@@ -269,26 +278,26 @@ static void pick_word(bool another)
     }
     cw.day = today;
     cw.word_shown = false;  // a new word starts with its acting
-    cw.turn_ms = M5.millis();
+    cw.turn_ms = millis();
     face_shown_ms = cw.turn_ms;
 }
 
 static ui::ClockFace clock_face(std::string &date)
 {
-    const m5::rtc_datetime_t dt = now_dt();
-    const int wd = ((day_number(dt.date.year, dt.date.month, dt.date.date) % 7) + 13) % 7;  // 0: Sunday
+    const board::DateTime dt = now_dt();
+    const int wd = ((day_number(dt.year, dt.month, dt.day) % 7) + 13) % 7;  // 0: Sunday
     const UiText &tx = ui_text(deck_locale());
     char buf[64];
-    const char *month = tx.months[(dt.date.month + 11) % 12];
+    const char *month = tx.months[(dt.month + 11) % 12];
     if (strncmp(deck_locale(), "zh", 2) == 0) {
-        snprintf(buf, sizeof(buf), "%s%d日 %s", month, dt.date.date, tx.weekdays[wd]);  // 10月15日 星期四
+        snprintf(buf, sizeof(buf), "%s%d日 %s", month, dt.day, tx.weekdays[wd]);  // 10月15日 星期四
     } else {
-        snprintf(buf, sizeof(buf), "%s, %d %s", tx.weekdays[wd], dt.date.date, month);  // Thursday, 15 October
+        snprintf(buf, sizeof(buf), "%s, %d %s", tx.weekdays[wd], dt.day, month);  // Thursday, 15 October
     }
     date = buf;
     // Where in its turn the word is: the picture pops up and shrinks away,
     // the word fades in and out.
-    const float e = (float)(M5.millis() - cw.turn_ms);
+    const float e = (float)(millis() - cw.turn_ms);
     float scale = 1, alpha = 1;
     if (cw.word_shown) {
         alpha = fminf(e / FADE_MS, ((float)WORD_MS - e) / FADE_MS);
@@ -299,7 +308,7 @@ static ui::ClockFace clock_face(std::string &date)
         const float u = fminf(1, (e - (ACT_MS - SHRINK_MS)) / SHRINK_MS);
         scale = 1 - u * u;
     }
-    return {dt.time.hours, dt.time.minutes, dt.time.seconds, date.c_str(), cw.deck, cw.card, cw.word_shown,
+    return {dt.hour, dt.minute, dt.second, date.c_str(), cw.deck, cw.card, cw.word_shown,
             alpha < 0 ? 0 : alpha > 1 ? 1 : alpha, scale < 0 ? 0 : scale};
 }
 
@@ -310,7 +319,7 @@ static int timer_left()
     if (!tm.running) {
         return tm.remaining;
     }
-    const int32_t ms = (int32_t)(tm.end_ms - M5.millis());
+    const int32_t ms = (int32_t)(tm.end_ms - millis());
     return ms > 0 ? (ms + 999) / 1000 : 0;
 }
 
@@ -324,7 +333,7 @@ static ui::TimerFace timer_face()
 
 static void render_stage()
 {
-    uint32_t now = M5.millis();
+    uint32_t now = millis();
     float t = fmodf((now - face_shown_ms) / 1000.0f, character::LOOP_SECONDS), clock = now / 1000.0f;
     if (st.screen == HOME) {
         static const ui::MenuIcon ICONS[HOME_ITEMS] = {ui::ICON_CLOCK, ui::ICON_KNOEDEL, ui::ICON_BREZEL, ui::ICON_TIMER,
@@ -365,16 +374,16 @@ static void render_setting()
         break;
     case SET_TIME: {
         name = tx.time;
-        const m5::rtc_datetime_t dt = edit.on ? edit.dt : now_dt();
+        const board::DateTime dt = edit.on ? edit.dt : now_dt();
         char buf[40];
         const int f = edit.on ? edit.field : -1;
         auto mark = [f](int field) { return f == field ? "{{" : ""; };
         auto end = [f](int field) { return f == field ? "}}" : ""; };
         if (f >= 2) {  // the date: 14.10.2026
-            snprintf(buf, sizeof(buf), "%s%d%s.%s%d%s.%s%d%s", mark(2), dt.date.date, end(2), mark(3), dt.date.month, end(3),
-                     mark(4), dt.date.year, end(4));
+            snprintf(buf, sizeof(buf), "%s%d%s.%s%d%s.%s%d%s", mark(2), dt.day, end(2), mark(3), dt.month, end(3),
+                     mark(4), dt.year, end(4));
         } else {
-            snprintf(buf, sizeof(buf), "%s%d%s:%s%02d%s", mark(0), dt.time.hours, end(0), mark(1), dt.time.minutes, end(1));
+            snprintf(buf, sizeof(buf), "%s%d%s:%s%02d%s", mark(0), dt.hour, end(0), mark(1), dt.minute, end(1));
         }
         value = buf;
         hint = edit.on ? tx.edit_hint : tx.tap_change;
@@ -476,7 +485,7 @@ static void speak()
 static void show()
 {
     face = 0;
-    face_shown_ms = M5.millis();
+    face_shown_ms = millis();
     if (st.screen == CARDS) {
         progress::mark_seen(st.deck, st.card);  // from now on practice may ask for it
     }
@@ -490,11 +499,11 @@ static void show()
 static void push_squashed(float zoom_x)
 {
     int half = (int)(ui::SCREEN * zoom_x / 2);
-    M5.Display.startWrite();
-    M5.Display.fillRect(0, 0, ui::CX - half, ui::SCREEN, TFT_BLACK);
-    M5.Display.fillRect(ui::CX + half, 0, ui::SCREEN - (ui::CX + half), ui::SCREEN, TFT_BLACK);
-    fb.pushRotateZoom(&M5.Display, ui::CX, ui::CY, 0, zoom_x, 1.0f);
-    M5.Display.endWrite();
+    board::display().startWrite();
+    board::display().fillRect(0, 0, ui::CX - half, ui::SCREEN, TFT_BLACK);
+    board::display().fillRect(ui::CX + half, 0, ui::SCREEN - (ui::CX + half), ui::SCREEN, TFT_BLACK);
+    fb.pushRotateZoom(&board::display(), ui::CX, ui::CY, 0, zoom_x, 1.0f);
+    board::display().endWrite();
 }
 
 static void next_face()
@@ -504,7 +513,7 @@ static void next_face()
         push_squashed(cosf(i * 1.5708f / (FLIP_STEPS + 0.6f)));
     }
     face = (face + 1) % ui::face_count(st.deck, st.card);
-    face_shown_ms = M5.millis();
+    face_shown_ms = millis();
     render();
     speak();
     for (int i = FLIP_STEPS; i >= 1; i--) {
@@ -519,25 +528,19 @@ static void next_face()
 // matters, so the clock is never set: see progress.h.
 static int clock_day()
 {
-    m5::rtc_date_t d;
-    if (!M5.Rtc.isEnabled()) {
+    board::DateTime d;
+    if (!board::has_clock()) {
         return -1;
     }
-    if (!M5.Rtc.getDate(&d)) {
+    if (!board::get_time(d)) {
         // A clock that never ran, or lost power, holds no valid date. Any date
         // will do to start it: progress.cpp carries on from the last day it saw.
-        const m5::rtc_date_t start_date = {2000, 1, 1, 6};
-        const m5::rtc_time_t start_time = {0, 0, 0};
-        M5.Rtc.setDateTime(&start_date, &start_time);
-        if (!M5.Rtc.getDate(&d)) {
+        if (!board::set_time({2000, 1, 1, 0, 0, 0}) || !board::get_time(d)) {
             return -1;
         }
         ESP_LOGW(TAG, "the clock held no date and was started");
     }
-    // Days since 2000-01-01 (civil calendar).
-    const int y = d.year - (d.month <= 2), era = (y >= 0 ? y : y - 399) / 400, yoe = y - era * 400;
-    const int doy = (153 * (d.month + (d.month > 2 ? -3 : 9)) + 2) / 5 + d.date - 1;
-    const int day = era * 146097 + yoe * 365 + yoe / 4 - yoe / 100 + doy - 730425;
+    const int day = day_number(d.year, d.month, d.day);
     return day >= 0 && day < 36500 ? day : -1;
 }
 
@@ -601,7 +604,7 @@ static void practice_answer(bool knew)
         last_variant = v;
         pr.cheer_variant = v;
         pr.cheer_word = WORDS[esp_random() % (sizeof(WORDS) / sizeof(WORDS[0]))];
-        pr.cheer_ms = M5.millis();
+        pr.cheer_ms = millis();
         pr.phase = CHEER;
         show();
         play_tune(CHEER_TUNE);
@@ -643,7 +646,7 @@ static uint8_t wrap(int value, int count) { return (uint8_t)((value % count + co
 
 static void timer_start()
 {
-    tm.end_ms = M5.millis() + tm.remaining * 1000;
+    tm.end_ms = millis() + tm.remaining * 1000;
     tm.running = true;
 }
 
@@ -692,10 +695,10 @@ static void timer_tick()
     tm.running = false;
     tm.remaining = 0;
     tm.alert = true;
-    tm.alert_ms = M5.millis();
+    tm.alert_ms = millis();
     play_tune(tm.focus ? FOCUS_DONE_TUNE : BREAK_DONE_TUNE);
     st.screen = TIMER;
-    M5.Display.setBrightness(BRIGHTNESSES[st.brightness]);
+    board::display().setBrightness(BRIGHTNESSES[st.brightness]);
     show();
 }
 
@@ -713,26 +716,25 @@ static void speak_word()
 // after the year the clock is set.
 static void edit_time(int dir)
 {
-    m5::rtc_datetime_t &dt = edit.dt;
+    board::DateTime &dt = edit.dt;
     switch (edit.field) {
     case 0:
-        dt.time.hours = wrap(dt.time.hours + dir, 24);
+        dt.hour = wrap(dt.hour + dir, 24);
         break;
     case 1:
-        dt.time.minutes = wrap(dt.time.minutes + dir, 60);
+        dt.minute = wrap(dt.minute + dir, 60);
         break;
     case 2:
-        dt.date.date = 1 + wrap(dt.date.date - 1 + dir, days_in_month(dt.date.year, dt.date.month));
+        dt.day = 1 + wrap(dt.day - 1 + dir, days_in_month(dt.year, dt.month));
         break;
     case 3:
-        dt.date.month = 1 + wrap(dt.date.month - 1 + dir, 12);
+        dt.month = 1 + wrap(dt.month - 1 + dir, 12);
         break;
     default:
-        dt.date.year = dt.date.year + dir < 2024 ? 2099 : dt.date.year + dir > 2099 ? 2024 : dt.date.year + dir;
+        dt.year = dt.year + dir < 2024 ? 2099 : dt.year + dir > 2099 ? 2024 : dt.year + dir;
         break;
     }
-    dt.date.date = dt.date.date > days_in_month(dt.date.year, dt.date.month) ? days_in_month(dt.date.year, dt.date.month)
-                                                                              : dt.date.date;
+    dt.day = dt.day > days_in_month(dt.year, dt.month) ? days_in_month(dt.year, dt.month) : dt.day;
     redraw();
 }
 
@@ -742,17 +744,17 @@ static void edit_time_next()
         edit.on = true;
         edit.field = 0;
         edit.dt = now_dt();
-        if (edit.dt.date.year < 2024) {
-            edit.dt.date = {2026, 1, 1, 0};
+        if (edit.dt.year < 2024) {
+            edit.dt.year = 2026;
+            edit.dt.month = edit.dt.day = 1;
         }
-        edit.dt.time.seconds = 0;
+        edit.dt.second = 0;
     } else if (++edit.field > 4) {
         // Set the clock; practice keeps counting days from where it was.
-        const m5::rtc_datetime_t old = now_dt();
-        edit.dt.date.weekDay = (int8_t)(((day_number(edit.dt.date.year, edit.dt.date.month, edit.dt.date.date) % 7) + 13) % 7);
-        M5.Rtc.setDateTime(&edit.dt);
-        progress::clock_moved(day_number(old.date.year, old.date.month, old.date.date),
-                              day_number(edit.dt.date.year, edit.dt.date.month, edit.dt.date.date));
+        const board::DateTime old = now_dt();
+        board::set_time(edit.dt);
+        progress::clock_moved(day_number(old.year, old.month, old.day),
+                              day_number(edit.dt.year, edit.dt.month, edit.dt.day));
         progress::save();
         edit.on = false;
         cw.day = -1;
@@ -806,14 +808,14 @@ static void power_off()
 {
     save_state();
     audio_stop();
-    M5.Display.fillScreen(TFT_BLACK);
-    M5.Display.setBrightness(0);
-    M5.Display.sleep();
-    M5.delay(100);
-    M5.Power.powerOff();  // does not return on battery; on USB power the board stays on
-    M5.delay(500);
-    M5.Display.wakeup();
-    M5.Display.setBrightness(BRIGHTNESSES[st.brightness]);
+    board::display().fillScreen(TFT_BLACK);
+    board::display().setBrightness(0);
+    board::display().sleep();
+    sleep_ms(100);
+    board::power_off();  // does not return on battery; on USB power the board stays on
+    sleep_ms(500);
+    board::display().wakeup();
+    board::display().setBrightness(BRIGHTNESSES[st.brightness]);
     show();
 }
 
@@ -828,11 +830,11 @@ static void change_setting()
         break;
     case SET_VOLUME:
         st.volume = wrap(st.volume + 1, sizeof(VOLUMES));
-        M5.Speaker.setVolume(VOLUMES[st.volume]);
+        board::set_volume(VOLUMES[st.volume]);
         break;
     case SET_BRIGHTNESS:
         st.brightness = wrap(st.brightness + 1, sizeof(BRIGHTNESSES));
-        M5.Display.setBrightness(BRIGHTNESSES[st.brightness]);
+        board::display().setBrightness(BRIGHTNESSES[st.brightness]);
         break;
     case SET_TIME:
         edit_time_next();
@@ -864,8 +866,8 @@ static void tap()
         break;
     case CLOCK:
         // Show the word now (the picture shrinks away first), and say it.
-        if (!cw.word_shown && M5.millis() - cw.turn_ms < ACT_MS - SHRINK_MS) {
-            cw.turn_ms = M5.millis() - (ACT_MS - SHRINK_MS);
+        if (!cw.word_shown && millis() - cw.turn_ms < ACT_MS - SHRINK_MS) {
+            cw.turn_ms = millis() - (ACT_MS - SHRINK_MS);
         }
         speak_word();
         break;
@@ -946,7 +948,7 @@ static bool load_content()
 // Without content there is nothing to show but how to get some.
 static void no_content_screen(bool wrong_version)
 {
-    auto &d = M5.Display;
+    auto &d = board::display();
     d.setBrightness(BRIGHTNESSES[BRIGHTNESS_DEFAULT]);
     d.fillScreen(TFT_BLACK);
     d.setTextDatum(middle_center);
@@ -962,25 +964,21 @@ static void no_content_screen(bool wrong_version)
     d.drawString("tools/flash_content.py", d.width() / 2, d.height() / 2 + 84);
     d.drawString("(see README)", d.width() / 2, d.height() / 2 + 112);
     while (true) {
-        M5.update();
-        if (M5.BtnA.wasHold()) {
-            M5.Power.powerOff();
+        if (board::update() == board::Event::BACK) {
+            board::power_off();
         }
-        M5.delay(50);
+        sleep_ms(50);
     }
 }
 
 extern "C" void app_main(void)
 {
-    auto cfg = M5.config();
-    cfg.internal_mic = false;
-    M5.begin(cfg);
-
     esp_err_t err = nvs_flash_init();
     if (err == ESP_ERR_NVS_NO_FREE_PAGES || err == ESP_ERR_NVS_NEW_VERSION_FOUND) {
         nvs_flash_erase();
         nvs_flash_init();
     }
+    board::begin();
     load_state();
 
     const bool mounted = content_mount();
@@ -989,9 +987,9 @@ extern "C" void app_main(void)
     }
     clamp_state();
 
-    M5.Display.setBrightness(BRIGHTNESSES[st.brightness]);
-    M5.Display.fillScreen(TFT_BLACK);
-    M5.Speaker.setVolume(VOLUMES[st.volume]);
+    board::display().setBrightness(BRIGHTNESSES[st.brightness]);
+    board::display().fillScreen(TFT_BLACK);
+    board::set_volume(VOLUMES[st.volume]);
 
     fb.setPsram(true);
     fb.setColorDepth(16);
@@ -1007,52 +1005,43 @@ extern "C" void app_main(void)
         pick_word(false);
     }
     progress::load(clock_day());
-    m5::rtc_datetime_t now = {};
-    const bool has_clock = M5.Rtc.isEnabled() && M5.Rtc.getDateTime(&now);
+    board::DateTime now = {};
+    const bool has_clock = board::get_time(now);
     ESP_LOGI(TAG, "practice: day %d, %d cards seen, clock %s (%04d-%02d-%02d %02d:%02d:%02d)", progress::today(),
-             progress::known(), !M5.Rtc.isEnabled() ? "not found" : has_clock ? "running" : "not usable", now.date.year,
-             now.date.month, now.date.date, now.time.hours, now.time.minutes, now.time.seconds);
+             progress::known(), !board::has_clock() ? "not found" : has_clock ? "running" : "not usable", now.year,
+             now.month, now.day, now.hour, now.minute, now.second);
     ESP_LOGI(TAG, "knoedel-watch %s", esp_app_get_description()->version);
-    ESP_LOGI(TAG, "display %dx%d, pack \"%s\": %d decks, language %s%s", (int)M5.Display.width(), (int)M5.Display.height(),
+    ESP_LOGI(TAG, "display %dx%d, pack \"%s\": %d decks, language %s%s", (int)board::display().width(), (int)board::display().height(),
              content_name(), deck_count(), deck_locale(), two_languages ? " (two in the pack)" : "");
-    {
-        float ax = 0, ay = 0, az = 0;
-        M5.Imu.update();
-        M5.Imu.getAccel(&ax, &ay, &az);
-        ESP_LOGI(TAG, "imu: %s (type %d), accel %.2f %.2f %.2f g", M5.Imu.isEnabled() ? "found" : "not found",
-                 (int)M5.Imu.getType(), ax, ay, az);
-    }
-    ESP_LOGI(TAG, "power: battery %d %% (%d mV), %s, VBUS %d mV", (int)M5.Power.getBatteryLevel(),
-             (int)M5.Power.getBatteryVoltage(), M5.Power.isCharging() == m5::Power_Class::is_charging ? "charging" : "not charging",
-             (int)M5.Power.getVBUSVoltage());
     show();
     st_dirty = false;
 
     // last_input_ms: keys and touch, for switching off; last_wake_ms: also
     // picking the watch up, for dimming.
-    uint32_t last_input_ms = M5.millis(), last_wake_ms = M5.millis(), fps_ms = M5.millis();
+    uint32_t last_input_ms = millis(), last_wake_ms = millis(), fps_ms = millis();
     int frames = 0;
     uint32_t render_ms = 0, push_ms = 0;
     bool dimmed = false, lying_face_down = false;
     int shown_second = -1, alert_calls = 0;
     while (true) {
-        uint32_t frame_start = M5.millis();
-        M5.update();
-
+        uint32_t frame_start = millis();
         bool input = true;
-        auto touch = M5.Touch.getDetail();
-        if (M5.BtnA.wasHold()) {
+        switch (board::update()) {
+        case board::Event::BACK:
             back();
-        } else if (M5.BtnA.wasClicked()) {
+            break;
+        case board::Event::PREVIOUS:
             step(-1);
-        } else if (M5.BtnB.wasClicked()) {
+            break;
+        case board::Event::NEXT:
             step(1);
-        } else if (touch.wasFlicked() && abs(touch.distanceX()) > abs(touch.distanceY())) {
-            step(touch.distanceX() < 0 ? 1 : -1);
-        } else if (touch.wasClicked()) {
+            break;
+        case board::Event::SELECT:
             tap();
-        } else {
-            input = touch.isPressed() || M5.BtnA.isPressed() || M5.BtnB.isPressed();
+            break;
+        default:
+            input = board::touched();
+            break;
         }
 
         motion::update();
@@ -1069,79 +1058,79 @@ extern "C" void app_main(void)
                 timer_start();
                 redraw();
             }
-            M5.Display.setBrightness(lying_face_down ? 0 : dimmed ? BRIGHTNESS_IDLE : BRIGHTNESSES[st.brightness]);
-            last_wake_ms = M5.millis();
+            board::display().setBrightness(lying_face_down ? 0 : dimmed ? BRIGHTNESS_IDLE : BRIGHTNESSES[st.brightness]);
+            last_wake_ms = millis();
         }
         const bool picked_up = motion::moved() && !lying_face_down;
 
         if (input || (picked_up && dimmed)) {
-            last_wake_ms = M5.millis();
-            last_input_ms = input ? M5.millis() : last_input_ms;
+            last_wake_ms = millis();
+            last_input_ms = input ? millis() : last_input_ms;
             if (dimmed && !lying_face_down) {
-                M5.Display.setBrightness(BRIGHTNESSES[st.brightness]);
+                board::display().setBrightness(BRIGHTNESSES[st.brightness]);
             }
             dimmed = false;
-        } else if (!dimmed && M5.millis() - last_wake_ms > IDLE_DIM_MS) {
+        } else if (!dimmed && millis() - last_wake_ms > IDLE_DIM_MS) {
             // On USB power the watch is a desk clock: left alone, it shows the time.
-            if (M5.Power.getVBUSVoltage() >= 4000 && st.screen != CLOCK && st.screen != TIMER && !edit.on) {
+            if (board::on_usb() && st.screen != CLOCK && st.screen != TIMER && !edit.on) {
                 st.screen = CLOCK;
                 pick_word(false);
                 show();
             }
             if (!lying_face_down) {
-                M5.Display.setBrightness(BRIGHTNESS_IDLE);
+                board::display().setBrightness(BRIGHTNESS_IDLE);
             }
             dimmed = true;
-        } else if (M5.millis() - last_input_ms > IDLE_OFF_MS && !tm.running && !tm.alert) {
+        } else if (millis() - last_input_ms > IDLE_OFF_MS && !tm.running && !tm.alert) {
             // Left alone: switch off, so that the battery (and with it the clock) never runs flat.
-            if (M5.Power.getVBUSVoltage() < 4000) {
+            if (!board::on_usb()) {
                 ESP_LOGI(TAG, "idle for %u minutes: switching off", (unsigned)(IDLE_OFF_MS / 60000));
                 power_off();
             }
-            last_input_ms = M5.millis();  // on USB power: look again in five minutes
+            last_input_ms = millis();  // on USB power: look again in five minutes
         }
         // Written a moment after the last change, so that paging through cards costs one write.
-        if (st_dirty && M5.millis() - last_input_ms > SAVE_AFTER_MS) {
+        if (st_dirty && millis() - last_input_ms > SAVE_AFTER_MS) {
             save_state();
         }
 
         tune_tick();
         timer_tick();
-        if (st.screen == PRACTICE && pr.phase == CHEER && M5.millis() - pr.cheer_ms > CHEER_MS) {
+        if (st.screen == PRACTICE && pr.phase == CHEER && millis() - pr.cheer_ms > CHEER_MS) {
             practice_next();
         }
         // A timer that has run out calls twice more, then waits quietly.
-        if (tm.alert && M5.millis() - tm.alert_ms > 6000 && alert_calls < 2) {
+        if (tm.alert && millis() - tm.alert_ms > 6000 && alert_calls < 2) {
             play_tune(tm.focus ? FOCUS_DONE_TUNE : BREAK_DONE_TUNE);
-            tm.alert_ms = M5.millis();
+            tm.alert_ms = millis();
             alert_calls++;
         } else if (!tm.alert) {
             alert_calls = 0;
         }
         // On the clock the word's acting and the word itself take turns.
-        if (st.screen == CLOCK && M5.millis() - cw.turn_ms > (cw.word_shown ? WORD_MS : ACT_MS)) {
+        if (st.screen == CLOCK && millis() - cw.turn_ms > (cw.word_shown ? WORD_MS : ACT_MS)) {
             cw.word_shown = !cw.word_shown;
-            cw.turn_ms = M5.millis();
+            cw.turn_ms = millis();
             face_shown_ms = cw.turn_ms;  // the acting starts from its beginning
             redraw();
         }
         // While the word fades in or out, its part of the screen is redrawn every frame.
         if (st.screen == CLOCK && cw.word_shown) {
-            const uint32_t e = M5.millis() - cw.turn_ms;
+            const uint32_t e = millis() - cw.turn_ms;
             if (e < FADE_MS + 40 || e > WORD_MS - FADE_MS - 40) {
                 render();
-                M5.Display.setClipRect(60, 230, ui::SCREEN - 120, 160);
+                board::display().setClipRect(60, 230, ui::SCREEN - 120, 160);
                 fb.pushSprite(0, 0);
-                M5.Display.clearClipRect();
+                board::display().clearClipRect();
             }
         }
         // The clock and the timer redraw once a second; the word changes at midnight.
         if (st.screen == CLOCK || st.screen == TIMER || (st.screen == HOME && st.home_item == ITEM_CLOCK)) {
-            const m5::rtc_datetime_t dt = now_dt();
-            ui::set_clock(dt.time.hours, dt.time.minutes, dt.time.seconds);
-            const int second = st.screen == TIMER ? timer_left() : dt.time.seconds;
+            const board::DateTime dt = now_dt();
+            ui::set_clock(dt.hour, dt.minute, dt.second);
+            const int second = st.screen == TIMER ? timer_left() : dt.second;
             if (second != shown_second && st.screen != HOME) {
-                if (st.screen == CLOCK && cw.day != day_number(dt.date.year, dt.date.month, dt.date.date)) {
+                if (st.screen == CLOCK && cw.day != day_number(dt.year, dt.month, dt.day)) {
                     pick_word(false);
                 }
                 redraw();
@@ -1149,36 +1138,36 @@ extern "C" void app_main(void)
             shown_second = second;
         }
         if (lying_face_down) {
-            M5.delay(FRAME_MS);  // nothing to draw on a dark screen
+            sleep_ms(FRAME_MS);  // nothing to draw on a dark screen
             continue;
         }
 
         // The meaning follows the acting as a hint.
-        if (st.screen == PRACTICE && pr.phase == ASK && !pr.hint && M5.millis() - face_shown_ms > HINT_AFTER_MS) {
+        if (st.screen == PRACTICE && pr.phase == ASK && !pr.hint && millis() - face_shown_ms > HINT_AFTER_MS) {
             pr.hint = true;
             redraw();
         }
         if (animated()) {
-            uint32_t t0 = M5.millis();
+            uint32_t t0 = millis();
             render_stage();
-            uint32_t t1 = M5.millis();
+            uint32_t t1 = millis();
             push_stage();
             render_ms += t1 - t0;
-            push_ms += M5.millis() - t1;
+            push_ms += millis() - t1;
             frames++;
         }
-        if (M5.millis() - fps_ms >= 5000) {
+        if (millis() - fps_ms >= 5000) {
             if (animated() && frames > 0) {
                 ESP_LOGI(TAG, "screen %d deck %d card %d: %.1f fps (draw %lu ms, push %lu ms per frame)", st.screen,
-                         st.deck, st.card, frames * 1000.0f / (M5.millis() - fps_ms), (unsigned long)(render_ms / frames),
+                         st.deck, st.card, frames * 1000.0f / (millis() - fps_ms), (unsigned long)(render_ms / frames),
                          (unsigned long)(push_ms / frames));
             }
             frames = 0;
             render_ms = push_ms = 0;
-            fps_ms = M5.millis();
+            fps_ms = millis();
         }
 
-        uint32_t spent = M5.millis() - frame_start;
-        M5.delay(spent < FRAME_MS ? FRAME_MS - spent : 1);
+        uint32_t spent = millis() - frame_start;
+        sleep_ms(spent < FRAME_MS ? FRAME_MS - spent : 1);
     }
 }

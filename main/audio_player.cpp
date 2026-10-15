@@ -1,6 +1,5 @@
 #include "audio_player.h"
 
-#include <M5Unified.h>
 #include <esp_heap_caps.h>
 #include <esp_log.h>
 #include <freertos/FreeRTOS.h>
@@ -9,6 +8,8 @@
 #include <string.h>
 
 #include <atomic>
+
+#include "board.h"
 
 extern "C" {
 #include "third_party/minimp3.h"
@@ -71,11 +72,10 @@ static void audio_task(void *)
     Request req;
     while (true) {
         xQueueReceive(s_queue, &req, portMAX_DELAY);
-        M5.Speaker.stop();
+        board::stop_sound();  // from here on s_pcm is free to be filled again
         if (req.generation != s_generation || req.count == 0) {
             continue;
         }
-        vTaskDelay(pdMS_TO_TICKS(20));  // let the mixer drop the old buffer before reusing it
 
         size_t samples = 0;
         int rate = 24000, channels = 1;
@@ -91,7 +91,7 @@ static void audio_task(void *)
             current = decode_clip(req.clips[i], req.generation, samples, rate, channels);
         }
         if (current && samples > 0 && req.generation == s_generation) {
-            M5.Speaker.playRaw(s_pcm, samples, rate, channels == 2, 1, 0, true);
+            board::play_pcm(s_pcm, samples, rate, channels == 2);
         }
     }
 }

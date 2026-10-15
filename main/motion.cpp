@@ -1,7 +1,9 @@
 #include "motion.h"
 
-#include <M5Unified.h>
+#include <esp_timer.h>
 #include <math.h>
+
+#include "board.h"
 
 namespace motion {
 
@@ -15,18 +17,17 @@ uint32_t s_peaks[4];  // times of the last strong jolts
 int s_peak;
 uint32_t s_last_peak;
 
+uint32_t now_ms() { return (uint32_t)(esp_timer_get_time() / 1000); }
+
 }  // namespace
 
 void update()
 {
-    if (!M5.Imu.isEnabled()) {
-        return;
-    }
     float ax, ay, az;
-    if (!M5.Imu.getAccel(&ax, &ay, &az)) {
+    if (!board::acceleration(ax, ay, az)) {
         return;
     }
-    const uint32_t now = M5.millis();
+    const uint32_t now = now_ms();
     if (!s_ready) {
         s_gx = ax, s_gy = ay, s_gz = az;
         s_ready = true;
@@ -56,8 +57,8 @@ void update()
     }
 }
 
-bool available() { return M5.Imu.isEnabled(); }
-bool face_down() { return s_down_since && M5.millis() - s_down_since > 800; }
+bool available() { return board::has_motion(); }
+bool face_down() { return s_down_since && now_ms() - s_down_since > 800; }
 
 bool moved()
 {

@@ -1,5 +1,5 @@
 #pragma once
-// What the motion sensor (BMI270) says about how the watch is held: whether
+// What the motion sensor says about how the watch is held: whether
 // it lies face down, was picked up, or was shaken.
 
 namespace motion {
