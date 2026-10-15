@@ -1,5 +1,7 @@
 # Knödel Watch
 
+[![build](https://github.com/yanxuceo/knoedel-watch/actions/workflows/build.yml/badge.svg)](https://github.com/yanxuceo/knoedel-watch/actions/workflows/build.yml)
+
 [English](README.md) | 中文
 
 **可爱的小角色把每个单词演出来，在一块小小的圆屏上学外语。**

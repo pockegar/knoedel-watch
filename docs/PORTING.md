@@ -74,11 +74,25 @@ and wake it with one of the keys (ESP32-S3 ext0/ext1 wake-up).
    over M5Unified.
 3. Add the board's ESP-IDF components to `main/idf_component.yml` so that only
    builds for that board fetch them. The builds for other boards, and their
-   `dependencies.lock`, must not change.
+   `dependencies.lock`, must not change. A rule on the board's Kconfig option
+   does this:
+
+   ```yaml
+   espressif/esp_lcd_co5300:
+     version: "^2.2.0"
+     rules:
+       - if: "$CONFIG{KNOEDEL_BOARD_MY_BOARD} == True"
+   ```
+
+   Such rules make the build configure twice, with a CMake warning "Missing
+   kconfig option. Re-run the build process": that is expected.
 4. Put the board's settings (the Kconfig choice, flash size) in
    `sdkconfig.defaults.my_board`, and build with
    `idf.py -B build-my_board -D SDKCONFIG=sdkconfig.my_board -D "SDKCONFIG_DEFAULTS=sdkconfig.defaults;sdkconfig.defaults.my_board" build`.
-5. Write a short `docs/boards/my-board.md`: pins, how to build and flash, what
+5. Add the board to the matrix in `.github/workflows/build.yml`, with
+   `defaults: sdkconfig.defaults;sdkconfig.defaults.my_board`. Every push and
+   pull request then builds it.
+6. Write a short `docs/boards/my-board.md`: pins, how to build and flash, what
    does not work yet.
 
 Keep everything for the board inside its own files: no `#ifdef` for one board

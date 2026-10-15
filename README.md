@@ -1,5 +1,7 @@
 # Knödel Watch
 
+[![build](https://github.com/yanxuceo/knoedel-watch/actions/workflows/build.yml/badge.svg)](https://github.com/yanxuceo/knoedel-watch/actions/workflows/build.yml)
+
 English | [中文](README.zh.md)
 
 **Little animated characters act out every word. Learn a language on a tiny round screen.**
